@@ -1,0 +1,7 @@
+D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.csproj.AssemblyReference.cache
+D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormChangePassword.resources
+D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormLogin.resources
+D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormRegister.resources
+D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.Properties.Resources.resources
+D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.csproj.GenerateResource.cache
+D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.csproj.CoreCompileInputs.cache
