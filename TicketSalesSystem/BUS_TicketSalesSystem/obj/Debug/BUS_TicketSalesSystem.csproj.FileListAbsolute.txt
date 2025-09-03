@@ -1,0 +1,2 @@
+D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\BUS_TicketSalesSystem\obj\Debug\BUS_TicketSalesSystem.csproj.AssemblyReference.cache
+D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\BUS_TicketSalesSystem\obj\Debug\BUS_TicketSalesSystem.csproj.CoreCompileInputs.cache
