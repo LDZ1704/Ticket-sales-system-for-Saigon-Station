@@ -6,6 +6,17 @@ GO
 
 USE BanVeGaSaiGon
 GO
+-- Bảng người dùng
+CREATE TABLE NguoiDung (
+    MaNguoiDung INT IDENTITY PRIMARY KEY,
+    Ho NVARCHAR(100) NOT NULL, --tach fullname
+	Ten NVARCHAR(50) NOT NULL, --tach fullname
+    NgaySinh DATE,
+    Email NVARCHAR(100),
+    SoDienThoai NVARCHAR(20),
+	NgayTao DATE DEFAULT GETDATE(), --them ngay tao
+    LoaiNguoiDung NVARCHAR(20) CHECK (LoaiNguoiDung IN ('KHACH','NHANVIEN','QUANTRI'))
+)
 
 -- Bảng người dùng
 CREATE TABLE NguoiDung (
