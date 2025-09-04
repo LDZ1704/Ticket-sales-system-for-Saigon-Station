@@ -61,7 +61,5 @@ namespace DAL_TicketSalesSystem
                 return ctx.TaiKhoans.Any(tk => tk.TenDangNhap == tenDangNhap);
             }
         }
-
-       
     }
 }

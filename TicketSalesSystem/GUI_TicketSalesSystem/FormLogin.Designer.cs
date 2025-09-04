@@ -118,7 +118,7 @@
             this.Controls.Add(this.lbUsername);
             this.Controls.Add(this.label1);
             this.Name = "FormLogin";
-            this.Text = "Đăng nhập";
+            this.Text = "Hệ thống bán vé ga Sài Gòn - Đăng nhập";
             this.ResumeLayout(false);
             this.PerformLayout();
 

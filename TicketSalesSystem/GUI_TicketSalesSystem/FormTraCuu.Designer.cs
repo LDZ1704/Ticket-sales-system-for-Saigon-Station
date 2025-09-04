@@ -1,0 +1,218 @@
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace GUI_TicketSalesSystem
+{
+    partial class FormTraCuu
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.cboGaDi = new System.Windows.Forms.ComboBox();
+            this.cboGaDen = new System.Windows.Forms.ComboBox();
+            this.dtpNgayDi = new System.Windows.Forms.DateTimePicker();
+            this.btnTraCuu = new System.Windows.Forms.Button();
+            this.dgvKetQua = new System.Windows.Forms.DataGridView();
+            this.lblGaDi = new System.Windows.Forms.Label();
+            this.lblGaDen = new System.Windows.Forms.Label();
+            this.lblNgayDi = new System.Windows.Forms.Label();
+            this.dgvMaChuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTenTau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTenTuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvGioKhoiHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvGioDen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // cboGaDi
+            // 
+            this.cboGaDi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGaDi.Location = new System.Drawing.Point(90, 20);
+            this.cboGaDi.Name = "cboGaDi";
+            this.cboGaDi.Size = new System.Drawing.Size(458, 32);
+            this.cboGaDi.TabIndex = 1;
+            // 
+            // cboGaDen
+            // 
+            this.cboGaDen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGaDen.Location = new System.Drawing.Point(90, 60);
+            this.cboGaDen.Name = "cboGaDen";
+            this.cboGaDen.Size = new System.Drawing.Size(458, 32);
+            this.cboGaDen.TabIndex = 3;
+            // 
+            // dtpNgayDi
+            // 
+            this.dtpNgayDi.Location = new System.Drawing.Point(90, 100);
+            this.dtpNgayDi.MinDate = new System.DateTime(2025, 9, 4, 0, 0, 0, 0);
+            this.dtpNgayDi.Name = "dtpNgayDi";
+            this.dtpNgayDi.Size = new System.Drawing.Size(458, 29);
+            this.dtpNgayDi.TabIndex = 5;
+            // 
+            // btnTraCuu
+            // 
+            this.btnTraCuu.Location = new System.Drawing.Point(568, 62);
+            this.btnTraCuu.Name = "btnTraCuu";
+            this.btnTraCuu.Size = new System.Drawing.Size(117, 30);
+            this.btnTraCuu.TabIndex = 6;
+            this.btnTraCuu.Text = "Tra cứu";
+            // 
+            // dgvKetQua
+            // 
+            this.dgvKetQua.AllowUserToAddRows = false;
+            this.dgvKetQua.AllowUserToDeleteRows = false;
+            this.dgvKetQua.ColumnHeadersHeight = 35;
+            this.dgvKetQua.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvMaChuyen,
+            this.dgvTenTau,
+            this.dgvTenTuyen,
+            this.dgvTrangThai,
+            this.dgvGioKhoiHanh,
+            this.dgvGioDen,
+            this.dgvGhiChu});
+            this.dgvKetQua.Location = new System.Drawing.Point(6, 149);
+            this.dgvKetQua.Name = "dgvKetQua";
+            this.dgvKetQua.ReadOnly = true;
+            this.dgvKetQua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvKetQua.Size = new System.Drawing.Size(818, 400);
+            this.dgvKetQua.TabIndex = 7;
+            // 
+            // lblGaDi
+            // 
+            this.lblGaDi.Location = new System.Drawing.Point(20, 20);
+            this.lblGaDi.Name = "lblGaDi";
+            this.lblGaDi.Size = new System.Drawing.Size(50, 23);
+            this.lblGaDi.TabIndex = 0;
+            this.lblGaDi.Text = "Ga đi:";
+            // 
+            // lblGaDen
+            // 
+            this.lblGaDen.Location = new System.Drawing.Point(20, 60);
+            this.lblGaDen.Name = "lblGaDen";
+            this.lblGaDen.Size = new System.Drawing.Size(50, 23);
+            this.lblGaDen.TabIndex = 2;
+            this.lblGaDen.Text = "Ga đến:";
+            // 
+            // lblNgayDi
+            // 
+            this.lblNgayDi.Location = new System.Drawing.Point(20, 100);
+            this.lblNgayDi.Name = "lblNgayDi";
+            this.lblNgayDi.Size = new System.Drawing.Size(60, 23);
+            this.lblNgayDi.TabIndex = 4;
+            this.lblNgayDi.Text = "Ngày đi:";
+            // 
+            // dgvMaChuyen
+            // 
+            this.dgvMaChuyen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvMaChuyen.HeaderText = "Mã chuyến";
+            this.dgvMaChuyen.Name = "dgvMaChuyen";
+            this.dgvMaChuyen.ReadOnly = true;
+            // 
+            // dgvTenTau
+            // 
+            this.dgvTenTau.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvTenTau.HeaderText = "Tên tàu";
+            this.dgvTenTau.Name = "dgvTenTau";
+            this.dgvTenTau.ReadOnly = true;
+            // 
+            // dgvTenTuyen
+            // 
+            this.dgvTenTuyen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvTenTuyen.HeaderText = "Tên tuyến";
+            this.dgvTenTuyen.Name = "dgvTenTuyen";
+            this.dgvTenTuyen.ReadOnly = true;
+            // 
+            // dgvTrangThai
+            // 
+            this.dgvTrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvTrangThai.HeaderText = "Trạng thái";
+            this.dgvTrangThai.Name = "dgvTrangThai";
+            this.dgvTrangThai.ReadOnly = true;
+            // 
+            // dgvGioKhoiHanh
+            // 
+            this.dgvGioKhoiHanh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvGioKhoiHanh.HeaderText = "Giờ khởi hành";
+            this.dgvGioKhoiHanh.Name = "dgvGioKhoiHanh";
+            this.dgvGioKhoiHanh.ReadOnly = true;
+            // 
+            // dgvGioDen
+            // 
+            this.dgvGioDen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvGioDen.HeaderText = "Giờ đến";
+            this.dgvGioDen.Name = "dgvGioDen";
+            this.dgvGioDen.ReadOnly = true;
+            // 
+            // dgvGhiChu
+            // 
+            this.dgvGhiChu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvGhiChu.HeaderText = "Ghi chú";
+            this.dgvGhiChu.Name = "dgvGhiChu";
+            this.dgvGhiChu.ReadOnly = true;
+            // 
+            // FormTraCuu
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(832, 561);
+            this.Controls.Add(this.lblGaDi);
+            this.Controls.Add(this.cboGaDi);
+            this.Controls.Add(this.lblGaDen);
+            this.Controls.Add(this.cboGaDen);
+            this.Controls.Add(this.lblNgayDi);
+            this.Controls.Add(this.dtpNgayDi);
+            this.Controls.Add(this.btnTraCuu);
+            this.Controls.Add(this.dgvKetQua);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Name = "FormTraCuu";
+            this.Text = "Hệ thống bán vé ga Sài Gòn - Tra cứu lịch chạy tàu";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private ComboBox cboGaDi;
+        private ComboBox cboGaDen;
+        private DateTimePicker dtpNgayDi;
+        private Button btnTraCuu;
+        private DataGridView dgvKetQua;
+        private Label lblGaDi;
+        private Label lblGaDen;
+        private Label lblNgayDi;
+        private DataGridViewTextBoxColumn dgvMaChuyen;
+        private DataGridViewTextBoxColumn dgvTenTau;
+        private DataGridViewTextBoxColumn dgvTenTuyen;
+        private DataGridViewTextBoxColumn dgvTrangThai;
+        private DataGridViewTextBoxColumn dgvGioKhoiHanh;
+        private DataGridViewTextBoxColumn dgvGioDen;
+        private DataGridViewTextBoxColumn dgvGhiChu;
+    }
+}

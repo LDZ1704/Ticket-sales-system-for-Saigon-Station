@@ -10,3 +10,17 @@ D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSal
 D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\obj\Debug\DAL_Tick.11F4B613.Up2Date
 D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\obj\Debug\DAL_TicketSalesSystem.dll
 D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\obj\Debug\DAL_TicketSalesSystem.pdb
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\bin\Debug\DAL_TicketSalesSystem.dll.config
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\bin\Debug\DAL_TicketSalesSystem.dll
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\bin\Debug\DAL_TicketSalesSystem.pdb
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\bin\Debug\DTO_TicketSalesSystem.dll
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\bin\Debug\DTO_TicketSalesSystem.pdb
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\obj\Debug\DAL_TicketSalesSystem.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\obj\Debug\DAL_TicketSalesSystem.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\obj\Debug\DAL_Tick.11F4B613.Up2Date
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\obj\Debug\DAL_TicketSalesSystem.dll
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\obj\Debug\DAL_TicketSalesSystem.pdb
