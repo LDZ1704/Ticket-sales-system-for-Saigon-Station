@@ -10,3 +10,5 @@ D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSal
 D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\obj\Debug\DAL_Tick.11F4B613.Up2Date
 D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\obj\Debug\DAL_TicketSalesSystem.dll
 D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\obj\Debug\DAL_TicketSalesSystem.pdb
+D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\bin\Debug\EntityFramework.SqlServer.dll
+D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DAL_TicketSalesSystem\bin\Debug\EntityFramework.SqlServer.xml
