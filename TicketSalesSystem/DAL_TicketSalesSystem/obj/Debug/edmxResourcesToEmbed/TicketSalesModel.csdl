@@ -292,7 +292,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="BanVeGaSaiGonEntities2" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="BanVeGaSaiGonEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="ChuyenTaus" EntityType="Self.ChuyenTau" />
     <EntitySet Name="GaTaus" EntityType="Self.GaTau" />
     <EntitySet Name="Ghes" EntityType="Self.Ghe" />
