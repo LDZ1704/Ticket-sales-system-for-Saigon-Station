@@ -1,0 +1,30 @@
+# Thư mục build
+bin/
+obj/
+
+# Visual Studio user-specific files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# File cache & log
+*.log
+*.tlog
+
+# File tạm hệ thống
+*.db
+*.DS_Store
+Thumbs.db
+
+# Các file từ tool AI/code assistant
+*.vsidx
+CopilotIndices/
+
+# Các file tạm khác
+*.class
+*.tmp
+
+# Bỏ file tạm trong dự án
+TicketSalesSystem/.vs/

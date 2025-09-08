@@ -27,7 +27,6 @@ namespace DAL_TicketSalesSystem
                 }
             }
         }
-
         public bool ThemNguoiDung(NguoiDung entity, TicketSalesContext ctx)
         {
             try
@@ -42,7 +41,6 @@ namespace DAL_TicketSalesSystem
                 return false;
             }
         }
-
         //Lấy người dùng theo ID
         public NguoiDung LayNguoiDungTheoID(int id)
         {

@@ -36,5 +36,37 @@ namespace BUS_TicketSalesSystem
                     : TrangThai.KHOA
             };
         }
+
+        public bool ThemTaiKhoan(TaiKhoan entity)
+        {
+            return dal_TaiKhoan.ThemTaiKhoan(entity);
+        }
+
+        public string ThemTaiKhoan(DTO_TaiKhoan dto)
+        {
+
+            if (dto == null)
+                return "Lỗi dữ liệu không hợp lệ.";
+
+            if (string.IsNullOrWhiteSpace(dto.TenDangNhap) || string.IsNullOrWhiteSpace(dto.MatKhau))
+                return "Lỗi tên đăng nhập và mật khẩu là bắt buộc";
+
+            // Map DTO → Entity
+            var entity = new TaiKhoan
+            {
+                TenDangNhap = dto.TenDangNhap,
+                MatKhau = PasswordHasher.Hash(dto.MatKhau),
+                TrangThai = dto.TrangThai.ToString()
+            };
+
+            bool result = dal_TaiKhoan.ThemTaiKhoan(entity);
+            return result ? "Đăng ký thành công." : "Lỗi khi đăng ký.";
+        }
+
+        // Kiểm tra người dùng đã có tài khoản hay chưa
+        public bool KiemTraDaCoTaiKhoan(int maNguoiDung)
+        {
+            return dal_TaiKhoan.KiemTraDaCoTaiKhoan(maNguoiDung);
+        }
     }
 }

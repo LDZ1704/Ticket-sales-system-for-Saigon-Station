@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL_TicketSalesSystem
 {
@@ -18,18 +14,29 @@ namespace DAL_TicketSalesSystem
             {
                 try
                 {
+                    // Dùng cùng context để thêm người dùng
                     bool okNguoiDung = dal_NguoiDung.ThemNguoiDung(entity_NguoiDung, ctx);
                     if (!okNguoiDung)
-                        throw new Exception("Thêm người dùng thất bại!");
+                        throw new Exception("Thêm người dùng thất bại.");
 
+                    // Lấy MaNguoiDung sau khi thêm
                     entity_TaiKhoan.MaNguoiDung = entity_NguoiDung.MaNguoiDung;
+
+                    // Dùng cùng context để thêm tài khoản
                     bool okTaiKhoan = dal_TaiKhoan.ThemTaiKhoan(entity_TaiKhoan, ctx);
                     if (!okTaiKhoan)
-                        throw new Exception("Thêm tài khoản thất bại!");
+                        throw new Exception("Thêm tài khoản thất bại.");
 
                     transaction.Commit();
                     return true;
                 }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    Console.WriteLine("Lỗi đăng ký: " + ex.Message);
+                    return false;
+                }
             }
+        }
     }
 }

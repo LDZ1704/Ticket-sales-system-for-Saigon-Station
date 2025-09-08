@@ -1,12 +1,86 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormRegister.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormRegister.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormRegister.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormRegister.cs",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormRegister.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T16:56:34.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormLogin.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormLogin.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormLogin.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormLogin.cs",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormLogin.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwBAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T16:55:18.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormLogin.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormLogin.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormLogin.cs [Design]",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T16:55:04.015Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormRegister.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormRegister.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormRegister.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormRegister.cs [Design]",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormRegister.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T16:56:11.591Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

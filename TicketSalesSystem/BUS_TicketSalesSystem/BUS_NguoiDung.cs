@@ -10,10 +10,10 @@ namespace BUS_TicketSalesSystem
 {
     public class BUS_NguoiDung
     {
-        private DAL_NguoiDung dal = new DAL_NguoiDung();
+        private DAL_NguoiDung dal_NguoiDung = new DAL_NguoiDung();
 
         // Xử lý đăng ký người dùng mới
-        public string DangKyNguoiDung(DTO_NguoiDung dto)
+        public string ThemNguoiDung(DTO_NguoiDung dto)
         {
             if (dto == null)
                 return "Dữ liệu không hợp lệ.";
@@ -33,14 +33,14 @@ namespace BUS_TicketSalesSystem
                 LoaiNguoiDung = dto.LoaiNguoiDung.ToString()
             };
 
-            bool result = dal.ThemNguoiDung(entity);
+            bool result = dal_NguoiDung.ThemNguoiDung(entity);
             return result ? "Đăng ký thành công." : "Lỗi khi đăng ký.";
         }
 
         // Fix for CS0136: Rename the local variable in LayNguoiDungTheoID to avoid name conflict
         public DTO_NguoiDung LayNguoiDungTheoID(int id)
         {
-            var nguoiDungEntity = dal.LayNguoiDungTheoID(id);
+            var nguoiDungEntity = dal_NguoiDung.LayNguoiDungTheoID(id);
             if (nguoiDungEntity == null) return null;
 
             Enum.TryParse(nguoiDungEntity.LoaiNguoiDung, true, out LoaiNguoiDung loaiNguoiDungParsed);
@@ -61,37 +61,37 @@ namespace BUS_TicketSalesSystem
         //Lấy mã người dùng theo số điện thoại
         public int? LayMaNguoiDungTheoSoDienThoai(string soDienThoai)
         {
-            return dal.LayMaNguoiDungTheoSoDienThoai(soDienThoai);
+            return dal_NguoiDung.LayMaNguoiDungTheoSoDienThoai(soDienThoai);
         }
 
         // Kiểm tra số điện thoại có trùng không
 
         public bool KiemTraSoDienThoaiTrung(string soDienThoai)
         {
-            return dal.KiemTraSoDienThoaiTrung(soDienThoai);
+            return dal_NguoiDung.KiemTraSoDienThoaiTrung(soDienThoai);
         }
 
         public bool KiemTraEmailTrung(string email)
         {
-            return dal.KiemTraEmailTrung(email);
+            return dal_NguoiDung.KiemTraEmailTrung(email);
         }
 
         // Cập nhật người dùng
         public bool CapNhatNguoiDung(DTO_NguoiDung dto)
         {
-            return dal.CapNhatNguoiDung(dto);
+            return dal_NguoiDung.CapNhatNguoiDung(dto);
         }
 
         // Xóa người dùng
         public bool XoaNguoiDung(int id)
         {
-            return dal.XoaNguoiDung(id);
+            return dal_NguoiDung.XoaNguoiDung(id);
         }
 
         // Lấy tất cả người dùng
         public List<DTO_NguoiDung> LayTatCaNguoiDung()
         {
-            var ds = dal.LayTatCaNguoiDung();
+            var ds = dal_NguoiDung.LayTatCaNguoiDung();
             var result = new List<DTO_NguoiDung>();
 
             foreach (var entity in ds)

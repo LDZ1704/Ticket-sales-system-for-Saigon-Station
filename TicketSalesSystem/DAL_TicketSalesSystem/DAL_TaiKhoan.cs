@@ -11,33 +11,23 @@ namespace DAL_TicketSalesSystem
     public class DAL_TaiKhoan
     {
         // Thêm tài khoản mới với mật khẩu được băm
-        public bool ThemTaiKhoan(DTO_TaiKhoan dto)
+        public bool ThemTaiKhoan(TaiKhoan entity)
         {
             using (var ctx = new TicketSalesContext())
             {
                 try
                 {
-                    var tk = new TaiKhoan
-                    {
-                        TenDangNhap = dto.TenDangNhap,
-                        MatKhau = PasswordHasher.Hash(dto.MatKhau), // băm mật khẩu
-                        NgayTao = dto.NgayTao,
-                        TrangThai = dto.TrangThai.ToString(),
-                        MaNguoiDung = dto.MaNguoiDung
-                    };
-
-                    ctx.TaiKhoans.Add(tk);
+                    ctx.TaiKhoans.Add(entity);
                     ctx.SaveChanges();
                     return true;
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Lỗi khi thêm tài khoản: " + ex.Message);
+                    Console.WriteLine(ex.Message);
                     return false;
                 }
             }
         }
-
         public bool ThemTaiKhoan(TaiKhoan entity, TicketSalesContext ctx)
         {
             try
@@ -52,7 +42,6 @@ namespace DAL_TicketSalesSystem
                 return false;
             }
         }
-
         // Đăng nhập với kiểm tra mật khẩu băm
         public TaiKhoan DangNhap(string tenDangNhap, string matKhau)
         {
@@ -74,6 +63,14 @@ namespace DAL_TicketSalesSystem
             using (var ctx = new TicketSalesContext())
             {
                 return ctx.TaiKhoans.Any(tk => tk.TenDangNhap == tenDangNhap);
+            }
+        }
+
+        public bool KiemTraDaCoTaiKhoan(int maNguoiDung)
+        {
+            using (var ctx = new TicketSalesContext())
+            {
+                return ctx.TaiKhoans.Any(tk => tk.MaNguoiDung == maNguoiDung);
             }
         }
     }
