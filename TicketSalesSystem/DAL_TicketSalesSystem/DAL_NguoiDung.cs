@@ -28,6 +28,21 @@ namespace DAL_TicketSalesSystem
             }
         }
 
+        public bool ThemNguoiDung(NguoiDung entity, TicketSalesContext ctx)
+        {
+            try
+            {
+                ctx.NguoiDungs.Add(entity);
+                ctx.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
         //Lấy người dùng theo ID
         public NguoiDung LayNguoiDungTheoID(int id)
         {

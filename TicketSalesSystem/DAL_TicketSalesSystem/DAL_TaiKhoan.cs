@@ -38,6 +38,21 @@ namespace DAL_TicketSalesSystem
             }
         }
 
+        public bool ThemTaiKhoan(TaiKhoan entity, TicketSalesContext ctx)
+        {
+            try
+            {
+                ctx.TaiKhoans.Add(entity);
+                ctx.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
         // Đăng nhập với kiểm tra mật khẩu băm
         public TaiKhoan DangNhap(string tenDangNhap, string matKhau)
         {
