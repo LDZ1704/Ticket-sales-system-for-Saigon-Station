@@ -42,6 +42,7 @@ namespace DAL_TicketSalesSystem
                 return false;
             }
         }
+
         // Đăng nhập với kiểm tra mật khẩu băm
         public TaiKhoan DangNhap(string tenDangNhap, string matKhau)
         {
@@ -71,6 +72,46 @@ namespace DAL_TicketSalesSystem
             using (var ctx = new TicketSalesContext())
             {
                 return ctx.TaiKhoans.Any(tk => tk.MaNguoiDung == maNguoiDung);
+            }
+        }
+
+        //Đổi mật khẩu
+        public bool KiemTraMatKhauCu(string tenDangNhap, string matKhauCu)
+        {
+            using (var ctx = new TicketSalesContext())
+            {
+                var taiKhoan = ctx.TaiKhoans.FirstOrDefault(tk => tk.TenDangNhap == tenDangNhap);
+                if (taiKhoan == null) return false;
+
+                return PasswordHasher.Verify(matKhauCu, taiKhoan.MatKhau);
+            }
+        }
+        public bool DoiMatKhau(string tenDangNhap, string matKhauMoi)
+        {
+            using (var ctx = new TicketSalesContext())
+            {
+                var taiKhoan = ctx.TaiKhoans.FirstOrDefault(tk => tk.TenDangNhap == tenDangNhap);
+                if (taiKhoan == null) return false;
+
+                taiKhoan.MatKhau = PasswordHasher.Hash(matKhauMoi);
+                return ctx.SaveChanges() > 0;
+            }
+        }
+        public bool KiemTraTaiKhoanHopLe(string tenDangNhap)
+        {
+            using (var ctx = new TicketSalesContext())
+            {
+                var taiKhoan = ctx.TaiKhoans.FirstOrDefault(tk => tk.TenDangNhap == tenDangNhap);
+                return taiKhoan != null && taiKhoan.TrangThai == "HOATDONG";
+            }
+        }
+
+        //Lấy tài khoản theo tên
+        public TaiKhoan LayTaiKhoanTheoTen(string tenDangNhap)
+        {
+            using (var context = new TicketSalesContext())
+            {
+                return context.TaiKhoans.FirstOrDefault(tk => tk.TenDangNhap == tenDangNhap);
             }
         }
     }

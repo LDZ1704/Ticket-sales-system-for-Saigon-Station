@@ -50,3 +50,11 @@ D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSal
 D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\bin\Debug\EntityFramework.SqlServer.dll
 D:\ltCSDL\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\bin\Debug\EntityFramework.SqlServer.xml
 >>>>>>> main
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.exe.config
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormDatVe.resources
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormMain.resources
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormThongKe.resources
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormTraCuu.resources
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormVeCuaToi.resources
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\bin\Debug\EntityFramework.SqlServer.xml

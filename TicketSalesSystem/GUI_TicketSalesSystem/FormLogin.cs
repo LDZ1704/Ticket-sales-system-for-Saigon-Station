@@ -19,6 +19,7 @@ namespace GUI_TicketSalesSystem
         public FormLogin()
         {
             InitializeComponent();
+            this.FormClosed += FormLogin_FormClosed;
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -57,8 +58,16 @@ namespace GUI_TicketSalesSystem
 
             // Đăng nhập thành công
             MessageBox.Show("Đăng nhập thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Hide();
+            FormMain formMain = new FormMain(username);
+            formMain.ShowDialog();
             this.Close();
             
+        }
+
+        private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

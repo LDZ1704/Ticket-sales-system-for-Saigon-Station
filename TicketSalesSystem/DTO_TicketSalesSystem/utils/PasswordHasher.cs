@@ -23,5 +23,11 @@ namespace DTO_TicketSalesSystem.utils
                 return sb.ToString();
             }
         }
+
+        public static bool Verify(string password, string hashedPassword)
+        {
+            string hashOfInput = Hash(password);
+            return hashOfInput == hashedPassword;
+        }
     }
 }

@@ -40,8 +40,8 @@ namespace GUI_TicketSalesSystem
             this.mnuVe = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDatVe = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuQuanLyVe = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuThongKe = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuVeCuaToi = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuThongKe = new System.Windows.Forms.ToolStripMenuItem();
             this.lblChaoMung = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -74,12 +74,14 @@ namespace GUI_TicketSalesSystem
             this.mnuDoiMatKhau.Name = "mnuDoiMatKhau";
             this.mnuDoiMatKhau.Size = new System.Drawing.Size(211, 34);
             this.mnuDoiMatKhau.Text = "Đổi mật khẩu";
+            this.mnuDoiMatKhau.Click += new System.EventHandler(this.mnuDoiMatKhau_Click);
             // 
             // mnuDangXuat
             // 
             this.mnuDangXuat.Name = "mnuDangXuat";
             this.mnuDangXuat.Size = new System.Drawing.Size(211, 34);
             this.mnuDangXuat.Text = "Đăng xuất";
+            this.mnuDangXuat.Click += new System.EventHandler(this.mnuDangXuat_Click);
             // 
             // mnuChuyenTau
             // 
@@ -116,17 +118,17 @@ namespace GUI_TicketSalesSystem
             this.mnuQuanLyVe.Size = new System.Drawing.Size(178, 34);
             this.mnuQuanLyVe.Text = "Vé của tôi";
             // 
-            // mnuThongKe
-            // 
-            this.mnuThongKe.Name = "mnuThongKe";
-            this.mnuThongKe.Size = new System.Drawing.Size(111, 34);
-            this.mnuThongKe.Text = "Thống kê";
-            // 
             // mnuVeCuaToi
             // 
             this.mnuVeCuaToi.Name = "mnuVeCuaToi";
             this.mnuVeCuaToi.Size = new System.Drawing.Size(117, 34);
             this.mnuVeCuaToi.Text = "Vé của tôi";
+            // 
+            // mnuThongKe
+            // 
+            this.mnuThongKe.Name = "mnuThongKe";
+            this.mnuThongKe.Size = new System.Drawing.Size(111, 34);
+            this.mnuThongKe.Text = "Thống kê";
             // 
             // lblChaoMung
             // 
@@ -149,6 +151,8 @@ namespace GUI_TicketSalesSystem
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ thống bán vé ga Sài Gòn";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
