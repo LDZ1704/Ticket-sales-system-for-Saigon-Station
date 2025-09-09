@@ -64,7 +64,7 @@
             this.label1.Location = new System.Drawing.Point(204, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(335, 42);
+            this.label1.Size = new System.Drawing.Size(265, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đăng ký tài khoản";
             // 
@@ -75,7 +75,7 @@
             this.lbUsername.Location = new System.Drawing.Point(37, 79);
             this.lbUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(158, 29);
+            this.lbUsername.Size = new System.Drawing.Size(124, 24);
             this.lbUsername.TabIndex = 1;
             this.lbUsername.Text = "Tên tài khoản";
             // 
@@ -86,7 +86,7 @@
             this.lbPassword.Location = new System.Drawing.Point(37, 126);
             this.lbPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(109, 29);
+            this.lbPassword.Size = new System.Drawing.Size(86, 24);
             this.lbPassword.TabIndex = 1;
             this.lbPassword.Text = "Mật khẩu";
             // 
@@ -97,7 +97,7 @@
             this.lbFirstName.Location = new System.Drawing.Point(37, 225);
             this.lbFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbFirstName.Name = "lbFirstName";
-            this.lbFirstName.Size = new System.Drawing.Size(44, 29);
+            this.lbFirstName.Size = new System.Drawing.Size(35, 24);
             this.lbFirstName.TabIndex = 1;
             this.lbFirstName.Text = "Họ";
             // 
@@ -108,7 +108,7 @@
             this.lbLastName.Location = new System.Drawing.Point(36, 270);
             this.lbLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbLastName.Name = "lbLastName";
-            this.lbLastName.Size = new System.Drawing.Size(56, 29);
+            this.lbLastName.Size = new System.Drawing.Size(44, 24);
             this.lbLastName.TabIndex = 1;
             this.lbLastName.Text = "Tên";
             // 
@@ -119,7 +119,7 @@
             this.lbBirthday.Location = new System.Drawing.Point(36, 314);
             this.lbBirthday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbBirthday.Name = "lbBirthday";
-            this.lbBirthday.Size = new System.Drawing.Size(119, 29);
+            this.lbBirthday.Size = new System.Drawing.Size(94, 24);
             this.lbBirthday.TabIndex = 1;
             this.lbBirthday.Text = "Ngày sinh";
             // 
@@ -130,7 +130,7 @@
             this.lbEmail.Location = new System.Drawing.Point(36, 357);
             this.lbEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(74, 29);
+            this.lbEmail.Size = new System.Drawing.Size(57, 24);
             this.lbEmail.TabIndex = 1;
             this.lbEmail.Text = "Email";
             // 
@@ -141,7 +141,7 @@
             this.lbPhone.Location = new System.Drawing.Point(36, 399);
             this.lbPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(154, 29);
+            this.lbPhone.Size = new System.Drawing.Size(121, 24);
             this.lbPhone.TabIndex = 1;
             this.lbPhone.Text = "Số điện thoại";
             // 
@@ -151,7 +151,7 @@
             this.txtUsername.Location = new System.Drawing.Point(211, 73);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(420, 34);
+            this.txtUsername.Size = new System.Drawing.Size(316, 29);
             this.txtUsername.TabIndex = 2;
             // 
             // txtPassword
@@ -161,7 +161,7 @@
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(420, 34);
+            this.txtPassword.Size = new System.Drawing.Size(316, 29);
             this.txtPassword.TabIndex = 2;
             // 
             // txtLastName
@@ -170,7 +170,7 @@
             this.txtLastName.Location = new System.Drawing.Point(211, 214);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(420, 34);
+            this.txtLastName.Size = new System.Drawing.Size(316, 29);
             this.txtLastName.TabIndex = 2;
             // 
             // txtFirstName
@@ -179,7 +179,7 @@
             this.txtFirstName.Location = new System.Drawing.Point(211, 264);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(420, 34);
+            this.txtFirstName.Size = new System.Drawing.Size(316, 29);
             this.txtFirstName.TabIndex = 2;
             // 
             // txtEmail
@@ -188,7 +188,7 @@
             this.txtEmail.Location = new System.Drawing.Point(211, 351);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(420, 34);
+            this.txtEmail.Size = new System.Drawing.Size(316, 29);
             this.txtEmail.TabIndex = 2;
             // 
             // txtPhone
@@ -197,7 +197,7 @@
             this.txtPhone.Location = new System.Drawing.Point(211, 393);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(420, 34);
+            this.txtPhone.Size = new System.Drawing.Size(316, 29);
             this.txtPhone.TabIndex = 2;
             // 
             // btnBackLogin
@@ -208,7 +208,7 @@
             this.btnBackLogin.Location = new System.Drawing.Point(42, 451);
             this.btnBackLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnBackLogin.Name = "btnBackLogin";
-            this.btnBackLogin.Size = new System.Drawing.Size(267, 54);
+            this.btnBackLogin.Size = new System.Drawing.Size(200, 44);
             this.btnBackLogin.TabIndex = 3;
             this.btnBackLogin.Text = "Quay về đăng nhập";
             this.btnBackLogin.UseVisualStyleBackColor = false;
@@ -220,7 +220,7 @@
             this.dateNgaySinh.Location = new System.Drawing.Point(211, 308);
             this.dateNgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.dateNgaySinh.Name = "dateNgaySinh";
-            this.dateNgaySinh.Size = new System.Drawing.Size(420, 34);
+            this.dateNgaySinh.Size = new System.Drawing.Size(316, 29);
             this.dateNgaySinh.TabIndex = 4;
             // 
             // btnRegister
@@ -228,10 +228,10 @@
             this.btnRegister.BackColor = System.Drawing.Color.Lime;
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnRegister.Location = new System.Drawing.Point(456, 451);
+            this.btnRegister.Location = new System.Drawing.Point(396, 451);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(175, 54);
+            this.btnRegister.Size = new System.Drawing.Size(131, 44);
             this.btnRegister.TabIndex = 3;
             this.btnRegister.Text = "Đăng ký";
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -242,10 +242,10 @@
             this.lblUsernameError.AutoSize = true;
             this.lblUsernameError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsernameError.ForeColor = System.Drawing.Color.Red;
-            this.lblUsernameError.Location = new System.Drawing.Point(638, 79);
+            this.lblUsernameError.Location = new System.Drawing.Point(555, 73);
             this.lblUsernameError.Name = "lblUsernameError";
             this.lblUsernameError.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblUsernameError.Size = new System.Drawing.Size(159, 20);
+            this.lblUsernameError.Size = new System.Drawing.Size(135, 17);
             this.lblUsernameError.TabIndex = 5;
             this.lblUsernameError.Text = "lableUsernameError";
             // 
@@ -254,10 +254,10 @@
             this.lblConfirmPasswordError.AutoSize = true;
             this.lblConfirmPasswordError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmPasswordError.ForeColor = System.Drawing.Color.Red;
-            this.lblConfirmPasswordError.Location = new System.Drawing.Point(638, 172);
+            this.lblConfirmPasswordError.Location = new System.Drawing.Point(555, 166);
             this.lblConfirmPasswordError.Name = "lblConfirmPasswordError";
             this.lblConfirmPasswordError.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblConfirmPasswordError.Size = new System.Drawing.Size(215, 20);
+            this.lblConfirmPasswordError.Size = new System.Drawing.Size(179, 17);
             this.lblConfirmPasswordError.TabIndex = 6;
             this.lblConfirmPasswordError.Text = "lableConfirmPasswordError";
             // 
@@ -266,10 +266,10 @@
             this.lblPasswordError.AutoSize = true;
             this.lblPasswordError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPasswordError.ForeColor = System.Drawing.Color.Red;
-            this.lblPasswordError.Location = new System.Drawing.Point(638, 126);
+            this.lblPasswordError.Location = new System.Drawing.Point(555, 120);
             this.lblPasswordError.Name = "lblPasswordError";
             this.lblPasswordError.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblPasswordError.Size = new System.Drawing.Size(156, 20);
+            this.lblPasswordError.Size = new System.Drawing.Size(131, 17);
             this.lblPasswordError.TabIndex = 7;
             this.lblPasswordError.Text = "lablePasswordError";
             // 
@@ -280,7 +280,7 @@
             this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
-            this.txtConfirmPassword.Size = new System.Drawing.Size(420, 34);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(316, 29);
             this.txtConfirmPassword.TabIndex = 9;
             // 
             // label4
@@ -290,7 +290,7 @@
             this.label4.Location = new System.Drawing.Point(36, 172);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 29);
+            this.label4.Size = new System.Drawing.Size(125, 24);
             this.label4.TabIndex = 8;
             this.label4.Text = "Xác nhận MK";
             // 
@@ -299,10 +299,10 @@
             this.lblNgaySinhError.AutoSize = true;
             this.lblNgaySinhError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNgaySinhError.ForeColor = System.Drawing.Color.Red;
-            this.lblNgaySinhError.Location = new System.Drawing.Point(638, 314);
+            this.lblNgaySinhError.Location = new System.Drawing.Point(555, 308);
             this.lblNgaySinhError.Name = "lblNgaySinhError";
             this.lblNgaySinhError.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblNgaySinhError.Size = new System.Drawing.Size(153, 20);
+            this.lblNgaySinhError.Size = new System.Drawing.Size(131, 17);
             this.lblNgaySinhError.TabIndex = 10;
             this.lblNgaySinhError.Text = "lableNgaySinhError";
             // 
@@ -311,10 +311,10 @@
             this.lblEmailError.AutoSize = true;
             this.lblEmailError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailError.ForeColor = System.Drawing.Color.Red;
-            this.lblEmailError.Location = new System.Drawing.Point(638, 361);
+            this.lblEmailError.Location = new System.Drawing.Point(555, 355);
             this.lblEmailError.Name = "lblEmailError";
             this.lblEmailError.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblEmailError.Size = new System.Drawing.Size(124, 20);
+            this.lblEmailError.Size = new System.Drawing.Size(104, 17);
             this.lblEmailError.TabIndex = 11;
             this.lblEmailError.Text = "lableEmailError";
             // 
@@ -323,10 +323,10 @@
             this.lblPhoneError.AutoSize = true;
             this.lblPhoneError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhoneError.ForeColor = System.Drawing.Color.Red;
-            this.lblPhoneError.Location = new System.Drawing.Point(638, 403);
+            this.lblPhoneError.Location = new System.Drawing.Point(555, 397);
             this.lblPhoneError.Name = "lblPhoneError";
             this.lblPhoneError.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblPhoneError.Size = new System.Drawing.Size(129, 20);
+            this.lblPhoneError.Size = new System.Drawing.Size(111, 17);
             this.lblPhoneError.TabIndex = 12;
             this.lblPhoneError.Text = "lablePhoneError";
             // 
@@ -335,10 +335,10 @@
             this.lblLastNameError.AutoSize = true;
             this.lblLastNameError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastNameError.ForeColor = System.Drawing.Color.Red;
-            this.lblLastNameError.Location = new System.Drawing.Point(638, 224);
+            this.lblLastNameError.Location = new System.Drawing.Point(555, 218);
             this.lblLastNameError.Name = "lblLastNameError";
             this.lblLastNameError.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblLastNameError.Size = new System.Drawing.Size(159, 20);
+            this.lblLastNameError.Size = new System.Drawing.Size(134, 17);
             this.lblLastNameError.TabIndex = 13;
             this.lblLastNameError.Text = "lableLastNameError";
             // 
@@ -347,18 +347,18 @@
             this.lblFirstNameError.AutoSize = true;
             this.lblFirstNameError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstNameError.ForeColor = System.Drawing.Color.Red;
-            this.lblFirstNameError.Location = new System.Drawing.Point(638, 274);
+            this.lblFirstNameError.Location = new System.Drawing.Point(555, 268);
             this.lblFirstNameError.Name = "lblFirstNameError";
             this.lblFirstNameError.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblFirstNameError.Size = new System.Drawing.Size(160, 20);
+            this.lblFirstNameError.Size = new System.Drawing.Size(134, 17);
             this.lblFirstNameError.TabIndex = 14;
             this.lblFirstNameError.Text = "lableFirstNameError";
             // 
             // FormRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 512);
+            this.ClientSize = new System.Drawing.Size(876, 512);
             this.Controls.Add(this.lblFirstNameError);
             this.Controls.Add(this.lblLastNameError);
             this.Controls.Add(this.lblPhoneError);
@@ -388,6 +388,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormRegister";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng ký";
             this.Load += new System.EventHandler(this.FormRegister_Load);
             this.ResumeLayout(false);

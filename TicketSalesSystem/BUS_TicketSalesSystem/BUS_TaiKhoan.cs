@@ -68,5 +68,39 @@ namespace BUS_TicketSalesSystem
         {
             return dal_TaiKhoan.KiemTraDaCoTaiKhoan(maNguoiDung);
         }
+
+        //Đổi mật khẩu
+        public string DoiMatKhau(string tenDangNhap, string matKhauCu, string matKhauMoi)
+        {
+            if (string.IsNullOrWhiteSpace(matKhauCu)) return "Vui lòng nhập mật khẩu cũ";
+            if (string.IsNullOrWhiteSpace(matKhauMoi)) return "Vui lòng nhập mật khẩu mới";
+            if (matKhauMoi.Length < 6) return "Mật khẩu mới phải có ít nhất 6 ký tự";
+            if (matKhauCu == matKhauMoi) return "Mật khẩu mới phải khác mật khẩu cũ";
+
+            //Có thể thêm ràng buộc nếu được
+            //if (!KiemTraDoManhMatKhau(matKhauMoi))
+            //    return "Mật khẩu phải có kí tự chữ và số!";
+
+            try
+            {
+                if (!dal_TaiKhoan.KiemTraTaiKhoanHopLe(tenDangNhap))
+                    return "Tài khoản không tồn tại hoặc đã bị khóa";
+                if (!dal_TaiKhoan.KiemTraMatKhauCu(tenDangNhap, matKhauCu))
+                    return "Mật khẩu cũ không đúng";
+                if (dal_TaiKhoan.DoiMatKhau(tenDangNhap, matKhauMoi))
+                    return "Đổi mật khẩu thành công";
+                else
+                    return "Có lỗi xảy ra, vui lòng thử lại";
+            }
+            catch (Exception ex)
+            {
+                return "Lỗi hệ thống: " + ex.Message;
+            }
+        }
+
+        //private bool KiemTraDoManhMatKhau(string matKhau)
+        //{
+        //    return matKhau.Any(char.IsLetter) && matKhau.Any(char.IsDigit);
+        //}
     }
 }

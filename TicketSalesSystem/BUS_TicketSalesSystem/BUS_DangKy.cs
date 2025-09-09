@@ -64,7 +64,8 @@ namespace BUS_TicketSalesSystem
                 {
                     TenDangNhap = dtoTaiKhoan.TenDangNhap,
                     MatKhau = PasswordHasher.Hash(dtoTaiKhoan.MatKhau),
-                    TrangThai = dtoTaiKhoan.TrangThai.ToString()
+                    TrangThai = dtoTaiKhoan.TrangThai.ToString(),
+                    NgayTao = dtoTaiKhoan.NgayTao
                     // MaNguoiDung sẽ được gán sau khi thêm
                 };
 
