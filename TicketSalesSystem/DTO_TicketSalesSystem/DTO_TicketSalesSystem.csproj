@@ -41,9 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO_ChuyenTau.cs" />
+    <Compile Include="DTO_GaTau.cs" />
     <Compile Include="DTO_NguoiDung.cs" />
     <Compile Include="DTO_QuanLy.cs" />
     <Compile Include="DTO_TaiKhoan.cs" />
+    <Compile Include="DTO_Tau.cs" />
+    <Compile Include="DTO_TuyenDuong.cs" />
     <Compile Include="enums\LoaiNguoiDung.cs" />
     <Compile Include="enums\TrangThai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

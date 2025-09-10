@@ -37,9 +37,6 @@ namespace GUI_TicketSalesSystem
             this.dtpNgayDi = new System.Windows.Forms.DateTimePicker();
             this.btnTraCuu = new System.Windows.Forms.Button();
             this.dgvKetQua = new System.Windows.Forms.DataGridView();
-            this.lblGaDi = new System.Windows.Forms.Label();
-            this.lblGaDen = new System.Windows.Forms.Label();
-            this.lblNgayDi = new System.Windows.Forms.Label();
             this.dgvMaChuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTenTau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTenTuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +44,9 @@ namespace GUI_TicketSalesSystem
             this.dgvGioKhoiHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvGioDen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblGaDi = new System.Windows.Forms.Label();
+            this.lblGaDen = new System.Windows.Forms.Label();
+            this.lblNgayDi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,6 +81,7 @@ namespace GUI_TicketSalesSystem
             this.btnTraCuu.Size = new System.Drawing.Size(117, 30);
             this.btnTraCuu.TabIndex = 6;
             this.btnTraCuu.Text = "Tra cứu";
+            this.btnTraCuu.Click += new System.EventHandler(this.btnTraCuu_Click);
             // 
             // dgvKetQua
             // 
@@ -101,30 +102,6 @@ namespace GUI_TicketSalesSystem
             this.dgvKetQua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKetQua.Size = new System.Drawing.Size(818, 400);
             this.dgvKetQua.TabIndex = 7;
-            // 
-            // lblGaDi
-            // 
-            this.lblGaDi.Location = new System.Drawing.Point(20, 20);
-            this.lblGaDi.Name = "lblGaDi";
-            this.lblGaDi.Size = new System.Drawing.Size(50, 23);
-            this.lblGaDi.TabIndex = 0;
-            this.lblGaDi.Text = "Ga đi:";
-            // 
-            // lblGaDen
-            // 
-            this.lblGaDen.Location = new System.Drawing.Point(20, 60);
-            this.lblGaDen.Name = "lblGaDen";
-            this.lblGaDen.Size = new System.Drawing.Size(50, 23);
-            this.lblGaDen.TabIndex = 2;
-            this.lblGaDen.Text = "Ga đến:";
-            // 
-            // lblNgayDi
-            // 
-            this.lblNgayDi.Location = new System.Drawing.Point(20, 100);
-            this.lblNgayDi.Name = "lblNgayDi";
-            this.lblNgayDi.Size = new System.Drawing.Size(60, 23);
-            this.lblNgayDi.TabIndex = 4;
-            this.lblNgayDi.Text = "Ngày đi:";
             // 
             // dgvMaChuyen
             // 
@@ -175,6 +152,30 @@ namespace GUI_TicketSalesSystem
             this.dgvGhiChu.Name = "dgvGhiChu";
             this.dgvGhiChu.ReadOnly = true;
             // 
+            // lblGaDi
+            // 
+            this.lblGaDi.Location = new System.Drawing.Point(20, 20);
+            this.lblGaDi.Name = "lblGaDi";
+            this.lblGaDi.Size = new System.Drawing.Size(50, 23);
+            this.lblGaDi.TabIndex = 0;
+            this.lblGaDi.Text = "Ga đi:";
+            // 
+            // lblGaDen
+            // 
+            this.lblGaDen.Location = new System.Drawing.Point(20, 60);
+            this.lblGaDen.Name = "lblGaDen";
+            this.lblGaDen.Size = new System.Drawing.Size(50, 23);
+            this.lblGaDen.TabIndex = 2;
+            this.lblGaDen.Text = "Ga đến:";
+            // 
+            // lblNgayDi
+            // 
+            this.lblNgayDi.Location = new System.Drawing.Point(20, 100);
+            this.lblNgayDi.Name = "lblNgayDi";
+            this.lblNgayDi.Size = new System.Drawing.Size(60, 23);
+            this.lblNgayDi.TabIndex = 4;
+            this.lblNgayDi.Text = "Ngày đi:";
+            // 
             // FormTraCuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -192,6 +193,8 @@ namespace GUI_TicketSalesSystem
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormTraCuu";
             this.Text = "Hệ thống bán vé ga Sài Gòn - Tra cứu lịch chạy tàu";
+            this.TopMost = true;
+            this.Load += new System.EventHandler(this.FormTraCuu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).EndInit();
             this.ResumeLayout(false);
 
