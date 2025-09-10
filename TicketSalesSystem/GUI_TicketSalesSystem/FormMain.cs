@@ -83,5 +83,12 @@ namespace GUI_TicketSalesSystem
                 e.Cancel = true;
             }
         }
+
+        private void mnuTraCuu_Click(object sender, EventArgs e)
+        {
+            FormTraCuu frm = new FormTraCuu();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

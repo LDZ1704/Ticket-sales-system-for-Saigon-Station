@@ -126,4 +126,77 @@ CREATE TABLE Ve (
     MaQR NVARCHAR(100)
 )
 
---DROP DATABASE BanVeGaSaiGon
+-- Dữ liệu cho bảng GaTau
+INSERT INTO GaTau(TenGa, DiaChi, Mien, GhiChu) VALUES
+(N'Ga Sài Gòn', N'01 Nguyễn Thông, Quận 3, TP. Hồ Chí Minh', N'Nam', N'Ga trung tâm miền Nam'),
+(N'Ga Hà Nội', N'120 Lê Duẩn, Hoàn Kiếm, Hà Nội', N'Bắc', N'Ga trung tâm miền Bắc'),
+(N'Ga Đà Nẵng', N'791 Hải Phòng, Thanh Khê, Đà Nẵng', N'Trung', N'Ga lớn miền Trung'),
+(N'Ga Nha Trang', N'17 Thái Nguyên, Phước Tân, Nha Trang', N'Nam', N'Ga du lịch nổi tiếng'),
+(N'Ga Huế', N'02 Bùi Thị Xuân, TP. Huế', N'Trung', N'Ga cố đô Huế');
+
+-- Dữ liệu cho bảng TuyenDuong
+INSERT INTO TuyenDuong(MaGaDi, MaGaDen, KhoangCach, ThoiGianDuKien, MoTa) VALUES
+(1, 2, 1726, '23:00:00', N'Tuyến Bắc Nam Sài Gòn - Hà Nội'),
+(1, 3, 935, '17:00:00', N'Tuyến Sài Gòn - Đà Nẵng'),
+(1, 4, 411, '08:00:00', N'Tuyến Sài Gòn - Nha Trang'),
+(3, 2, 791, '15:00:00', N'Tuyến Đà Nẵng - Hà Nội'),
+(5, 2, 688, '13:00:00', N'Tuyến Huế - Hà Nội');
+
+-- Dữ liệu cho bảng Tau
+INSERT INTO Tau(TenTau, MoTa) VALUES
+(N'SE1', N'Tàu Thống Nhất SE1 chạy tuyến Bắc Nam'),
+(N'SE2', N'Tàu Thống Nhất SE2 chạy tuyến Bắc Nam'),
+(N'SE3', N'Tàu khách SE3 chạy tuyến Sài Gòn - Hà Nội'),
+(N'SNT2', N'Tàu khách Sài Gòn - Nha Trang'),
+(N'SE22', N'Tàu khách Đà Nẵng - Hà Nội');
+
+-- Dữ liệu cho bảng ToaTau
+INSERT INTO ToaTau(TenToa, LoaiGhe, ViTri, MaTau) VALUES
+(N'A1', N'Ghế mềm điều hòa', 1, 1),
+(N'A2', N'Ghế cứng', 2, 1),
+(N'B1', N'Giường nằm 4 chỗ', 3, 1),
+(N'A1', N'Ghế mềm điều hòa', 1, 2),
+(N'B1', N'Giường nằm 6 chỗ', 2, 2),
+(N'A1', N'Ghế cứng', 1, 3),
+(N'A2', N'Ghế mềm', 2, 3),
+(N'A1', N'Ghế mềm điều hòa', 1, 4),
+(N'A1', N'Ghế cứng', 1, 5);
+
+-- Dữ liệu cho bảng Ghe
+INSERT INTO Ghe(SoHieu, ViTri, TrangThai, MaToa) VALUES
+(N'01A', N'Cửa sổ', 'TRONG', 1),
+(N'01B', N'Giữa toa', 'TRONG', 1),
+(N'02A', N'Cửa sổ', 'DADAT', 1),
+(N'01A', N'Cửa sổ', 'TRONG', 2),
+(N'01B', N'Giữa toa', 'TRONG', 2),
+(N'01A', N'Giường trên', 'DADAT', 3),
+(N'01B', N'Giường dưới', 'TRONG', 3),
+(N'01A', N'Cửa sổ', 'TRONG', 4),
+(N'01B', N'Giữa toa', 'TRONG', 4),
+(N'01A', N'Giường trên', 'TRONG', 5),
+(N'01B', N'Giường dưới', 'TRONG', 5),
+(N'01A', N'Cửa sổ', 'DADAT', 6),
+(N'01B', N'Giữa toa', 'TRONG', 6),
+(N'01A', N'Cửa sổ', 'TRONG', 7),
+(N'01B', N'Giữa toa', 'TRONG', 7),
+(N'01A', N'Cửa sổ', 'TRONG', 8),
+(N'01B', N'Giữa toa', 'DADAT', 8),
+(N'01A', N'Cửa sổ', 'TRONG', 9),
+(N'01B', N'Giữa toa', 'TRONG', 9);
+
+-- Dữ liệu cho bảng ChuyenTau
+INSERT INTO ChuyenTau(MaTau, MaTuyen, GioKhoiHanh, GioDen, TrangThai, GhiChu) VALUES
+(1, 1, '2025-09-10', '2025-09-11', 'MOBAN', N'Tàu SE1 Sài Gòn - Hà Nội'),
+(2, 1, '2025-09-11', '2025-09-12', 'MOBAN', N'Tàu SE2 Hà Nội - Sài Gòn'),
+(3, 2, '2025-09-12', '2025-09-13', 'MOBAN', N'Tàu SE3 Sài Gòn - Đà Nẵng'),
+(4, 3, '2025-09-15', '2025-09-15', 'MOBAN', N'Tàu SNT2 Sài Gòn - Nha Trang'),
+(5, 4, '2025-09-18', '2025-09-19', 'MOBAN', N'Tàu SE22 Đà Nẵng - Hà Nội');
+
+SELECT * FROM GaTau
+SELECT * FROM TuyenDuong
+SELECT * FROM Tau
+SELECT * FROM ToaTau
+SELECT * FROM Ghe
+SELECT * FROM ChuyenTau
+
+DROP DATABASE BanVeGaSaiGon

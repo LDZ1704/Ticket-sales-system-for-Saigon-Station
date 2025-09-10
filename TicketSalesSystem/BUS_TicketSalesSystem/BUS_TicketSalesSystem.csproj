@@ -56,6 +56,7 @@
     <Compile Include="BUS_NguoiDung.cs" />
     <Compile Include="BUS_QuanLy.cs" />
     <Compile Include="BUS_TaiKhoan.cs" />
+    <Compile Include="BUS_TraCuu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
