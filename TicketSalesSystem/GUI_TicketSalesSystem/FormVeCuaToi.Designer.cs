@@ -32,10 +32,6 @@ namespace GUI_TicketSalesSystem
         private void InitializeComponent()
         {
             this.dgvVe = new System.Windows.Forms.DataGridView();
-            this.btnLamMoi = new System.Windows.Forms.Button();
-            this.btnHuyVe = new System.Windows.Forms.Button();
-            this.btnDoiVe = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.dgvMaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvHanhKhach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +40,10 @@ namespace GUI_TicketSalesSystem
             this.dgvGiaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvNgayDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLamMoi = new System.Windows.Forms.Button();
+            this.btnHuyVe = new System.Windows.Forms.Button();
+            this.btnDoiVe = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,41 +66,9 @@ namespace GUI_TicketSalesSystem
             this.dgvVe.Name = "dgvVe";
             this.dgvVe.ReadOnly = true;
             this.dgvVe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVe.Size = new System.Drawing.Size(998, 480);
+            this.dgvVe.Size = new System.Drawing.Size(1237, 480);
             this.dgvVe.TabIndex = 4;
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.Location = new System.Drawing.Point(616, 20);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(125, 30);
-            this.btnLamMoi.TabIndex = 1;
-            this.btnLamMoi.Text = "Làm mới";
-            // 
-            // btnHuyVe
-            // 
-            this.btnHuyVe.Location = new System.Drawing.Point(761, 20);
-            this.btnHuyVe.Name = "btnHuyVe";
-            this.btnHuyVe.Size = new System.Drawing.Size(115, 30);
-            this.btnHuyVe.TabIndex = 2;
-            this.btnHuyVe.Text = "Hủy vé";
-            // 
-            // btnDoiVe
-            // 
-            this.btnDoiVe.Location = new System.Drawing.Point(894, 20);
-            this.btnDoiVe.Name = "btnDoiVe";
-            this.btnDoiVe.Size = new System.Drawing.Size(108, 30);
-            this.btnDoiVe.TabIndex = 3;
-            this.btnDoiVe.Text = "Đổi vé";
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(20, 20);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(336, 47);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Danh sách vé đã đặt";
+            this.dgvVe.SelectionChanged += new System.EventHandler(this.dgvVe_SelectionChanged);
             // 
             // dgvMaVe
             // 
@@ -158,9 +126,45 @@ namespace GUI_TicketSalesSystem
             this.dgvNgayDat.Name = "dgvNgayDat";
             this.dgvNgayDat.ReadOnly = true;
             // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Location = new System.Drawing.Point(855, 20);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(125, 30);
+            this.btnLamMoi.TabIndex = 1;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
+            // btnHuyVe
+            // 
+            this.btnHuyVe.Location = new System.Drawing.Point(1000, 20);
+            this.btnHuyVe.Name = "btnHuyVe";
+            this.btnHuyVe.Size = new System.Drawing.Size(115, 30);
+            this.btnHuyVe.TabIndex = 2;
+            this.btnHuyVe.Text = "Hủy vé";
+            this.btnHuyVe.Click += new System.EventHandler(this.btnHuyVe_Click);
+            // 
+            // btnDoiVe
+            // 
+            this.btnDoiVe.Location = new System.Drawing.Point(1133, 20);
+            this.btnDoiVe.Name = "btnDoiVe";
+            this.btnDoiVe.Size = new System.Drawing.Size(108, 30);
+            this.btnDoiVe.TabIndex = 3;
+            this.btnDoiVe.Text = "Đổi vé";
+            this.btnDoiVe.Click += new System.EventHandler(this.btnDoiVe_Click);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(20, 20);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(336, 47);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Danh sách vé đã đặt";
+            // 
             // FormVeCuaToi
             // 
-            this.ClientSize = new System.Drawing.Size(1006, 553);
+            this.ClientSize = new System.Drawing.Size(1244, 553);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.btnHuyVe);
@@ -168,7 +172,9 @@ namespace GUI_TicketSalesSystem
             this.Controls.Add(this.dgvVe);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FormVeCuaToi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ thống bán vé ga Sài Gòn - Vé của tôi";
+            this.Load += new System.EventHandler(this.FormVeCuaToi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVe)).EndInit();
             this.ResumeLayout(false);
 

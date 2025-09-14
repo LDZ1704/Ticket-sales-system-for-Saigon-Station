@@ -57,11 +57,18 @@
     <Compile Include="ChuyenTau.cs">
       <DependentUpon>TicketSalesModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL_ChuyenTau.cs" />
     <Compile Include="DAL_DangKy.cs" />
+    <Compile Include="DAL_GaTau.cs" />
+    <Compile Include="DAL_Ghe.cs" />
+    <Compile Include="DAL_HanhKhach.cs" />
     <Compile Include="DAL_NguoiDung.cs" />
     <Compile Include="DAL_QuanLy.cs" />
     <Compile Include="DAL_TaiKhoan.cs" />
+    <Compile Include="DAL_ThanhToan.cs" />
+    <Compile Include="DAL_ToaTau.cs" />
     <Compile Include="DAL_TraCuu.cs" />
+    <Compile Include="DAL_Ve.cs" />
     <Compile Include="GaTau.cs">
       <DependentUpon>TicketSalesModel.tt</DependentUpon>
     </Compile>

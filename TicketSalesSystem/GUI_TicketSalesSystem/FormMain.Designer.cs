@@ -108,20 +108,23 @@ namespace GUI_TicketSalesSystem
             // mnuDatVe
             // 
             this.mnuDatVe.Name = "mnuDatVe";
-            this.mnuDatVe.Size = new System.Drawing.Size(178, 34);
+            this.mnuDatVe.Size = new System.Drawing.Size(180, 34);
             this.mnuDatVe.Text = "Đặt vé";
+            this.mnuDatVe.Click += new System.EventHandler(this.mnuDatVe_Click);
             // 
             // mnuQuanLyVe
             // 
             this.mnuQuanLyVe.Name = "mnuQuanLyVe";
-            this.mnuQuanLyVe.Size = new System.Drawing.Size(178, 34);
+            this.mnuQuanLyVe.Size = new System.Drawing.Size(180, 34);
             this.mnuQuanLyVe.Text = "Vé của tôi";
+            this.mnuQuanLyVe.Click += new System.EventHandler(this.mnuQuanLyVe_Click);
             // 
             // mnuThongKe
             // 
             this.mnuThongKe.Name = "mnuThongKe";
             this.mnuThongKe.Size = new System.Drawing.Size(111, 34);
             this.mnuThongKe.Text = "Thống kê";
+            this.mnuThongKe.Click += new System.EventHandler(this.mnuThongKe_Click);
             // 
             // lblChaoMung
             // 
