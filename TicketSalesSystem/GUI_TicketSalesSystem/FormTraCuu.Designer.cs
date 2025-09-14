@@ -47,6 +47,7 @@ namespace GUI_TicketSalesSystem
             this.lblGaDi = new System.Windows.Forms.Label();
             this.lblGaDen = new System.Windows.Forms.Label();
             this.lblNgayDi = new System.Windows.Forms.Label();
+            this.btnDatVe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +101,7 @@ namespace GUI_TicketSalesSystem
             this.dgvKetQua.Name = "dgvKetQua";
             this.dgvKetQua.ReadOnly = true;
             this.dgvKetQua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKetQua.Size = new System.Drawing.Size(818, 400);
+            this.dgvKetQua.Size = new System.Drawing.Size(1208, 400);
             this.dgvKetQua.TabIndex = 7;
             // 
             // dgvMaChuyen
@@ -176,22 +177,33 @@ namespace GUI_TicketSalesSystem
             this.lblNgayDi.TabIndex = 4;
             this.lblNgayDi.Text = "Ngày đi:";
             // 
+            // btnDatVe
+            // 
+            this.btnDatVe.Location = new System.Drawing.Point(568, 100);
+            this.btnDatVe.Name = "btnDatVe";
+            this.btnDatVe.Size = new System.Drawing.Size(117, 30);
+            this.btnDatVe.TabIndex = 6;
+            this.btnDatVe.Text = "Đặt vé";
+            this.btnDatVe.Click += new System.EventHandler(this.btnDatVe_Click);
+            // 
             // FormTraCuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 561);
+            this.ClientSize = new System.Drawing.Size(1218, 561);
             this.Controls.Add(this.lblGaDi);
             this.Controls.Add(this.cboGaDi);
             this.Controls.Add(this.lblGaDen);
             this.Controls.Add(this.cboGaDen);
             this.Controls.Add(this.lblNgayDi);
             this.Controls.Add(this.dtpNgayDi);
+            this.Controls.Add(this.btnDatVe);
             this.Controls.Add(this.btnTraCuu);
             this.Controls.Add(this.dgvKetQua);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormTraCuu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ thống bán vé ga Sài Gòn - Tra cứu lịch chạy tàu";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FormTraCuu_Load);
@@ -217,5 +229,6 @@ namespace GUI_TicketSalesSystem
         private DataGridViewTextBoxColumn dgvGioKhoiHanh;
         private DataGridViewTextBoxColumn dgvGioDen;
         private DataGridViewTextBoxColumn dgvGhiChu;
+        private Button btnDatVe;
     }
 }

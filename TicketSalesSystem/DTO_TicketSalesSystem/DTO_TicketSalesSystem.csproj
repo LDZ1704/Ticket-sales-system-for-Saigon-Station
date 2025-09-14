@@ -42,16 +42,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO_ChuyenTau.cs" />
+    <Compile Include="DTO_DatVe.cs" />
     <Compile Include="DTO_GaTau.cs" />
+    <Compile Include="DTO_Ghe.cs" />
+    <Compile Include="DTO_HanhKhach.cs" />
     <Compile Include="DTO_NguoiDung.cs" />
     <Compile Include="DTO_QuanLy.cs" />
     <Compile Include="DTO_TaiKhoan.cs" />
     <Compile Include="DTO_Tau.cs" />
+    <Compile Include="DTO_ThanhToan.cs" />
+    <Compile Include="DTO_ToaTau.cs" />
     <Compile Include="DTO_TuyenDuong.cs" />
+    <Compile Include="DTO_Ve.cs" />
     <Compile Include="enums\LoaiNguoiDung.cs" />
     <Compile Include="enums\TrangThai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\PasswordHasher.cs" />
+    <Compile Include="utils\UserSession.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -47,6 +47,7 @@ namespace DAL_TicketSalesSystem
                                   GioDen = ct.GioDen ?? DateTime.MinValue,
                                   GhiChu = ct.GhiChu
                               }).OrderBy(x => x.GioKhoiHanh).ToList();
+
                 return ketQua;
             }
         }

@@ -93,9 +93,9 @@ CREATE TABLE ChuyenTau (
     MaChuyen INT IDENTITY PRIMARY KEY,
     MaTau INT FOREIGN KEY REFERENCES Tau(MaTau),
     MaTuyen INT FOREIGN KEY REFERENCES TuyenDuong(MaTuyen),
-    GioKhoiHanh DATE,
+    GioKhoiHanh DATETIME,
 	-- bỏ giờ xuất phát do trong ngày khởi hành có cả giờ rồi
-    GioDen Date, -- chỉnh giờ đến thành Date luôn
+    GioDen DATETIME,
     TrangThai NVARCHAR(20) CHECK (TrangThai IN ('MOBAN','DACHAY','HUY')),
     GhiChu NVARCHAR(200)
 )
@@ -166,37 +166,51 @@ INSERT INTO ToaTau(TenToa, LoaiGhe, ViTri, MaTau) VALUES
 INSERT INTO Ghe(SoHieu, ViTri, TrangThai, MaToa) VALUES
 (N'01A', N'Cửa sổ', 'TRONG', 1),
 (N'01B', N'Giữa toa', 'TRONG', 1),
-(N'02A', N'Cửa sổ', 'DADAT', 1),
+(N'02A', N'Cửa sổ', 'TRONG', 1),
 (N'01A', N'Cửa sổ', 'TRONG', 2),
 (N'01B', N'Giữa toa', 'TRONG', 2),
-(N'01A', N'Giường trên', 'DADAT', 3),
+(N'01A', N'Giường trên', 'TRONG', 3),
 (N'01B', N'Giường dưới', 'TRONG', 3),
 (N'01A', N'Cửa sổ', 'TRONG', 4),
 (N'01B', N'Giữa toa', 'TRONG', 4),
 (N'01A', N'Giường trên', 'TRONG', 5),
 (N'01B', N'Giường dưới', 'TRONG', 5),
-(N'01A', N'Cửa sổ', 'DADAT', 6),
+(N'01A', N'Cửa sổ', 'TRONG', 6),
 (N'01B', N'Giữa toa', 'TRONG', 6),
 (N'01A', N'Cửa sổ', 'TRONG', 7),
 (N'01B', N'Giữa toa', 'TRONG', 7),
 (N'01A', N'Cửa sổ', 'TRONG', 8),
-(N'01B', N'Giữa toa', 'DADAT', 8),
+(N'01B', N'Giữa toa', 'TRONG', 8),
 (N'01A', N'Cửa sổ', 'TRONG', 9),
 (N'01B', N'Giữa toa', 'TRONG', 9);
 
 -- Dữ liệu cho bảng ChuyenTau
 INSERT INTO ChuyenTau(MaTau, MaTuyen, GioKhoiHanh, GioDen, TrangThai, GhiChu) VALUES
-(1, 1, '2025-09-10', '2025-09-11', 'MOBAN', N'Tàu SE1 Sài Gòn - Hà Nội'),
-(2, 1, '2025-09-11', '2025-09-12', 'MOBAN', N'Tàu SE2 Hà Nội - Sài Gòn'),
-(3, 2, '2025-09-12', '2025-09-13', 'MOBAN', N'Tàu SE3 Sài Gòn - Đà Nẵng'),
-(4, 3, '2025-09-15', '2025-09-15', 'MOBAN', N'Tàu SNT2 Sài Gòn - Nha Trang'),
-(5, 4, '2025-09-18', '2025-09-19', 'MOBAN', N'Tàu SE22 Đà Nẵng - Hà Nội');
+(1, 1, '2025-09-20 06:00:00', '2025-09-21 05:00:00', 'MOBAN', N'Tàu SE1 Sài Gòn - Hà Nội'),
+(2, 1, '2025-09-20 18:30:00', '2025-09-22 19:00:00', 'MOBAN', N'Tàu SE2 Hà Nội - Sài Gòn'),
+(3, 2, '2025-09-20 06:00:00', '2025-09-23 18:00:00', 'MOBAN', N'Tàu SE3 Sài Gòn - Đà Nẵng'),
+(4, 3, '2025-09-20 09:00:00', '2025-09-21 15:30:00', 'MOBAN', N'Tàu SNT2 Sài Gòn - Nha Trang'),
+(5, 4, '2025-09-20 10:00:00', '2025-09-25 22:30:00', 'MOBAN', N'Tàu SE22 Đà Nẵng - Hà Nội');
 
+--Dữ liệu admin (chạy cả 2 cùng lúc cho chắc)
+INSERT INTO NguoiDung (Ho, Ten, NgaySinh, Email, SoDienThoai, LoaiNguoiDung)
+VALUES (N'Nguyễn', N'Admin', '1990-01-01', N'admin@banve.com', N'0909000000', N'QUANTRI');
+INSERT INTO TaiKhoan (TenDangNhap, MatKhau, TrangThai, MaNguoiDung)
+VALUES (N'admin', N'8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92' --123456
+        , N'HOATDONG',SCOPE_IDENTITY());
+
+use BanVeGaSaiGon
+go
 SELECT * FROM GaTau
 SELECT * FROM TuyenDuong
 SELECT * FROM Tau
 SELECT * FROM ToaTau
 SELECT * FROM Ghe
 SELECT * FROM ChuyenTau
+SELECT * FROM HanhKhach
+SELECT * FROM TaiKhoan
+SELECT * FROM NguoiDung
 
+use master
+go
 DROP DATABASE BanVeGaSaiGon

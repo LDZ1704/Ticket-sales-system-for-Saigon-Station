@@ -114,5 +114,15 @@ namespace DAL_TicketSalesSystem
                 return context.TaiKhoans.FirstOrDefault(tk => tk.TenDangNhap == tenDangNhap);
             }
         }
+
+        //Lấy mã người dùng theo tên
+        public int? LayMaNguoiDungTheoUsername(string tenDangNhap)
+        {
+            using (var ctx = new TicketSalesContext())
+            {
+                var taiKhoan = ctx.TaiKhoans.FirstOrDefault(tk => tk.TenDangNhap == tenDangNhap);
+                return taiKhoan?.MaNguoiDung;
+            }
+        }
     }
 }

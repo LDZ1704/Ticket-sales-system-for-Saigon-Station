@@ -15,5 +15,11 @@ namespace DTO_TicketSalesSystem
         public DateTime GioDen { get; set; }
         public string TrangThai { get; set; }
         public string GhiChu { get; set; }
+
+        //Thêm thông tin hiển thị
+        public string TenTau { get; set; }
+        public string Tuyen { get; set; }
+        public int SoChoTrong { get; set; }
+
     }
 }
