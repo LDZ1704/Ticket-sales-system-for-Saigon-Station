@@ -83,6 +83,12 @@
     <Compile Include="FormDatVe.Designer.cs">
       <DependentUpon>FormDatVe.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDoiVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDoiVe.Designer.cs">
+      <DependentUpon>FormDoiVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDatVe.resx">
       <DependentUpon>FormDatVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDoiVe.resx">
+      <DependentUpon>FormDoiVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

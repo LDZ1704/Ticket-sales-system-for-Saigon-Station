@@ -19,12 +19,9 @@ namespace GUI_TicketSalesSystem
         private List<DTO_GaTau> danhSachGa;
         private BUS_GaTau busGaTau = new BUS_GaTau();
         private BUS_ChuyenTau busChuyenTau = new BUS_ChuyenTau();
-        public FormTraCuu(string username = "")
+        public FormTraCuu()
         {
             InitializeComponent();
-            this.Load += FormTraCuu_Load;
-            this.btnTraCuu.Click += btnTraCuu_Click;
-            this.btnDatVe.Click += btnDatVe_Click;
         }
 
         private void FormTraCuu_Load(object sender, EventArgs e)

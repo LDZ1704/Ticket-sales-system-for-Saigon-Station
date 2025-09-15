@@ -53,6 +53,31 @@ namespace BUS_TicketSalesSystem
             }
         }
 
+        public List<DTO_ChuyenTau> LayDanhSachChuyenTauMoBan()
+        {
+            try
+            {
+                var list = dalChuyenTau.LayDanhSachChuyenTauMoBan();
+
+                foreach (var item in list)
+                {
+                    var tenTau = dalChuyenTau.LayTenTauBangChuyen(item.MaChuyen ?? 0);
+                    var tuyen = dalChuyenTau.LayTuyenBangChuyen(item.MaChuyen ?? 0);
+                    item.GhiChu = $"{tenTau}|{tuyen}";
+                }
+                return list;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi lấy danh sách chuyến mở bán: {ex.Message}");
+            }
+        }
+
+        public List<DTO_Ghe> LayDanhSachGheTrongBangMaToa(int maToa)
+        {
+            return dalChuyenTau.LayDanhSachGheTrongBangMaToa(maToa);
+        }
+
         public List<DTO_ChuyenTau> TraCuuChuyenTau(int maGaDi, int maGaDen, DateTime ngayDi)
         {
             try
@@ -68,8 +93,7 @@ namespace BUS_TicketSalesSystem
                     if (infoTuyen != null &&
                         infoTuyen.MaGaDi == maGaDi &&
                         infoTuyen.MaGaDen == maGaDen &&
-                        chuyen.GioKhoiHanh.Date == ngayDi.Date &&
-                        chuyen.TrangThai == "MOBAN")
+                        chuyen.GioKhoiHanh.Date == ngayDi.Date)
                     {
                         ketQua.Add(chuyen);
                     }

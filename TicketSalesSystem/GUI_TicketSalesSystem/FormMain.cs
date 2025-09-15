@@ -16,11 +16,9 @@ namespace GUI_TicketSalesSystem
     {
         private bool isDangXuat = false;
 
-        public FormMain(string username)
+        public FormMain()
         {
             InitializeComponent();
-            this.FormClosing += FormMain_FormClosing;
-            this.Load += FormMain_Load;
         }
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -38,34 +36,22 @@ namespace GUI_TicketSalesSystem
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (isDangXuat)
+            if (!isDangXuat)
             {
-                return;
-            }
+                DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất trước khi thoát?", "Xác nhận", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
-            DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất trước khi thoát?", "Xác nhận", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                try
+                if (result == DialogResult.Yes)
                 {
-                    FormLogin loginForm = new FormLogin();
-                    loginForm.Show();
-                    this.Hide();
+                    DangXuat();
                 }
-                catch (Exception ex)
+                else if (result == DialogResult.No)
                 {
-                    MessageBox.Show($"Lỗi quay về màn hình đăng nhập: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Application.Exit();
                 }
-            }
-            else if (result == DialogResult.No)
-            {
-                Application.Exit();
-            }
-            else
-            {
-                e.Cancel = true;
+                else
+                {
+                    e.Cancel = true;
+                }
             }
         }
 
@@ -169,25 +155,9 @@ namespace GUI_TicketSalesSystem
         #region Helper Methods
         private void DangXuat()
         {
-            try
-            {
-                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    isDangXuat = true;
-                    UserSession.Clear();
-                    MessageBox.Show("Đăng xuất thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    FormLogin loginForm = new FormLogin();
-                    loginForm.Show();
-                    this.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi đăng xuất: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            isDangXuat = true;
+            UserSession.Clear();
+            this.Close();
         }
 
         private void PhanQuyen()

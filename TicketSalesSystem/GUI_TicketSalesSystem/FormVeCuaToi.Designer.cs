@@ -62,11 +62,11 @@ namespace GUI_TicketSalesSystem
             this.dgvGiaVe,
             this.dgvTrangThai,
             this.dgvNgayDat});
-            this.dgvVe.Location = new System.Drawing.Point(4, 70);
+            this.dgvVe.Location = new System.Drawing.Point(4, 65);
             this.dgvVe.Name = "dgvVe";
             this.dgvVe.ReadOnly = true;
             this.dgvVe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVe.Size = new System.Drawing.Size(1237, 480);
+            this.dgvVe.Size = new System.Drawing.Size(1237, 485);
             this.dgvVe.TabIndex = 4;
             this.dgvVe.SelectionChanged += new System.EventHandler(this.dgvVe_SelectionChanged);
             // 
@@ -156,7 +156,7 @@ namespace GUI_TicketSalesSystem
             // lblTitle
             // 
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(20, 20);
+            this.lblTitle.Location = new System.Drawing.Point(12, 15);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(336, 47);
             this.lblTitle.TabIndex = 0;

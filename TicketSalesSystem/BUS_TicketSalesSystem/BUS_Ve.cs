@@ -85,6 +85,36 @@ namespace BUS_TicketSalesSystem
             }
         }
 
+        public bool DoiVe(int maVeCu, int maChuyenMoi, int maGheMoi, decimal giaVe, int maNguoiDung)
+        {
+            try
+            {
+                if (maVeCu <= 0 || maChuyenMoi <= 0 || maGheMoi <= 0)
+                    throw new ArgumentException("Thông tin không hợp lệ");
+
+                int maHanhKhach = dalVe.LayVeBangNguoiDung(maNguoiDung).FirstOrDefault(v => v.MaVe == maVeCu)?.MaHanhKhach ?? 0;
+                if (maHanhKhach == 0) throw new Exception("Không tìm thấy hành khách từ vé cũ");
+
+                var dalThanhToan = new DAL_ThanhToan();
+                int maThanhToan = dalThanhToan.ThemThanhToan(new DTO_ThanhToan
+                {
+                    MaNguoiDung = maNguoiDung,
+                    HinhThuc = "VNPAY",
+                    TrangThai = "THANHCONG",
+                    ThoiDiem = DateTime.Now,
+                    NgayThanhToan = DateTime.Now
+                });
+
+                string maQR = Guid.NewGuid().ToString();
+
+                return dalVe.DoiVe(maVeCu, maGheMoi, maChuyenMoi, maThanhToan, giaVe, maQR, maHanhKhach);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi đổi vé: {ex.Message}");
+            }
+        }
+
         private string ChuyenDoiTrangThai(string trangThai)
         {
             switch(trangThai)

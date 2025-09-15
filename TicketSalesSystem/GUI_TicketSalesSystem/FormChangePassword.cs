@@ -19,7 +19,6 @@ namespace GUI_TicketSalesSystem
         public FormChangePassword()
         {
             InitializeComponent();
-            this.Load += FormChangePassword_Load;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)

@@ -16,6 +16,7 @@ C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSale
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.csproj.AssemblyReference.cache
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormChangePassword.resources
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormDatVe.resources
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormDoiVe.resources
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormLogin.resources
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormMain.resources
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormRegister.resources

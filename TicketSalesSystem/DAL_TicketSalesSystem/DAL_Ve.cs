@@ -9,6 +9,7 @@ namespace DAL_TicketSalesSystem
 {
     public class DAL_Ve
     {
+        //Thêm vé
         public bool ThemVe(int maHanhKhach, int maChuyen, int maGhe, int maThanhToan, decimal giaVe, string maQR)
         {
             using (var ctx = new TicketSalesContext())
@@ -145,6 +146,38 @@ namespace DAL_TicketSalesSystem
                             where v.MaVe == maVe
                             select th.NgayThanhToan;
                 return query.FirstOrDefault() ?? DateTime.MinValue;
+            }
+        }
+
+        //Đổi vé
+        public bool DoiVe(int maVeCu, int maGheMoi, int maChuyenMoi, int maThanhToan, decimal giaVe, string maQR, int maHanhKhach)
+        {
+            using (var ctx = new TicketSalesContext())
+            {
+                var veCu = ctx.Ves.FirstOrDefault(v => v.MaVe == maVeCu);
+                if (veCu == null) return false;
+
+                veCu.TrangThai = "DADOI";
+
+                var gheCu = ctx.Ghes.FirstOrDefault(g => g.MaGhe == veCu.MaGhe);
+                if (gheCu != null) gheCu.TrangThai = "TRONG";
+
+                var veMoi = new Ve
+                {
+                    MaHanhKhach = maHanhKhach,
+                    MaChuyen = maChuyenMoi,
+                    MaGhe = maGheMoi,
+                    MaThanhToan = maThanhToan,
+                    GiaVe = giaVe,
+                    TrangThai = "DATHANHTOAN",
+                    MaQR = maQR
+                };
+                ctx.Ves.Add(veMoi);
+
+                var gheMoi = ctx.Ghes.FirstOrDefault(g => g.MaGhe == maGheMoi);
+                if (gheMoi != null) gheMoi.TrangThai = "DADAT";
+
+                return ctx.SaveChanges() > 0;
             }
         }
     }

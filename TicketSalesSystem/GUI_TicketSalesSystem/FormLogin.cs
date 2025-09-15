@@ -21,7 +21,6 @@ namespace GUI_TicketSalesSystem
         public FormLogin()
         {
             InitializeComponent();
-            this.FormClosed += FormLogin_FormClosed;
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -65,17 +64,17 @@ namespace GUI_TicketSalesSystem
             UserSession.UserId = taiKhoan.MaNguoiDung;
             UserSession.LoaiNguoiDung = nguoiDung?.LoaiNguoiDung ?? LoaiNguoiDung.KHACH;
 
-            // Đăng nhập thành công
-            string roleText = UserSession.IsAdmin ? "Quản trị viên" : "Người dùng";
-            MessageBox.Show($"Đăng nhập thành công! Vai trò: {roleText}", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"Đăng nhập thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             this.Hide();
-            FormMain formMain = new FormMain(username);
-            formMain.ShowDialog();
-            this.Close();
+            using (FormMain formMain = new FormMain())
+            {
+                formMain.ShowDialog();
+            }
+            this.Show();
         }
 
-        private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
+        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }

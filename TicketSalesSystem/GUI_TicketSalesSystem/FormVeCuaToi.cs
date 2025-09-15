@@ -23,7 +23,6 @@ namespace GUI_TicketSalesSystem
         public FormVeCuaToi()
         {
             InitializeComponent();
-            this.Load += FormVeCuaToi_Load;
         }
 
         private void FormVeCuaToi_Load(object sender, EventArgs e)
@@ -94,11 +93,11 @@ namespace GUI_TicketSalesSystem
 
                     // Đổi màu dòng theo trạng thái
                     var row = dgvVe.Rows[rowIndex];
-                    SetRowColor(row, ve.TrangThai);
+                    DoiMauCot(row, ve.TrangThai);
                 }
 
                 // Hiển thị thống kê
-                ShowStatistics(list);
+                HienThongKe(list);
             }
             catch (Exception ex)
             {
@@ -106,7 +105,7 @@ namespace GUI_TicketSalesSystem
             }
         }
 
-        private void SetRowColor(DataGridViewRow row, string trangThai)
+        private void DoiMauCot(DataGridViewRow row, string trangThai)
         {
             switch (trangThai)
             {
@@ -129,7 +128,7 @@ namespace GUI_TicketSalesSystem
             }
         }
 
-        private void ShowStatistics(List<DTO_Ve> ves)
+        private void HienThongKe(List<DTO_Ve> ves)
         {
             try
             {
@@ -147,9 +146,6 @@ namespace GUI_TicketSalesSystem
 
         private void SetupEvents()
         {
-            btnLamMoi.Click += btnLamMoi_Click;
-            btnHuyVe.Click += btnHuyVe_Click;
-            btnDoiVe.Click += btnDoiVe_Click;
             dgvVe.SelectionChanged += dgvVe_SelectionChanged;
         }
 
@@ -256,6 +252,7 @@ namespace GUI_TicketSalesSystem
 
                 var selectedRow = dgvVe.SelectedRows[0];
                 string trangThai = selectedRow.Cells["dgvTrangThai"].Value?.ToString() ?? "";
+                int maVeCu = Convert.ToInt32(selectedRow.Cells["dgvMaVe"].Value);
 
                 if (!busVe.KiemTraVeCoTheHuy(trangThai))
                 {
@@ -263,7 +260,13 @@ namespace GUI_TicketSalesSystem
                     return;
                 }
 
-                MessageBox.Show("Chức năng đổi vé đang được phát triển!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                using (var f = new FormDoiVe(maVeCu))
+                {
+                    if (f.ShowDialog() == DialogResult.OK)
+                    {
+                        LoadVes();
+                    }
+                }
             }
             catch (Exception ex)
             {
