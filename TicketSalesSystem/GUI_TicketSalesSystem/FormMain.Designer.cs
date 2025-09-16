@@ -40,7 +40,6 @@ namespace GUI_TicketSalesSystem
             this.mnuVe = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDatVe = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuQuanLyVe = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuVeCuaToi = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuThongKe = new System.Windows.Forms.ToolStripMenuItem();
             this.lblChaoMung = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
@@ -53,7 +52,6 @@ namespace GUI_TicketSalesSystem
             this.mnuTaiKhoan,
             this.mnuChuyenTau,
             this.mnuVe,
-            this.mnuVeCuaToi,
             this.mnuThongKe});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -96,6 +94,7 @@ namespace GUI_TicketSalesSystem
             this.mnuTraCuu.Name = "mnuTraCuu";
             this.mnuTraCuu.Size = new System.Drawing.Size(276, 34);
             this.mnuTraCuu.Text = "Tra cứu lịch chạy tàu";
+            this.mnuTraCuu.Click += new System.EventHandler(this.mnuTraCuu_Click);
             // 
             // mnuVe
             // 
@@ -109,26 +108,23 @@ namespace GUI_TicketSalesSystem
             // mnuDatVe
             // 
             this.mnuDatVe.Name = "mnuDatVe";
-            this.mnuDatVe.Size = new System.Drawing.Size(178, 34);
+            this.mnuDatVe.Size = new System.Drawing.Size(180, 34);
             this.mnuDatVe.Text = "Đặt vé";
+            this.mnuDatVe.Click += new System.EventHandler(this.mnuDatVe_Click);
             // 
             // mnuQuanLyVe
             // 
             this.mnuQuanLyVe.Name = "mnuQuanLyVe";
-            this.mnuQuanLyVe.Size = new System.Drawing.Size(178, 34);
+            this.mnuQuanLyVe.Size = new System.Drawing.Size(180, 34);
             this.mnuQuanLyVe.Text = "Vé của tôi";
-            // 
-            // mnuVeCuaToi
-            // 
-            this.mnuVeCuaToi.Name = "mnuVeCuaToi";
-            this.mnuVeCuaToi.Size = new System.Drawing.Size(117, 34);
-            this.mnuVeCuaToi.Text = "Vé của tôi";
+            this.mnuQuanLyVe.Click += new System.EventHandler(this.mnuQuanLyVe_Click);
             // 
             // mnuThongKe
             // 
             this.mnuThongKe.Name = "mnuThongKe";
             this.mnuThongKe.Size = new System.Drawing.Size(111, 34);
             this.mnuThongKe.Text = "Thống kê";
+            this.mnuThongKe.Click += new System.EventHandler(this.mnuThongKe_Click);
             // 
             // lblChaoMung
             // 
@@ -173,6 +169,5 @@ namespace GUI_TicketSalesSystem
         private ToolStripMenuItem mnuQuanLyVe;
         private ToolStripMenuItem mnuThongKe;
         private Label lblChaoMung;
-        private ToolStripMenuItem mnuVeCuaToi;
     }
 }

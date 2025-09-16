@@ -1,4 +1,5 @@
 ﻿using BUS_TicketSalesSystem;
+using DTO_TicketSalesSystem.utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,12 +15,10 @@ namespace GUI_TicketSalesSystem
     public partial class FormChangePassword : Form
     {
         private readonly BUS_TaiKhoan bus_TaiKhoan = new BUS_TaiKhoan();
-        private readonly string tenDangNhap;
 
-        public FormChangePassword(string tenDangNhap)
+        public FormChangePassword()
         {
             InitializeComponent();
-            this.tenDangNhap = tenDangNhap;
             this.Load += FormChangePassword_Load;
         }
 
@@ -36,7 +35,7 @@ namespace GUI_TicketSalesSystem
                 return;
             }
 
-            string ketQua = bus_TaiKhoan.DoiMatKhau(tenDangNhap, matKhauCu, matKhauMoi);
+            string ketQua = bus_TaiKhoan.DoiMatKhau(UserSession.Username, matKhauCu, matKhauMoi);
             if (ketQua == "Đổi mật khẩu thành công")
             {
                 MessageBox.Show(ketQua, "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);

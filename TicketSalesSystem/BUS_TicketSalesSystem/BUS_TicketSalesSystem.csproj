@@ -52,10 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS_ChuyenTau.cs" />
     <Compile Include="BUS_DangKy.cs" />
+    <Compile Include="BUS_DatVe.cs" />
+    <Compile Include="BUS_GaTau.cs" />
+    <Compile Include="BUS_Ghe.cs" />
+    <Compile Include="BUS_HanhKhach.cs" />
     <Compile Include="BUS_NguoiDung.cs" />
     <Compile Include="BUS_QuanLy.cs" />
     <Compile Include="BUS_TaiKhoan.cs" />
+    <Compile Include="BUS_Toa.cs" />
+    <Compile Include="BUS_TraCuu.cs" />
+    <Compile Include="BUS_Ve.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

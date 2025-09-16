@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO_TicketSalesSystem.utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,47 +14,26 @@ namespace GUI_TicketSalesSystem
 {
     public partial class FormMain : Form
     {
-        private string currentUsername;
         private bool isDangXuat = false;
+
         public FormMain(string username)
         {
             InitializeComponent();
-            this.currentUsername = username;
             this.FormClosing += FormMain_FormClosing;
-        }
-
-        private void mnuDoiMatKhau_Click(object sender, EventArgs e)
-        {
-            using (var frm = new FormChangePassword(currentUsername))
-            {
-                frm.ShowDialog();
-            }
-        }
-
-        private void mnuDangXuat_Click(object sender, EventArgs e)
-        {
-            DangXuat();
-        }
-        private void DangXuat()
-        {
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận đăng xuất",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-            );
-
-            if (result == DialogResult.Yes)
-            {
-                isDangXuat = true;
-                MessageBox.Show("Đăng xuất thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                FormLogin loginForm = new FormLogin();
-                loginForm.Show();
-                this.Close();
-            }
+            this.Load += FormMain_Load;
         }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            lblChaoMung.Text = $"Xin chào, {currentUsername}";
+            try
+            {
+                lblChaoMung.Text = $"Xin chào, {UserSession.Username}!";
+                PhanQuyen();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khởi tạo form chính: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -63,16 +43,21 @@ namespace GUI_TicketSalesSystem
                 return;
             }
 
-            DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất trước khi thoát?", "Xác nhận",
-                MessageBoxButtons.YesNoCancel,
-                MessageBoxIcon.Question
-            );
+            DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất trước khi thoát?", "Xác nhận", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
-                FormLogin loginForm = new FormLogin();
-                loginForm.Show();
-                this.Hide();
+                try
+                {
+                    FormLogin loginForm = new FormLogin();
+                    loginForm.Show();
+                    this.Hide();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi quay về màn hình đăng nhập: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Application.Exit();
+                }
             }
             else if (result == DialogResult.No)
             {
@@ -83,5 +68,161 @@ namespace GUI_TicketSalesSystem
                 e.Cancel = true;
             }
         }
+
+        #region Menu Event Handlers
+        private void mnuDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var frm = new FormChangePassword())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi mở form đổi mật khẩu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void mnuDangXuat_Click(object sender, EventArgs e)
+        {
+            DangXuat();
+        }
+        private void mnuTraCuu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Kiểm tra xem form đã tồn tại chưa
+                foreach (Form childForm in this.MdiChildren)
+                {
+                    if (childForm is FormTraCuu)
+                    {
+                        childForm.Activate();
+                        return;
+                    }
+                }
+
+                // Tạo form mới
+                FormTraCuu frm = new FormTraCuu();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi mở form tra cứu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void mnuDatVe_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Mở form tra cứu để chọn chuyến tàu trước khi đặt vé
+                mnuTraCuu_Click(sender, e);
+                MessageBox.Show("Vui lòng chọn chuyến tàu và nhấn 'Đặt vé' để tiếp tục!", "Hướng dẫn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi mở chức năng đặt vé: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void mnuQuanLyVe_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Kiểm tra xem form đã tồn tại chưa
+                foreach (Form childForm in this.MdiChildren)
+                {
+                    if (childForm is FormVeCuaToi)
+                    {
+                        childForm.Activate();
+                        return;
+                    }
+                }
+
+                // Tạo form mới
+                FormVeCuaToi frm = new FormVeCuaToi();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi mở form quản lý vé: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void mnuThongKe_Click(object sender, EventArgs e)
+        {
+            if (!CheckAdminPermission("xem thống kê")) return;
+            try
+            {
+                // Mở form thống kê dành cho admin
+                MessageBox.Show("Chức năng thống kê dành cho Quản trị viên!", "Thống kê", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        #endregion
+
+        #region Helper Methods
+        private void DangXuat()
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    isDangXuat = true;
+                    UserSession.Clear();
+                    MessageBox.Show("Đăng xuất thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    FormLogin loginForm = new FormLogin();
+                    loginForm.Show();
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi đăng xuất: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void PhanQuyen()
+        {
+            if (UserSession.IsAdmin)
+            {
+                // Admin có tất cả quyền
+                mnuThongKe.Visible = true;
+                mnuThongKe.Text = "Thống kê và Báo cáo";
+
+                // Có thể thêm menu admin khác
+                // mnuQuanLyUser.Visible = true;
+                // mnuQuanLyTau.Visible = true;
+            }
+            else
+            {
+                // User thường chỉ có quyền cơ bản
+                mnuThongKe.Visible = false;
+
+                // Ẩn các menu admin khác
+                // mnuQuanLyUser.Visible = false;
+                // mnuQuanLyTau.Visible = false;
+            }
+        }
+
+        private bool CheckAdminPermission(string action = "")
+        {
+            if (!UserSession.IsAdmin)
+            {
+                MessageBox.Show($"Bạn không có quyền thực hiện chức năng này!\nChỉ Quản trị viên mới có thể {action}.", "Không đủ quyền", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        #endregion
     }
 }

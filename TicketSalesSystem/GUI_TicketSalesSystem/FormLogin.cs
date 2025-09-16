@@ -1,5 +1,6 @@
 ﻿using BUS_TicketSalesSystem;
 using DTO_TicketSalesSystem;
+using DTO_TicketSalesSystem.utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace GUI_TicketSalesSystem
     public partial class FormLogin : Form
     {
         private readonly BUS_TaiKhoan busTaiKhoan = new BUS_TaiKhoan();
+        private readonly BUS_NguoiDung busNguoiDung = new BUS_NguoiDung();
 
         public FormLogin()
         {
@@ -56,13 +58,21 @@ namespace GUI_TicketSalesSystem
                 return;
             }
 
+            var nguoiDung = busNguoiDung.LayNguoiDungTheoID(taiKhoan.MaNguoiDung);
+
+            //Lưu thông tin vào session
+            UserSession.Username = username;
+            UserSession.UserId = taiKhoan.MaNguoiDung;
+            UserSession.LoaiNguoiDung = nguoiDung?.LoaiNguoiDung ?? LoaiNguoiDung.KHACH;
+
             // Đăng nhập thành công
-            MessageBox.Show("Đăng nhập thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string roleText = UserSession.IsAdmin ? "Quản trị viên" : "Người dùng";
+            MessageBox.Show($"Đăng nhập thành công! Vai trò: {roleText}", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             this.Hide();
             FormMain formMain = new FormMain(username);
             formMain.ShowDialog();
             this.Close();
-            
         }
 
         private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)

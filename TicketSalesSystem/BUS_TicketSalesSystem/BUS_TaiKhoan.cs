@@ -102,5 +102,22 @@ namespace BUS_TicketSalesSystem
         //{
         //    return matKhau.Any(char.IsLetter) && matKhau.Any(char.IsDigit);
         //}
+
+        //Lấy mã tài khoản theo tên
+        public int LayUserIDBangUsername(string username)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(username))
+                    return 1;
+
+                var userId = dal_TaiKhoan.LayMaNguoiDungTheoUsername(username);
+                return userId ?? 1;
+            }
+            catch
+            {
+                return 1;
+            }
+        }
     }
 }
