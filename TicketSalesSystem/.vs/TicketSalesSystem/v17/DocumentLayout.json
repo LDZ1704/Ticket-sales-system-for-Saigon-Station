@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|c:\\users\\administrator\\desktop\\ticket-sales-system-for-saigon-station\\ticketsalessystem\\gui_ticketsalessystem\\formvecuatoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formvecuatoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormVeCuaToi.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormVeCuaToi.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormVeCuaToi.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormVeCuaToi.cs",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormVeCuaToi.cs",
+              "ViewState": "AgIAAEwBAAAAAAAAAAAqwF4BAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T08:28:46.449Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

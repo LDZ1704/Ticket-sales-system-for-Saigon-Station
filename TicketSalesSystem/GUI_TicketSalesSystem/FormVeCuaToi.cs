@@ -342,18 +342,19 @@ namespace GUI_TicketSalesSystem
                 string tuKhoa = "";
                 using (var inputForm = new Form())
                 {
-                    inputForm.Width = 400;
-                    inputForm.Height = 150;
+                    inputForm.Width = 600;
+                    inputForm.Height = 200;
                     inputForm.Text = "Tìm kiếm vé";
                     inputForm.StartPosition = FormStartPosition.CenterParent;
                     inputForm.FormBorderStyle = FormBorderStyle.FixedDialog;
                     inputForm.MaximizeBox = false;
                     inputForm.MinimizeBox = false;
+                    inputForm.Font = new Font("Segoe UI", 16, FontStyle.Regular);
 
-                    var label = new Label() { Text = "Nhập từ khóa (tên hành khách, tuyến đường):", Left = 20, Top = 20, Width = 350 };
-                    var textBox = new TextBox() { Left = 20, Top = 45, Width = 250 };
-                    var btnOK = new Button() { Text = "Tìm kiếm", Left = 280, Top = 43, Width = 80, DialogResult = DialogResult.OK };
-                    var btnCancel = new Button() { Text = "Hủy", Left = 280, Top = 73, Width = 80, DialogResult = DialogResult.Cancel };
+                    var label = new Label() { Text = "Nhập từ khóa (tên hành khách, tuyến đường):", Left = 20, Top = 20, Width = 550, Height = 40, Font = new Font("Segoe UI", 16, FontStyle.Bold)};
+                    var textBox = new TextBox() { Left = 20, Top = 67, Width = 400, Height = 35, Font = new Font("Segoe UI", 16)};
+                    var btnOK = new Button() { Text = "Tìm kiếm", Left = 440, Top = 65, Width = 120, Height = 40, DialogResult = DialogResult.OK, Font = new Font("Segoe UI", 16, FontStyle.Bold)};
+                    var btnCancel = new Button() { Text = "Hủy", Left = 440, Top = 115, Width = 120, Height = 40, DialogResult = DialogResult.Cancel, Font = new Font("Segoe UI", 16, FontStyle.Bold)};
 
                     inputForm.Controls.Add(label);
                     inputForm.Controls.Add(textBox);

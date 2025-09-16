@@ -67,7 +67,6 @@
     <Compile Include="DAL_TaiKhoan.cs" />
     <Compile Include="DAL_ThanhToan.cs" />
     <Compile Include="DAL_ToaTau.cs" />
-    <Compile Include="DAL_TraCuu.cs" />
     <Compile Include="DAL_Ve.cs" />
     <Compile Include="GaTau.cs">
       <DependentUpon>TicketSalesModel.tt</DependentUpon>
