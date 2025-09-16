@@ -41,6 +41,7 @@ namespace GUI_TicketSalesSystem
             this.dgvTenTau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTenTuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvGiaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvGioKhoiHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvGioDen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -94,6 +95,7 @@ namespace GUI_TicketSalesSystem
             this.dgvTenTau,
             this.dgvTenTuyen,
             this.dgvTrangThai,
+            this.dgvGiaVe,
             this.dgvGioKhoiHanh,
             this.dgvGioDen,
             this.dgvGhiChu});
@@ -101,7 +103,7 @@ namespace GUI_TicketSalesSystem
             this.dgvKetQua.Name = "dgvKetQua";
             this.dgvKetQua.ReadOnly = true;
             this.dgvKetQua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKetQua.Size = new System.Drawing.Size(1208, 400);
+            this.dgvKetQua.Size = new System.Drawing.Size(1457, 400);
             this.dgvKetQua.TabIndex = 7;
             // 
             // dgvMaChuyen
@@ -131,6 +133,13 @@ namespace GUI_TicketSalesSystem
             this.dgvTrangThai.HeaderText = "Trạng thái";
             this.dgvTrangThai.Name = "dgvTrangThai";
             this.dgvTrangThai.ReadOnly = true;
+            // 
+            // dgvGiaVe
+            // 
+            this.dgvGiaVe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvGiaVe.HeaderText = "Giá vé";
+            this.dgvGiaVe.Name = "dgvGiaVe";
+            this.dgvGiaVe.ReadOnly = true;
             // 
             // dgvGioKhoiHanh
             // 
@@ -190,7 +199,7 @@ namespace GUI_TicketSalesSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1218, 561);
+            this.ClientSize = new System.Drawing.Size(1465, 553);
             this.Controls.Add(this.lblGaDi);
             this.Controls.Add(this.cboGaDi);
             this.Controls.Add(this.lblGaDen);
@@ -201,7 +210,9 @@ namespace GUI_TicketSalesSystem
             this.Controls.Add(this.btnTraCuu);
             this.Controls.Add(this.dgvKetQua);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximizeBox = false;
             this.Name = "FormTraCuu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ thống bán vé ga Sài Gòn - Tra cứu lịch chạy tàu";
@@ -222,13 +233,14 @@ namespace GUI_TicketSalesSystem
         private Label lblGaDi;
         private Label lblGaDen;
         private Label lblNgayDi;
+        private Button btnDatVe;
         private DataGridViewTextBoxColumn dgvMaChuyen;
         private DataGridViewTextBoxColumn dgvTenTau;
         private DataGridViewTextBoxColumn dgvTenTuyen;
         private DataGridViewTextBoxColumn dgvTrangThai;
+        private DataGridViewTextBoxColumn dgvGiaVe;
         private DataGridViewTextBoxColumn dgvGioKhoiHanh;
         private DataGridViewTextBoxColumn dgvGioDen;
         private DataGridViewTextBoxColumn dgvGhiChu;
-        private Button btnDatVe;
     }
 }

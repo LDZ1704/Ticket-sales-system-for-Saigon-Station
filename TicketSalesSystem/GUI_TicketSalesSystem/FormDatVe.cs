@@ -99,7 +99,6 @@ namespace GUI_TicketSalesSystem
             }
         }
 
-
         private void LoadThongTinChuyen()
         {
             try
@@ -200,6 +199,8 @@ namespace GUI_TicketSalesSystem
             if (cboToa.SelectedItem is ComboBoxItem item)
             {
                 LoadGhes((int)item.Value);
+                decimal giaVe = TinhGiaVeTheoToa();
+                txtGiaVe.Text = $"{giaVe:N0} VND";
             }
         }
 
@@ -276,6 +277,31 @@ namespace GUI_TicketSalesSystem
             {
                 MessageBox.Show($"Lỗi đặt vé: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private decimal TinhGiaVeTheoToa()
+        {
+            if (cboToa.SelectedItem is ComboBoxItem item)
+            {
+                var toa = busToa.LayToaBangId((int)item.Value);
+                if (toa != null)
+                {
+                    switch (toa.LoaiGhe?.ToLower())
+                    {
+                        case "ghế mềm điều hòa":
+                            return 400000;
+                        case "ghế cứng":
+                            return 250000;
+                        case "giường nằm 4 chỗ":
+                            return 550000;
+                        case "giường nằm 6 chỗ":
+                            return 450000;
+                        default:
+                            return 350000;
+                    }
+                }
+            }
+            return 350000;
         }
 
         private bool ValidateInput()

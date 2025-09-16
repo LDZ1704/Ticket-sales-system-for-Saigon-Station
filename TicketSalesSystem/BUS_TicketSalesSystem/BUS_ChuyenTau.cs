@@ -53,6 +53,21 @@ namespace BUS_TicketSalesSystem
             }
         }
 
+        public string LayTuyenBangChuyen(int maChuyen)
+        {
+            try
+            {
+                if (maChuyen <= 0)
+                    throw new ArgumentException("Mã chuyến không hợp lệ");
+
+                return dalChuyenTau.LayTuyenBangChuyen(maChuyen);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi lấy thông tin tuyến: {ex.Message}");
+            }
+        }
+
         public List<DTO_ChuyenTau> LayDanhSachChuyenTauMoBan()
         {
             try

@@ -44,6 +44,8 @@ namespace GUI_TicketSalesSystem
             this.btnHuyVe = new System.Windows.Forms.Button();
             this.btnDoiVe = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.btnThongKe = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,15 +164,37 @@ namespace GUI_TicketSalesSystem
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Danh sách vé đã đặt";
             // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Location = new System.Drawing.Point(713, 20);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(125, 30);
+            this.btnThongKe.TabIndex = 1;
+            this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Location = new System.Drawing.Point(571, 20);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(125, 30);
+            this.btnTimKiem.TabIndex = 1;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
             // FormVeCuaToi
             // 
             this.ClientSize = new System.Drawing.Size(1244, 553);
             this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.btnTimKiem);
+            this.Controls.Add(this.btnThongKe);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.btnHuyVe);
             this.Controls.Add(this.btnDoiVe);
             this.Controls.Add(this.dgvVe);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormVeCuaToi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ thống bán vé ga Sài Gòn - Vé của tôi";
@@ -195,5 +219,7 @@ namespace GUI_TicketSalesSystem
         private DataGridViewTextBoxColumn dgvGiaVe;
         private DataGridViewTextBoxColumn dgvTrangThai;
         private DataGridViewTextBoxColumn dgvNgayDat;
+        private Button btnThongKe;
+        private Button btnTimKiem;
     }
 }
