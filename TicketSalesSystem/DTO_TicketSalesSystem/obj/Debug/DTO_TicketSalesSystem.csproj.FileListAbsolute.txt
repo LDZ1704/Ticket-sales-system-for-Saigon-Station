@@ -1,6 +1,0 @@
-C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DTO_TicketSalesSystem\bin\Debug\DTO_TicketSalesSystem.dll
-C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DTO_TicketSalesSystem\bin\Debug\DTO_TicketSalesSystem.pdb
-C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DTO_TicketSalesSystem\obj\Debug\DTO_TicketSalesSystem.csproj.AssemblyReference.cache
-C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DTO_TicketSalesSystem\obj\Debug\DTO_TicketSalesSystem.csproj.CoreCompileInputs.cache
-C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DTO_TicketSalesSystem\obj\Debug\DTO_TicketSalesSystem.dll
-C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\DTO_TicketSalesSystem\obj\Debug\DTO_TicketSalesSystem.pdb

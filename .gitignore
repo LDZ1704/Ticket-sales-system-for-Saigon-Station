@@ -27,4 +27,12 @@ CopilotIndices/
 *.tmp
 
 # Bỏ file tạm trong dự án
-TicketSalesSystem/.vs/
+TicketSalesSystem/.vs/.vs/
+bin/
+obj/
+*.dll
+*.pdb
+*.cache
+*.suo
+*.user
+*.userosscache
