@@ -19,12 +19,10 @@ namespace GUI_TicketSalesSystem
         private List<DTO_GaTau> danhSachGa;
         private BUS_GaTau busGaTau = new BUS_GaTau();
         private BUS_ChuyenTau busChuyenTau = new BUS_ChuyenTau();
-        public FormTraCuu(string username = "")
+        private BUS_Toa busToa = new BUS_Toa();
+        public FormTraCuu()
         {
             InitializeComponent();
-            this.Load += FormTraCuu_Load;
-            this.btnTraCuu.Click += btnTraCuu_Click;
-            this.btnDatVe.Click += btnDatVe_Click;
         }
 
         private void FormTraCuu_Load(object sender, EventArgs e)
@@ -76,6 +74,9 @@ namespace GUI_TicketSalesSystem
                     tenTuyen = parts.Length > 1 ? parts[1] : "N/A";
                 }
 
+                // Tính giá vé cơ bản cho chuyến (có thể lấy từ toa đầu tiên)
+                decimal giaVeCoBan = TinhGiaVeCoBanTheoChuyenTau(item.MaChuyen ?? 0);
+
                 dgvKetQua.Rows.Add(
                     item.MaChuyen,
                     tenTau,
@@ -83,9 +84,38 @@ namespace GUI_TicketSalesSystem
                     item.TrangThai,
                     item.GioKhoiHanh.ToString("dd/MM/yyyy HH:mm"),
                     item.GioDen.ToString("dd/MM/yyyy HH:mm"),
+                    $"{giaVeCoBan:N0} VND",
                     item.GhiChu
                 );
             }
+        }
+
+        private decimal TinhGiaVeCoBanTheoChuyenTau(int maChuyen)
+        {
+            try
+            {
+                var dsToa = busToa.LayToaBangChuyenTau(maChuyen);
+                if (dsToa.Count > 0)
+                {
+                    var toaDauTien = dsToa[0];
+                    switch (toaDauTien.LoaiGhe?.ToLower())
+                    {
+                        case "ghế mềm điều hòa":
+                            return 400000;
+                        case "ghế cứng":
+                            return 250000;
+                        case "giường nằm 4 chỗ":
+                            return 550000;
+                        case "giường nằm 6 chỗ":
+                            return 450000;
+                        default:
+                            return 350000;
+                    }
+                }
+            }
+            catch { }
+
+            return 350000;
         }
 
         private void btnTraCuu_Click(object sender, EventArgs e)

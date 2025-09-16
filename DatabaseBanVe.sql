@@ -210,6 +210,7 @@ SELECT * FROM ChuyenTau
 SELECT * FROM HanhKhach
 SELECT * FROM TaiKhoan
 SELECT * FROM NguoiDung
+SELECT * FROM Ve
 
 use master
 go

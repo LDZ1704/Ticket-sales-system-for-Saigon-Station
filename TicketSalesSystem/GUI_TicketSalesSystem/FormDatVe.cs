@@ -29,7 +29,8 @@ namespace GUI_TicketSalesSystem
         {
             InitializeComponent();
             this.maChuyen = maChuyen;
-            this.Load += FormDatVe_Load;
+            SetupEvents();
+            SetDefaultValues();
         }
 
         private void FormDatVe_Load(object sender, EventArgs e)
@@ -38,8 +39,6 @@ namespace GUI_TicketSalesSystem
             {
                 LoadThongTinChuyen();
                 LoadToas();
-                SetupEvents();
-                SetDefaultValues();
                 LoadThongTinNguoiDung();
             }
             catch (Exception ex)
@@ -99,7 +98,6 @@ namespace GUI_TicketSalesSystem
                 }
             }
         }
-
 
         private void LoadThongTinChuyen()
         {
@@ -188,7 +186,6 @@ namespace GUI_TicketSalesSystem
         private void SetupEvents()
         {
             cboToa.SelectedIndexChanged += cboToa_SelectedIndexChanged;
-            btnDatVe.Click += btnDatVe_Click;
             dgvVe.SelectionChanged += dgvVe_SelectionChanged;
         }
         private void SetDefaultValues()
@@ -202,6 +199,8 @@ namespace GUI_TicketSalesSystem
             if (cboToa.SelectedItem is ComboBoxItem item)
             {
                 LoadGhes((int)item.Value);
+                decimal giaVe = TinhGiaVeTheoToa();
+                txtGiaVe.Text = $"{giaVe:N0} VND";
             }
         }
 
@@ -233,8 +232,7 @@ namespace GUI_TicketSalesSystem
                 var selectedGhe = currentGhes.FirstOrDefault(g => g.SoHieu == soGhe);
                 if (selectedGhe == null || selectedGhe.TrangThai != "TRONG")
                 {
-                    MessageBox.Show("Ghế đã được chọn hoặc không hợp lệ!", "Thông báo",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ghế đã được chọn hoặc không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -266,13 +264,12 @@ namespace GUI_TicketSalesSystem
                     bool success = busDatVe.DatVe(datVeInput);
                     if (success)
                     {
-                        MessageBox.Show("Đặt vé thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ClearForm();
                         // Reload ghế để cập nhật trạng thái
                         if (cboToa.SelectedItem is ComboBoxItem item)
                         {
                             LoadGhes((int)item.Value);
                         }
+                        MessageBox.Show("Đặt vé thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -280,6 +277,31 @@ namespace GUI_TicketSalesSystem
             {
                 MessageBox.Show($"Lỗi đặt vé: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private decimal TinhGiaVeTheoToa()
+        {
+            if (cboToa.SelectedItem is ComboBoxItem item)
+            {
+                var toa = busToa.LayToaBangId((int)item.Value);
+                if (toa != null)
+                {
+                    switch (toa.LoaiGhe?.ToLower())
+                    {
+                        case "ghế mềm điều hòa":
+                            return 400000;
+                        case "ghế cứng":
+                            return 250000;
+                        case "giường nằm 4 chỗ":
+                            return 550000;
+                        case "giường nằm 6 chỗ":
+                            return 450000;
+                        default:
+                            return 350000;
+                    }
+                }
+            }
+            return 350000;
         }
 
         private bool ValidateInput()
@@ -355,15 +377,6 @@ namespace GUI_TicketSalesSystem
         private int LayMaNguoiDungHienTai()
         {
             return UserSession.UserId;
-        }
-
-        private void ClearForm()
-        {
-            txtHoTen.Clear();
-            txtSoGiayTo.Clear();
-            cboGioiTinh.SelectedIndex = 0;
-            dtpNgaySinh.Value = DateTime.Now.AddYears(-18);
-            dgvVe.ClearSelection();
         }
     }
 

@@ -18,7 +18,6 @@ namespace DAL_TicketSalesSystem
                             join td in ctx.TuyenDuongs on ct.MaTuyen equals td.MaTuyen
                             join gdi in ctx.GaTaus on td.MaGaDi equals gdi.MaGaTau
                             join gden in ctx.GaTaus on td.MaGaDen equals gden.MaGaTau
-                            where ct.TrangThai == "MOBAN"
                             select new DTO_ChuyenTau
                             {
                                 MaChuyen = ct.MaChuyen,
@@ -113,6 +112,46 @@ namespace DAL_TicketSalesSystem
                                  MoTa = td.MoTa
                              };
                 return result.FirstOrDefault();
+            }
+        }
+
+        public List<DTO_ChuyenTau> LayDanhSachChuyenTauMoBan()
+        {
+            using (var ctx = new TicketSalesContext())
+            {
+                var query = ctx.ChuyenTaus
+                    .Where(c => c.TrangThai == "MOBAN")
+                    .Select(c => new DTO_ChuyenTau
+                    {
+                        MaChuyen = c.MaChuyen,
+                        MaTau = c.MaTau ?? 0,
+                        MaTuyen = c.MaTuyen ?? 0,
+                        GioKhoiHanh = c.GioKhoiHanh ?? DateTime.MinValue,
+                        GioDen = c.GioDen ?? DateTime.MinValue,
+                        TrangThai = c.TrangThai,
+                        GhiChu = c.GhiChu
+                    });
+
+                return query.ToList();
+            }
+        }
+
+        public List<DTO_Ghe> LayDanhSachGheTrongBangMaToa(int maToa)
+        {
+            using (var ctx = new TicketSalesContext())
+            {
+                var query = ctx.Ghes
+                       .Where(g => g.MaToa == maToa && g.TrangThai == "TRONG")
+                       .Select(g => new DTO_Ghe
+                       {
+                           MaGhe = g.MaGhe,
+                           SoHieu = g.SoHieu,
+                           ViTri = g.ViTri,
+                           TrangThai = g.TrangThai,
+                           MaToa = g.MaToa ?? 0
+                       });
+
+                return query.ToList();
             }
         }
     }

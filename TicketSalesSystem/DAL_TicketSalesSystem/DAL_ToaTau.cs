@@ -9,6 +9,29 @@ namespace DAL_TicketSalesSystem
 {
     public class DAL_ToaTau
     {
+        public DTO_ToaTau LayToaBangId(int maToa)
+        {
+            using (var ctx = new TicketSalesContext())
+            {
+                var toa = ctx.ToaTaus
+                    .Where(t => t.MaToa == maToa)
+                    .Select(t => new DTO_ToaTau
+                    {
+                        MaToa = t.MaToa,
+                        TenToa = t.TenToa,
+                        LoaiGhe = t.LoaiGhe,
+                        ViTri = t.ViTri,
+                        MaTau = t.MaTau ?? 0,
+                        //thêm hiển thị
+                        DisplayText = t.TenToa + " - " + t.LoaiGhe,
+                        SoChoTrong = t.Ghes.Count(g => g.TrangThai == "TRONG")
+                    })
+                    .FirstOrDefault();
+
+                return toa;
+            }
+        }
+
         public List<DTO_ToaTau> LayToaBangChuyenTau(int maChuyen)
         {
             using (var ctx = new TicketSalesContext())

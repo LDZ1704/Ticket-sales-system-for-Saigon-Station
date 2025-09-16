@@ -58,7 +58,7 @@ namespace GUI_TicketSalesSystem
             // lblThongTinChuyen
             // 
             this.lblThongTinChuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThongTinChuyen.Location = new System.Drawing.Point(399, 23);
+            this.lblThongTinChuyen.Location = new System.Drawing.Point(442, 21);
             this.lblThongTinChuyen.Name = "lblThongTinChuyen";
             this.lblThongTinChuyen.Size = new System.Drawing.Size(320, 40);
             this.lblThongTinChuyen.TabIndex = 0;
@@ -90,7 +90,7 @@ namespace GUI_TicketSalesSystem
             this.dgvVe.Name = "dgvVe";
             this.dgvVe.ReadOnly = true;
             this.dgvVe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVe.Size = new System.Drawing.Size(637, 300);
+            this.dgvVe.Size = new System.Drawing.Size(770, 300);
             this.dgvVe.TabIndex = 3;
             this.dgvVe.SelectionChanged += new System.EventHandler(this.dgvVe_SelectionChanged);
             // 
@@ -243,7 +243,7 @@ namespace GUI_TicketSalesSystem
             // 
             // FormDatVe
             // 
-            this.ClientSize = new System.Drawing.Size(1091, 406);
+            this.ClientSize = new System.Drawing.Size(1219, 406);
             this.Controls.Add(this.lblThongTinChuyen);
             this.Controls.Add(this.lblToa);
             this.Controls.Add(this.cboToa);
@@ -260,6 +260,8 @@ namespace GUI_TicketSalesSystem
             this.Controls.Add(this.txtGiaVe);
             this.Controls.Add(this.btnDatVe);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormDatVe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ thống bán vé ga Sài Gòn - Đặt vé";

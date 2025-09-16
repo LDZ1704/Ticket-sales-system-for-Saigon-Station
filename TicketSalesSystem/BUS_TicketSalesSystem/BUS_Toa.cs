@@ -33,5 +33,10 @@ namespace BUS_TicketSalesSystem
                 throw new Exception($"Lỗi lấy danh sách toa: {ex.Message}");
             }
         }
+
+        public DTO_ToaTau LayToaBangId(int maToa)
+        {
+            return dalToaTau.LayToaBangId(maToa);
+        }
     }
 }
