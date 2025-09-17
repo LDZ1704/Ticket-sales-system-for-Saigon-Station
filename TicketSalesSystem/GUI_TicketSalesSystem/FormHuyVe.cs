@@ -108,7 +108,7 @@ namespace GUI_TicketSalesSystem
                     return;
 
                 // Thực hiện hủy vé
-                bool ketQua = busVe.HuyVe(_maVe);
+                bool ketQua = busVe.HuyVe(_maVe, UserSession.UserId);
 
                 if (ketQua)
                 {
