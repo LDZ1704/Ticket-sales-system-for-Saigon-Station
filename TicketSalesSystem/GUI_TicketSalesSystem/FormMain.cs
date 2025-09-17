@@ -166,7 +166,6 @@ namespace GUI_TicketSalesSystem
             {
                 // Admin có tất cả quyền
                 mnuThongKe.Visible = true;
-                mnuThongKe.Text = "Thống kê và Báo cáo";
 
                 // Có thể thêm menu admin khác
                 // mnuQuanLyUser.Visible = true;

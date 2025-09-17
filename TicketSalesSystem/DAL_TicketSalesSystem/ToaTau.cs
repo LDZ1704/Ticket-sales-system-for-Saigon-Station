@@ -25,6 +25,7 @@ namespace DAL_TicketSalesSystem
         public string LoaiGhe { get; set; }
         public Nullable<int> ViTri { get; set; }
         public Nullable<int> MaTau { get; set; }
+        public Nullable<decimal> GiaVe { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ghe> Ghes { get; set; }

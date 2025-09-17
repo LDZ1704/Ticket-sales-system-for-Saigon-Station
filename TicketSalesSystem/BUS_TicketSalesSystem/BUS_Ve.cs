@@ -135,7 +135,7 @@ namespace BUS_TicketSalesSystem
         }
 
         //Đổi vé với kiểm tra đầy đủ điều kiện
-        public bool DoiVe(int maVeCu, int maChuyenMoi, int maGheMoi, decimal giaVe, int maNguoiDung)
+        public bool DoiVe(int maVeCu, int maChuyenMoi, int maGheMoi, int maNguoiDung)
         {
             try
             {
@@ -168,8 +168,13 @@ namespace BUS_TicketSalesSystem
                 if (!busThanhToan.KiemTraDieuKienDoiVe(veCu.NgayKhoiHanh, chuyenMoi.GioKhoiHanh, DateTime.Now))
                     throw new Exception("Chuyến tàu mới không thỏa mãn điều kiện đổi vé");
 
+                // Lấy giá vé mới từ toa
+                decimal giaVeMoi = dalVe.LayGiaVeTuGhe(maGheMoi);
+                if (giaVeMoi <= 0)
+                    throw new Exception("Không thể xác định giá vé mới");
+
                 // Tính chênh lệch giá vé
-                decimal chenhLech = busThanhToan.TinhChenhLechGiaVe(veCu.GiaVe, giaVe);
+                decimal chenhLech = busThanhToan.TinhChenhLechGiaVe(veCu.GiaVe, giaVeMoi);
 
                 // Tạo thanh toán cho chênh lệch (nếu có)
                 int maThanhToan = 0;
@@ -192,11 +197,43 @@ namespace BUS_TicketSalesSystem
                 }
 
                 string maQR = Guid.NewGuid().ToString();
-                return dalVe.DoiVe(maVeCu, maGheMoi, maChuyenMoi, maThanhToan, giaVe, maQR, veCu.MaHanhKhach);
+                return dalVe.DoiVe(maVeCu, maGheMoi, maChuyenMoi, maThanhToan, giaVeMoi, maQR, veCu.MaHanhKhach);
             }
             catch (Exception ex)
             {
                 throw new Exception($"Lỗi đổi vé: {ex.Message}");
+            }
+        }
+
+        //Lấy giá vé từ ghế được chọn
+        public decimal LayGiaVeTuGhe(int maGhe)
+        {
+            try
+            {
+                if (maGhe <= 0)
+                    throw new ArgumentException("Mã ghế không hợp lệ");
+
+                return dalVe.LayGiaVeTuGhe(maGhe);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi lấy giá vé từ ghế: {ex.Message}");
+            }
+        }
+
+        //Lấy giá vé từ toa
+        public decimal LayGiaVeTuToa(int maToa)
+        {
+            try
+            {
+                if (maToa <= 0)
+                    throw new ArgumentException("Mã toa không hợp lệ");
+
+                return dalVe.LayGiaVeTuToa(maToa);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi lấy giá vé từ toa: {ex.Message}");
             }
         }
 

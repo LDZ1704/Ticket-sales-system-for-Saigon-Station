@@ -154,5 +154,64 @@ namespace DAL_TicketSalesSystem
                 return query.ToList();
             }
         }
+
+        // Lấy giá vé cơ bản nhất của chuyến tàu(từ toa có giá thấp nhất)
+        public decimal LayGiaVeCoBanBangChuyen(int maChuyen)
+        {
+            using (var ctx = new TicketSalesContext())
+            {
+                var result = from ct in ctx.ChuyenTaus
+                             join tt in ctx.ToaTaus on ct.MaTau equals tt.MaTau
+                             where ct.MaChuyen == maChuyen
+                             orderby tt.GiaVe
+                             select tt.GiaVe;
+
+                return result.FirstOrDefault() ?? 0;
+            }
+        }
+
+        // Lấy danh sách giá vé theo toa của chuyến tàu
+        public List<dynamic> LayDanhSachGiaVeTheoChuyen(int maChuyen)
+        {
+            using (var ctx = new TicketSalesContext())
+            {
+                var result = from ct in ctx.ChuyenTaus
+                             join tt in ctx.ToaTaus on ct.MaTau equals tt.MaTau
+                             where ct.MaChuyen == maChuyen
+                             orderby tt.ViTri
+                             select new
+                             {
+                                 MaToa = tt.MaToa,
+                                 TenToa = tt.TenToa,
+                                 LoaiGhe = tt.LoaiGhe,
+                                 GiaVe = tt.GiaVe ?? 0,
+                                 ViTri = tt.ViTri
+                             };
+
+                return result.Cast<dynamic>().ToList();
+            }
+        }
+
+        // Lấy thông tin toa và giá vé từ ghế
+        public dynamic LayThongTinToaVaGiaVeTuGhe(int maGhe)
+        {
+            using (var ctx = new TicketSalesContext())
+            {
+                var result = from g in ctx.Ghes
+                             join tt in ctx.ToaTaus on g.MaToa equals tt.MaToa
+                             where g.MaGhe == maGhe
+                             select new
+                             {
+                                 MaToa = tt.MaToa,
+                                 TenToa = tt.TenToa,
+                                 LoaiGhe = tt.LoaiGhe,
+                                 GiaVe = tt.GiaVe ?? 0,
+                                 SoHieu = g.SoHieu,
+                                 ViTri = g.ViTri
+                             };
+
+                return result.FirstOrDefault();
+            }
+        }
     }
 }

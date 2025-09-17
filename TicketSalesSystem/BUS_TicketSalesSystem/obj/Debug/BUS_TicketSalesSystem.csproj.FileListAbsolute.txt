@@ -1,5 +1,3 @@
-C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\BUS_TicketSalesSystem\obj\Debug\BUS_TicketSalesSystem.csproj.AssemblyReference.cache
-C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\BUS_TicketSalesSystem\obj\Debug\BUS_TicketSalesSystem.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\BUS_TicketSalesSystem\bin\Debug\BUS_TicketSalesSystem.dll.config
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\BUS_TicketSalesSystem\bin\Debug\BUS_TicketSalesSystem.dll
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\BUS_TicketSalesSystem\bin\Debug\BUS_TicketSalesSystem.pdb
@@ -12,6 +10,8 @@ C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSale
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\BUS_TicketSalesSystem\bin\Debug\DTO_TicketSalesSystem.pdb
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\BUS_TicketSalesSystem\bin\Debug\EntityFramework.xml
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\BUS_TicketSalesSystem\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\BUS_TicketSalesSystem\obj\Debug\BUS_TicketSalesSystem.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\BUS_TicketSalesSystem\obj\Debug\BUS_TicketSalesSystem.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\BUS_TicketSalesSystem\obj\Debug\BUS_Tick.A53E251D.Up2Date
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\BUS_TicketSalesSystem\obj\Debug\BUS_TicketSalesSystem.dll
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\BUS_TicketSalesSystem\obj\Debug\BUS_TicketSalesSystem.pdb

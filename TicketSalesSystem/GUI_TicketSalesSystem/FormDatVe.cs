@@ -86,6 +86,7 @@ namespace GUI_TicketSalesSystem
                 Console.WriteLine($"Không thể load thông tin: {ex.Message}");
             }
         }
+
         // Helper method để set giới tính
         private void SetGioiTinh(string gioiTinh)
         {
@@ -155,12 +156,16 @@ namespace GUI_TicketSalesSystem
                 dgvVe.Rows.Clear();
                 foreach (var ghe in list)
                 {
+                    string trangThaiHienThi = ghe.TrangThai == "DADAT" ? "Đã được đặt" : "Có thể đặt";
+                    string viTriGhe = ghe.ViTri ?? "N/A";
+                    string loaiGhe = LayLoaiGheBangToa(maToa);
+
                     dgvVe.Rows.Add(
                         maChuyen,
-                        "", //Mã hành khách sẽ được tạo sau
+                        viTriGhe,
                         ghe.SoHieu,
-                        ghe.TrangThai,
-                        "" //Mã QR sẽ được tạo sau khi đặt
+                        trangThaiHienThi,
+                        loaiGhe
                     );
 
                     // Đổi màu dòng theo trạng thái ghế
@@ -170,17 +175,40 @@ namespace GUI_TicketSalesSystem
                         row.DefaultCellStyle.BackColor = Color.LightGray;
                         row.DefaultCellStyle.SelectionBackColor = Color.Gray;
                         row.ReadOnly = true;
+                        row.Cells[2].ToolTipText = "Ghế này đã có người đặt";
                     }
                     else
                     {
                         row.DefaultCellStyle.BackColor = Color.LightGreen;
                         row.DefaultCellStyle.SelectionBackColor = Color.Green;
+                        row.Cells[2].ToolTipText = $"Ghế {ghe.SoHieu} - Có thể đặt";
                     }
+                }
+
+                if (dgvVe.Columns.Count >= 5)
+                {
+                    dgvVe.Columns[0].HeaderText = "Chuyến";
+                    dgvVe.Columns[1].HeaderText = "Vị trí";
+                    dgvVe.Columns[2].HeaderText = "Số ghế";
+                    dgvVe.Columns[3].HeaderText = "Trạng thái";
+                    dgvVe.Columns[4].HeaderText = "Loại ghế";
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi tải danh sách ghế: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private string LayLoaiGheBangToa(int maToa)
+        {
+            try
+            {
+                var toa = busToa.LayToaBangId(maToa);
+                return toa?.LoaiGhe ?? "N/A";
+            }
+            catch
+            {
+                return "N/A";
             }
         }
         private void SetupEvents()
@@ -190,8 +218,8 @@ namespace GUI_TicketSalesSystem
         }
         private void SetDefaultValues()
         {
-            // Set giá vé default
-            txtGiaVe.Text = "350,000 VND";
+            txtGiaVe.Text = "Chọn toa để xem giá vé";
+            txtGiaVe.ReadOnly = true;
         }
 
         private void cboToa_SelectedIndexChanged(object sender, EventArgs e)
@@ -199,8 +227,22 @@ namespace GUI_TicketSalesSystem
             if (cboToa.SelectedItem is ComboBoxItem item)
             {
                 LoadGhes((int)item.Value);
-                decimal giaVe = TinhGiaVeTheoToa();
-                txtGiaVe.Text = $"{giaVe:N0} VND";
+                try
+                {
+                    decimal giaVe = busDatVe.LayGiaVeTuToa((int)item.Value);
+                    txtGiaVe.Text = $"{giaVe:N0} VND";
+
+                    int soGheTrong = currentGhes.Count(g => g.TrangThai == "TRONG");
+                    int tongGhe = currentGhes.Count;
+                    lbSoGheTrong.Text = $"Ghế trống: {soGheTrong}/{tongGhe}";
+                    lbSoGheTrong.ForeColor = soGheTrong > 0 ? Color.Green : Color.Red;
+                }
+                catch
+                {
+                    txtGiaVe.Text = "Không thể lấy giá vé";
+                    lbSoGheTrong.Text = "Không thể lấy thông tin ghế";
+                    lbSoGheTrong.ForeColor = Color.Red;
+                }
             }
         }
 
@@ -212,7 +254,32 @@ namespace GUI_TicketSalesSystem
                 string trangThai = selectedRow.Cells["dgvTrangThai"].Value?.ToString() ?? "";
 
                 // Enable button nếu ghế trống
-                btnDatVe.Enabled = (trangThai == "TRONG");
+                btnDatVe.Enabled = (trangThai == "Có thể đặt");
+
+                // Hiển thị thông tin ghế được chọn
+                if (trangThai == "Có thể đặt")
+                {
+                    string soGhe = selectedRow.Cells["dgvSoGhe"].Value.ToString();
+                    var selectedGhe = currentGhes.FirstOrDefault(g => g.SoHieu == soGhe);
+
+                    if (selectedGhe != null)
+                    {
+                        try
+                        {
+                            // Lấy giá vé chính xác cho ghế này
+                            decimal giaVeGhe = busDatVe.LayGiaVeChoHienThi(selectedGhe.MaGhe ?? 0);
+                            if (giaVeGhe > 0)
+                            {
+                                txtGiaVe.Text = $"{giaVeGhe:N0} VND";
+                            }
+                        }
+                        catch
+                        {
+                            decimal giaVeToa = busToa.LayGiaVeBangMaToa(selectedGhe.MaToa);
+                            txtGiaVe.Text = $"{giaVeToa:N0} VND";
+                        }
+                    }
+                }
             }
             else
             {
@@ -236,6 +303,14 @@ namespace GUI_TicketSalesSystem
                     return;
                 }
 
+                // Lấy giá vé thực tế từ hệ thống
+                decimal giaVeThucTe = busDatVe.LayGiaVeChoHienThi(selectedGhe.MaGhe ?? 0);
+                if (giaVeThucTe <= 0)
+                {
+                    MessageBox.Show("Không thể xác định giá vé!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 var datVeInput = new DTO_DatVe
                 {
                     MaChuyen = maChuyen,
@@ -244,16 +319,15 @@ namespace GUI_TicketSalesSystem
                     SoGiayTo = txtSoGiayTo.Text.Trim(),
                     GioiTinh = cboGioiTinh.SelectedItem.ToString(),
                     NgaySinh = dtpNgaySinh.Value,
-                    GiaVe = ParseGiaVe(txtGiaVe.Text),
                     MaNguoiDung = LayMaNguoiDungHienTai()
                 };
 
-                // Xác nhận đặt vé
+                // Xác nhận đặt vé với giá vé thực tế
                 var confirmResult = MessageBox.Show(
                     $"Xác nhận đặt vé:\n" +
                     $"Hành khách: {datVeInput.HoTen}\n" +
                     $"Ghế: {selectedGhe.SoHieu}\n" +
-                    $"Giá vé: {txtGiaVe.Text}",
+                    $"Giá vé: {giaVeThucTe:N0} VND",
                     "Xác nhận đặt vé",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question
@@ -269,7 +343,13 @@ namespace GUI_TicketSalesSystem
                         {
                             LoadGhes((int)item.Value);
                         }
-                        MessageBox.Show("Đặt vé thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        MessageBox.Show(
+                            $"Đặt vé thành công!\n\nGiá vé: {giaVeThucTe:N0} VND",
+                            "Thành công",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information
+                        );
                     }
                 }
             }
@@ -277,31 +357,6 @@ namespace GUI_TicketSalesSystem
             {
                 MessageBox.Show($"Lỗi đặt vé: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private decimal TinhGiaVeTheoToa()
-        {
-            if (cboToa.SelectedItem is ComboBoxItem item)
-            {
-                var toa = busToa.LayToaBangId((int)item.Value);
-                if (toa != null)
-                {
-                    switch (toa.LoaiGhe?.ToLower())
-                    {
-                        case "ghế mềm điều hòa":
-                            return 400000;
-                        case "ghế cứng":
-                            return 250000;
-                        case "giường nằm 4 chỗ":
-                            return 550000;
-                        case "giường nằm 6 chỗ":
-                            return 450000;
-                        default:
-                            return 350000;
-                    }
-                }
-            }
-            return 350000;
         }
 
         private bool ValidateInput()
@@ -359,19 +414,6 @@ namespace GUI_TicketSalesSystem
             }
 
             return true;
-        }
-
-        private decimal ParseGiaVe(string giaVeText)
-        {
-            try
-            {
-                string cleanText = giaVeText.Replace(" VND", "").Replace(",", "").Replace(".", "");
-                return decimal.Parse(cleanText);
-            }
-            catch
-            {
-                return 350000; // Giá mặc định
-            }
         }
 
         private int LayMaNguoiDungHienTai()

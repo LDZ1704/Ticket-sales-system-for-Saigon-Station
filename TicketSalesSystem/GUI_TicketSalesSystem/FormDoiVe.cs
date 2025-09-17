@@ -106,29 +106,40 @@ namespace GUI_TicketSalesSystem
         {
             try
             {
-                //Lấy tất cả chuyến mở bán
+                // Lấy tất cả chuyến mở bán
                 var dsChuyen = busChuyenTau.LayDanhSachChuyenTauMoBan();
 
-                //Lọc chuyến có thể đổi (cùng ngày hoặc sau ngày khởi hành cũ)
+                // Lọc chuyến có thể đổi (cùng ngày hoặc sau ngày khởi hành cũ)
                 var chuyenCoTheDoi = dsChuyen.Where(c =>
                     c.GioKhoiHanh.Date >= _thongTinVeCu.NgayKhoiHanh.Date &&
-                    c.MaChuyen != _thongTinVeCu.MaChuyen
+                    c.MaChuyen != _thongTinVeCu.MaChuyen // Loại trừ chuyến hiện tại
                 ).ToList();
 
-                // Thêm thông tin hiển thị
+                // Tạo danh sách hiển thị với thông tin đầy đủ
+                var dsHienThi = new List<dynamic>();
                 foreach (var chuyen in chuyenCoTheDoi)
                 {
                     var tenTau = busChuyenTau.LayTuyenBangChuyen(chuyen.MaChuyen ?? 0);
                     var tuyen = busChuyenTau.LayTuyenBangChuyen(chuyen.MaChuyen ?? 0);
                     chuyen.TenTau = tenTau;
                     chuyen.Tuyen = tuyen;
+
+                    dsHienThi.Add(new
+                    {
+                        MaChuyen = chuyen.MaChuyen,
+                        HienThi = $"{tenTau} - {tuyen} - {chuyen.GioKhoiHanh:dd/MM/yyyy HH:mm}",
+                        TenTau = tenTau,
+                        Tuyen = tuyen,
+                        GioKhoiHanh = chuyen.GioKhoiHanh,
+                        MaTau = chuyen.MaTau
+                    });
                 }
 
-                cboChuyenMoi.DataSource = chuyenCoTheDoi;
-                cboChuyenMoi.DisplayMember = "GhiChu";
+                cboChuyenMoi.DataSource = dsHienThi;
+                cboChuyenMoi.DisplayMember = "HienThi";
                 cboChuyenMoi.ValueMember = "MaChuyen";
 
-                if (chuyenCoTheDoi.Count == 0)
+                if (dsHienThi.Count == 0)
                 {
                     MessageBox.Show("Không có chuyến tàu nào khả dụng để đổi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     btnXacNhan.Enabled = false;
@@ -157,13 +168,14 @@ namespace GUI_TicketSalesSystem
         {
             try
             {
-                if (cboChuyenMoi.SelectedItem is DTO_ChuyenTau chuyen)
+                if (cboChuyenMoi.SelectedItem != null)
                 {
-                    txtTuyen.Text = chuyen.Tuyen;
-                    txtTau.Text = chuyen.TenTau;
+                    var selectedItem = (dynamic)cboChuyenMoi.SelectedItem;
+                    txtTuyen.Text = selectedItem.Tuyen;
+                    txtTau.Text = selectedItem.TenTau;
 
                     // Load toa theo tàu
-                    var dsToa = busToa.LayToaBangChuyenTau(chuyen.MaTau);
+                    var dsToa = busToa.LayToaBangChuyenTau(selectedItem.MaTau);
                     cboToaMoi.DataSource = dsToa;
                     cboToaMoi.DisplayMember = "TenToa";
                     cboToaMoi.ValueMember = "MaToa";
@@ -191,6 +203,12 @@ namespace GUI_TicketSalesSystem
                 int maGheMoi = (int)cboGheMoi.SelectedValue;
                 decimal giaVeMoi = TinhGiaVeMoi();
 
+                if (giaVeMoi <= 0)
+                {
+                    MessageBox.Show("Không thể xác định giá vé mới!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 // Tính chênh lệch
                 decimal chenhLech = busThanhToan.TinhChenhLechGiaVe(_thongTinVeCu.GiaVe, giaVeMoi);
 
@@ -214,7 +232,7 @@ namespace GUI_TicketSalesSystem
                 if (result == DialogResult.Yes)
                 {
                     // Thực hiện đổi vé
-                    bool ketQua = busVe.DoiVe(_maVeCu, maChuyenMoi, maGheMoi, giaVeMoi, UserSession.UserId);
+                    bool ketQua = busVe.DoiVe(_maVeCu, maChuyenMoi, maGheMoi, UserSession.UserId);
 
                     if (ketQua)
                     {
@@ -249,14 +267,12 @@ namespace GUI_TicketSalesSystem
                 cboChuyenMoi.Focus();
                 return false;
             }
-
             if (cboToaMoi.SelectedValue == null)
             {
                 MessageBox.Show("Vui lòng chọn toa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cboToaMoi.Focus();
                 return false;
             }
-
             if (cboGheMoi.SelectedValue == null)
             {
                 MessageBox.Show("Vui lòng chọn ghế!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -310,24 +326,19 @@ namespace GUI_TicketSalesSystem
 
         private decimal TinhGiaVeMoi()
         {
-            // Logic tính giá vé theo toa, loại ghế - hiện tại giả lập
-            if (cboToaMoi.SelectedItem is DTO_ToaTau toa)
+            try
             {
-                switch (toa.LoaiGhe?.ToLower())
+                if (cboToaMoi.SelectedValue != null)
                 {
-                    case "ghế mềm điều hòa":
-                        return 400000;
-                    case "ghế cứng":
-                        return 250000;
-                    case "giường nằm 4 chỗ":
-                        return 550000;
-                    case "giường nằm 6 chỗ":
-                        return 450000;
-                    default:
-                        return 350000;
+                    int maToa = Convert.ToInt32(cboToaMoi.SelectedValue);
+                    return busVe.LayGiaVeTuToa(maToa);
                 }
+                return 0;
             }
-            return 350000;
+            catch
+            {
+                return 0;
+            }
         }
 
         private void HienThiChenhLech(decimal chenhLech)
