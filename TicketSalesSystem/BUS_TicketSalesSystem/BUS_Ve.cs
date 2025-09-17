@@ -55,7 +55,7 @@ namespace BUS_TicketSalesSystem
             }
         }
 
-        //Hủy vé với kiểm tra đầy đủ điều kiện
+        //Hủy vé
         public bool HuyVe(int maVe, int maNguoiDung)
         {
             try
@@ -82,37 +82,6 @@ namespace BUS_TicketSalesSystem
 
                 // Lấy mã ghế từ vé
                 int maGhe = veInfo.MaGhe;
-                if (maGhe <= 0)
-                    throw new Exception("Không tìm thấy ghế của vé");
-
-                // Cập nhật trạng thái vé
-                bool updateVe = dalVe.ChinhSuaTrangThaiVe(maVe, "DAHUY");
-                if (!updateVe)
-                    throw new Exception("Không thể hủy vé");
-
-                // Cập nhật trạng thái ghế về trống
-                bool updateGhe = dalGhe.ChinhSuaTrangThaiGhe(maGhe, "TRONG");
-                if (!updateGhe)
-                    throw new Exception("Không thể cập nhật trạng thái ghế");
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Lỗi hủy vé: {ex.Message}");
-            }
-        }
-
-        //Hủy vé đơn giản (không cần kiểm tra user - dùng cho formVeCuaToi)
-        public bool HuyVe(int maVe)
-        {
-            try
-            {
-                if (maVe <= 0)
-                    throw new ArgumentException("Mã vé không hợp lệ");
-
-                // Lấy mã ghế từ vé
-                int maGhe = dalVe.LayMaGheBangVe(maVe);
                 if (maGhe <= 0)
                     throw new Exception("Không tìm thấy ghế của vé");
 
