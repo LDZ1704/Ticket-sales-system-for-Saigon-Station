@@ -81,5 +81,26 @@ namespace DAL_TicketSalesSystem
                 return hanhKhach.MaHanhKhach;
             }
         }
+
+        public bool CapNhatHanhKhach(DTO_HanhKhach dto)
+        {
+            using (var ctx = new TicketSalesContext())
+            {
+                var hanhKhach = ctx.HanhKhaches.FirstOrDefault(h => h.MaHanhKhach == dto.MaHanhKhach);
+                if (hanhKhach == null) return false;
+
+                hanhKhach.HoTen = dto.HoTen;
+                hanhKhach.GioiTinh = dto.GioiTinh;
+                hanhKhach.NgaySinh = dto.NgaySinh;
+                hanhKhach.LoaiGiayTo = dto.LoaiGiayTo;
+                hanhKhach.SoGiayTo = dto.SoGiayTo;
+                hanhKhach.QuocTich = dto.QuocTich;
+                hanhKhach.Email = dto.Email;
+                hanhKhach.SoDienThoai = dto.SoDienThoai;
+                hanhKhach.GhiChu = dto.GhiChu;
+
+                return ctx.SaveChanges() > 0;
+            }
+        }
     }
 }

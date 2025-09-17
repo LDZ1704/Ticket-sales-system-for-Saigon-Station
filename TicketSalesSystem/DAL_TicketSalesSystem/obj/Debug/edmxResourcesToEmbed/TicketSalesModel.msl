@@ -102,6 +102,7 @@
     <EntitySetMapping Name="ToaTaus">
       <EntityTypeMapping TypeName="BanVeGaSaiGonModel.ToaTau">
         <MappingFragment StoreEntitySet="ToaTau">
+          <ScalarProperty Name="GiaVe" ColumnName="GiaVe" />
           <ScalarProperty Name="MaToa" ColumnName="MaToa" />
           <ScalarProperty Name="TenToa" ColumnName="TenToa" />
           <ScalarProperty Name="LoaiGhe" ColumnName="LoaiGhe" />

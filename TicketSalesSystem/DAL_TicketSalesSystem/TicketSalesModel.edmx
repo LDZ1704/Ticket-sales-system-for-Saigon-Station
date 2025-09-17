@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BanVeGaSaiGonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BanVeGaSaiGonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ChuyenTau">
           <Key>
             <PropertyRef Name="MaChuyen" />
@@ -12,8 +12,8 @@
           <Property Name="MaChuyen" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaTau" Type="int" />
           <Property Name="MaTuyen" Type="int" />
-          <Property Name="GioKhoiHanh" Type="date" />
-          <Property Name="GioDen" Type="date" />
+          <Property Name="GioKhoiHanh" Type="datetime" />
+          <Property Name="GioDen" Type="datetime" />
           <Property Name="TrangThai" Type="nvarchar" MaxLength="20" />
           <Property Name="GhiChu" Type="nvarchar" MaxLength="200" />
         </EntityType>
@@ -102,6 +102,7 @@
           <Property Name="MaToa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenToa" Type="nvarchar" MaxLength="50" />
           <Property Name="LoaiGhe" Type="nvarchar" MaxLength="50" />
+          <Property Name="GiaVe" Type="decimal" Precision="12" Scale="2" />
           <Property Name="ViTri" Type="int" />
           <Property Name="MaTau" Type="int" />
         </EntityType>
@@ -334,8 +335,7 @@
             <End Role="Ve" EntitySet="Ve" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BanVeGaSaiGonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -346,8 +346,8 @@
           <Property Name="MaChuyen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaTau" Type="Int32" />
           <Property Name="MaTuyen" Type="Int32" />
-          <Property Name="GioKhoiHanh" Type="DateTime" Precision="0" />
-          <Property Name="GioDen" Type="DateTime" Precision="0" />
+          <Property Name="GioKhoiHanh" Type="DateTime" Precision="3" />
+          <Property Name="GioDen" Type="DateTime" Precision="3" />
           <Property Name="TrangThai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Tau" Relationship="Self.FK__ChuyenTau__MaTau__5165187F" FromRole="ChuyenTau" ToRole="Tau" />
@@ -455,6 +455,7 @@
           <Property Name="MaTau" Type="Int32" />
           <NavigationProperty Name="Ghes" Relationship="Self.FK__Ghe__MaToa__4E88ABD4" FromRole="ToaTau" ToRole="Ghe" />
           <NavigationProperty Name="Tau" Relationship="Self.FK__ToaTau__MaTau__4AB81AF0" FromRole="ToaTau" ToRole="Tau" />
+          <Property Name="GiaVe" Type="Decimal" Precision="12" Scale="2" />
         </EntityType>
         <EntityType Name="TuyenDuong">
           <Key>
@@ -799,6 +800,7 @@
           <EntitySetMapping Name="ToaTaus">
             <EntityTypeMapping TypeName="BanVeGaSaiGonModel.ToaTau">
               <MappingFragment StoreEntitySet="ToaTau">
+                <ScalarProperty Name="GiaVe" ColumnName="GiaVe" />
                 <ScalarProperty Name="MaToa" ColumnName="MaToa" />
                 <ScalarProperty Name="TenToa" ColumnName="TenToa" />
                 <ScalarProperty Name="LoaiGhe" ColumnName="LoaiGhe" />

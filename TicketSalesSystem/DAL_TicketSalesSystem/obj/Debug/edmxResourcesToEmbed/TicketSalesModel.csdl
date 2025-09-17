@@ -7,8 +7,8 @@
     <Property Name="MaChuyen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="MaTau" Type="Int32" />
     <Property Name="MaTuyen" Type="Int32" />
-    <Property Name="GioKhoiHanh" Type="DateTime" Precision="0" />
-    <Property Name="GioDen" Type="DateTime" Precision="0" />
+    <Property Name="GioKhoiHanh" Type="DateTime" Precision="3" />
+    <Property Name="GioDen" Type="DateTime" Precision="3" />
     <Property Name="TrangThai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Tau" Relationship="Self.FK__ChuyenTau__MaTau__5165187F" FromRole="ChuyenTau" ToRole="Tau" />
@@ -116,6 +116,7 @@
     <Property Name="MaTau" Type="Int32" />
     <NavigationProperty Name="Ghes" Relationship="Self.FK__Ghe__MaToa__4E88ABD4" FromRole="ToaTau" ToRole="Ghe" />
     <NavigationProperty Name="Tau" Relationship="Self.FK__ToaTau__MaTau__4AB81AF0" FromRole="ToaTau" ToRole="Tau" />
+    <Property Name="GiaVe" Type="Decimal" Precision="12" Scale="2" />
   </EntityType>
   <EntityType Name="TuyenDuong">
     <Key>

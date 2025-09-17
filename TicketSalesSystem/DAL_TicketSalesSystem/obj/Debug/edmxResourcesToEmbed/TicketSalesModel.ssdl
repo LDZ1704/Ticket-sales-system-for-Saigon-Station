@@ -7,8 +7,8 @@
     <Property Name="MaChuyen" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MaTau" Type="int" />
     <Property Name="MaTuyen" Type="int" />
-    <Property Name="GioKhoiHanh" Type="date" />
-    <Property Name="GioDen" Type="date" />
+    <Property Name="GioKhoiHanh" Type="datetime" />
+    <Property Name="GioDen" Type="datetime" />
     <Property Name="TrangThai" Type="nvarchar" MaxLength="20" />
     <Property Name="GhiChu" Type="nvarchar" MaxLength="200" />
   </EntityType>
@@ -97,6 +97,7 @@
     <Property Name="MaToa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenToa" Type="nvarchar" MaxLength="50" />
     <Property Name="LoaiGhe" Type="nvarchar" MaxLength="50" />
+    <Property Name="GiaVe" Type="decimal" Precision="12" Scale="2" />
     <Property Name="ViTri" Type="int" />
     <Property Name="MaTau" Type="int" />
   </EntityType>

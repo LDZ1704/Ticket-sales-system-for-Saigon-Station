@@ -74,6 +74,7 @@ CREATE TABLE ToaTau (
     MaToa INT IDENTITY PRIMARY KEY,
     TenToa NVARCHAR(50),
     LoaiGhe NVARCHAR(50),
+	GiaVe DECIMAL(12,2),
     --bỏ sô lượng ghế do truy vấn đc
     ViTri INT, --vị trí này là thứ tự thôi, nên để int
     MaTau INT FOREIGN KEY REFERENCES Tau(MaTau)
@@ -151,16 +152,16 @@ INSERT INTO Tau(TenTau, MoTa) VALUES
 (N'SE22', N'Tàu khách Đà Nẵng - Hà Nội');
 
 -- Dữ liệu cho bảng ToaTau
-INSERT INTO ToaTau(TenToa, LoaiGhe, ViTri, MaTau) VALUES
-(N'A1', N'Ghế mềm điều hòa', 1, 1),
-(N'A2', N'Ghế cứng', 2, 1),
-(N'B1', N'Giường nằm 4 chỗ', 3, 1),
-(N'A1', N'Ghế mềm điều hòa', 1, 2),
-(N'B1', N'Giường nằm 6 chỗ', 2, 2),
-(N'A1', N'Ghế cứng', 1, 3),
-(N'A2', N'Ghế mềm', 2, 3),
-(N'A1', N'Ghế mềm điều hòa', 1, 4),
-(N'A1', N'Ghế cứng', 1, 5);
+INSERT INTO ToaTau(TenToa, GiaVe, LoaiGhe, ViTri, MaTau) VALUES
+(N'A1', 400000.00, N'Ghế mềm điều hòa', 1, 1),
+(N'A2', 350000.00, N'Ghế cứng', 2, 1),
+(N'B1', 300000.00, N'Giường nằm 4 chỗ', 3, 1),
+(N'A1', 400000.00, N'Ghế mềm điều hòa', 1, 2),
+(N'B1', 250000.00, N'Giường nằm 6 chỗ', 2, 2),
+(N'A1', 200000.00, N'Ghế cứng', 1, 3),
+(N'A2', 250000.00, N'Ghế mềm', 2, 3),
+(N'A1', 350000.00, N'Ghế mềm điều hòa', 1, 4),
+(N'A1', 200000.00, N'Ghế cứng', 1, 5);
 
 -- Dữ liệu cho bảng Ghe
 INSERT INTO Ghe(SoHieu, ViTri, TrangThai, MaToa) VALUES

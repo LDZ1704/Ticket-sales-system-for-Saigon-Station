@@ -118,10 +118,10 @@ namespace DAL_TicketSalesSystem
                             join g in ctx.Ghes on v.MaGhe equals g.MaGhe
                             join tt in ctx.ToaTaus on g.MaToa equals tt.MaToa
                             where v.MaVe == maVe
-                            select new { tt.TenToa, g.SoHieu };
+                            select new { tt.TenToa, g.SoHieu, tt.LoaiGhe, tt.GiaVe };
 
                 var result = query.FirstOrDefault();
-                return result != null ? $"{result.TenToa} - {result.SoHieu}" : string.Empty;
+                return result != null ? $"{result.TenToa} - {result.SoHieu} ({result.LoaiGhe})" : string.Empty;
             }
         }
 
@@ -176,7 +176,7 @@ namespace DAL_TicketSalesSystem
                                 MaQR = v.MaQR,
                                 HanhKhach = hk.HoTen,
                                 Tuyen = gdi.TenGa + " - " + gden.TenGa,
-                                ToaGhe = tt.TenToa + " - " + g.SoHieu,
+                                ToaGhe = tt.TenToa + " - " + g.SoHieu + " (" + tt.LoaiGhe + ")",
                                 NgayKhoiHanh = ct.GioKhoiHanh ?? DateTime.MinValue,
                                 NgayDat = th.NgayThanhToan ?? DateTime.MinValue
                             };
@@ -289,7 +289,7 @@ namespace DAL_TicketSalesSystem
                         // Đặt ghế mới
                         gheMoi.TrangThai = "DADAT";
 
-                        // Tạo vé mới
+                        // Tạo vé mới với giá vé từ toa
                         var veMoi = new Ve
                         {
                             MaHanhKhach = maHanhKhach,
@@ -327,6 +327,30 @@ namespace DAL_TicketSalesSystem
                             select new { TrangThai = g.Key, SoLuong = g.Count() };
 
                 return query.ToDictionary(x => x.TrangThai ?? "Unknown", x => x.SoLuong);
+            }
+        }
+
+        // Lấy giá vé từ toa theo ghế
+        public decimal LayGiaVeTuGhe(int maGhe)
+        {
+            using (var ctx = new TicketSalesContext())
+            {
+                var query = from g in ctx.Ghes
+                            join tt in ctx.ToaTaus on g.MaToa equals tt.MaToa
+                            where g.MaGhe == maGhe
+                            select tt.GiaVe;
+
+                return query.FirstOrDefault() ?? 0;
+            }
+        }
+
+        // Lấy giá vé từ toa theo mã toa
+        public decimal LayGiaVeTuToa(int maToa)
+        {
+            using (var ctx = new TicketSalesContext())
+            {
+                var toa = ctx.ToaTaus.FirstOrDefault(t => t.MaToa == maToa);
+                return toa?.GiaVe ?? 0;
             }
         }
     }
