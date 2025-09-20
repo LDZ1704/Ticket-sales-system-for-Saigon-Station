@@ -71,64 +71,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormBaoCaoTongHop.cs">
+    <Compile Include="QuanTriVien\FormBaoCaoTongHop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBaoCaoTongHop.Designer.cs">
+    <Compile Include="QuanTriVien\FormBaoCaoTongHop.Designer.cs">
       <DependentUpon>FormBaoCaoTongHop.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCaiDatHeThong.cs">
+    <Compile Include="QuanTriVien\FormCaiDatHeThong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCaiDatHeThong.Designer.cs">
+    <Compile Include="QuanTriVien\FormCaiDatHeThong.Designer.cs">
       <DependentUpon>FormCaiDatHeThong.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCapQuyen.cs">
+    <Compile Include="QuanTriVien\FormCapQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCapQuyen.Designer.cs">
+    <Compile Include="QuanTriVien\FormCapQuyen.Designer.cs">
       <DependentUpon>FormCapQuyen.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormChangePassword.cs">
+    <Compile Include="NguoiDung\FormChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormChangePassword.Designer.cs">
+    <Compile Include="NguoiDung\FormChangePassword.Designer.cs">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDashboard.cs">
+    <Compile Include="QuanTriVien\FormDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDashboard.Designer.cs">
+    <Compile Include="QuanTriVien\FormDashboard.Designer.cs">
       <DependentUpon>FormDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDatVe.cs">
+    <Compile Include="DatVe\FormDatVe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDatVe.Designer.cs">
+    <Compile Include="DatVe\FormDatVe.Designer.cs">
       <DependentUpon>FormDatVe.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDoiVe.cs">
+    <Compile Include="DatVe\FormDoiVe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDoiVe.Designer.cs">
+    <Compile Include="DatVe\FormDoiVe.Designer.cs">
       <DependentUpon>FormDoiVe.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormHuyVe.cs">
+    <Compile Include="DatVe\FormHuyVe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormHuyVe.Designer.cs">
+    <Compile Include="DatVe\FormHuyVe.Designer.cs">
       <DependentUpon>FormHuyVe.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLichSuHoatDong.cs">
+    <Compile Include="QuanTriVien\FormLichSuHoatDong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLichSuHoatDong.Designer.cs">
+    <Compile Include="QuanTriVien\FormLichSuHoatDong.Designer.cs">
       <DependentUpon>FormLichSuHoatDong.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
+    <Compile Include="NguoiDung\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
+    <Compile Include="NguoiDung\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMain.cs">
@@ -137,94 +137,94 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormQuanLyNguoiDung.cs">
+    <Compile Include="QuanTriVien\FormQuanLyNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormQuanLyNguoiDung.Designer.cs">
+    <Compile Include="QuanTriVien\FormQuanLyNguoiDung.Designer.cs">
       <DependentUpon>FormQuanLyNguoiDung.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormQuanTriVien.cs">
+    <Compile Include="QuanTriVien\FormQuanTriVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormQuanTriVien.Designer.cs">
+    <Compile Include="QuanTriVien\FormQuanTriVien.Designer.cs">
       <DependentUpon>FormQuanTriVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRegister.cs">
+    <Compile Include="NguoiDung\FormRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRegister.Designer.cs">
+    <Compile Include="NguoiDung\FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThongKe.cs">
+    <Compile Include="QuanTriVien\FormThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormThongKe.Designer.cs">
+    <Compile Include="QuanTriVien\FormThongKe.Designer.cs">
       <DependentUpon>FormThongKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTraCuu.cs">
+    <Compile Include="DatVe\FormTraCuu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTraCuu.Designer.cs">
+    <Compile Include="DatVe\FormTraCuu.Designer.cs">
       <DependentUpon>FormTraCuu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormVeCuaToi.cs">
+    <Compile Include="DatVe\FormVeCuaToi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormVeCuaToi.Designer.cs">
+    <Compile Include="DatVe\FormVeCuaToi.Designer.cs">
       <DependentUpon>FormVeCuaToi.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\Debounce.cs" />
-    <EmbeddedResource Include="FormBaoCaoTongHop.resx">
+    <EmbeddedResource Include="QuanTriVien\FormBaoCaoTongHop.resx">
       <DependentUpon>FormBaoCaoTongHop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCaiDatHeThong.resx">
+    <EmbeddedResource Include="QuanTriVien\FormCaiDatHeThong.resx">
       <DependentUpon>FormCaiDatHeThong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCapQuyen.resx">
+    <EmbeddedResource Include="QuanTriVien\FormCapQuyen.resx">
       <DependentUpon>FormCapQuyen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormChangePassword.resx">
+    <EmbeddedResource Include="NguoiDung\FormChangePassword.resx">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDashboard.resx">
+    <EmbeddedResource Include="QuanTriVien\FormDashboard.resx">
       <DependentUpon>FormDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDatVe.resx">
+    <EmbeddedResource Include="DatVe\FormDatVe.resx">
       <DependentUpon>FormDatVe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDoiVe.resx">
+    <EmbeddedResource Include="DatVe\FormDoiVe.resx">
       <DependentUpon>FormDoiVe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormHuyVe.resx">
+    <EmbeddedResource Include="DatVe\FormHuyVe.resx">
       <DependentUpon>FormHuyVe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLichSuHoatDong.resx">
+    <EmbeddedResource Include="QuanTriVien\FormLichSuHoatDong.resx">
       <DependentUpon>FormLichSuHoatDong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
+    <EmbeddedResource Include="NguoiDung\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormQuanLyNguoiDung.resx">
+    <EmbeddedResource Include="QuanTriVien\FormQuanLyNguoiDung.resx">
       <DependentUpon>FormQuanLyNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormQuanTriVien.resx">
+    <EmbeddedResource Include="QuanTriVien\FormQuanTriVien.resx">
       <DependentUpon>FormQuanTriVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRegister.resx">
+    <EmbeddedResource Include="NguoiDung\FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormThongKe.resx">
+    <EmbeddedResource Include="QuanTriVien\FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTraCuu.resx">
+    <EmbeddedResource Include="DatVe\FormTraCuu.resx">
       <DependentUpon>FormTraCuu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormVeCuaToi.resx">
+    <EmbeddedResource Include="DatVe\FormVeCuaToi.resx">
       <DependentUpon>FormVeCuaToi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
