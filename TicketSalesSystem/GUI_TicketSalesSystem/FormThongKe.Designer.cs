@@ -38,15 +38,17 @@ namespace GUI_TicketSalesSystem
             this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
             this.lblDenNgay = new System.Windows.Forms.Label();
             this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
+            this.btnXuatBaoCao = new System.Windows.Forms.Button();
+            this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.lblDoanhThu = new System.Windows.Forms.Label();
             this.lblSoVe = new System.Windows.Forms.Label();
             this.dgvDoanhThu = new System.Windows.Forms.DataGridView();
+            this.tabVe = new System.Windows.Forms.TabPage();
+            this.tabTuyen = new System.Windows.Forms.TabPage();
             this.dgvNgay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSoVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabVe = new System.Windows.Forms.TabPage();
-            this.tabTuyen = new System.Windows.Forms.TabPage();
             this.tabThongKe.SuspendLayout();
             this.tabDoanhThu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).BeginInit();
@@ -62,6 +64,7 @@ namespace GUI_TicketSalesSystem
             this.tabThongKe.SelectedIndex = 0;
             this.tabThongKe.Size = new System.Drawing.Size(1141, 620);
             this.tabThongKe.TabIndex = 0;
+            this.tabThongKe.SelectedIndexChanged += new System.EventHandler(this.TabThongKe_SelectedIndexChanged);
             // 
             // tabDoanhThu
             // 
@@ -69,6 +72,8 @@ namespace GUI_TicketSalesSystem
             this.tabDoanhThu.Controls.Add(this.dtpTuNgay);
             this.tabDoanhThu.Controls.Add(this.lblDenNgay);
             this.tabDoanhThu.Controls.Add(this.dtpDenNgay);
+            this.tabDoanhThu.Controls.Add(this.btnXuatBaoCao);
+            this.tabDoanhThu.Controls.Add(this.btnLamMoi);
             this.tabDoanhThu.Controls.Add(this.btnThongKe);
             this.tabDoanhThu.Controls.Add(this.lblDoanhThu);
             this.tabDoanhThu.Controls.Add(this.lblSoVe);
@@ -112,6 +117,24 @@ namespace GUI_TicketSalesSystem
             this.dtpDenNgay.TabIndex = 3;
             this.dtpDenNgay.Value = new System.DateTime(2025, 9, 4, 0, 0, 0, 0);
             // 
+            // btnXuatBaoCao
+            // 
+            this.btnXuatBaoCao.Location = new System.Drawing.Point(740, 64);
+            this.btnXuatBaoCao.Name = "btnXuatBaoCao";
+            this.btnXuatBaoCao.Size = new System.Drawing.Size(149, 36);
+            this.btnXuatBaoCao.TabIndex = 4;
+            this.btnXuatBaoCao.Text = "Làm mới";
+            this.btnXuatBaoCao.Click += new System.EventHandler(this.btnXuatBaoCao_Click);
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Location = new System.Drawing.Point(585, 64);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(149, 36);
+            this.btnLamMoi.TabIndex = 4;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
             // btnThongKe
             // 
             this.btnThongKe.Location = new System.Drawing.Point(430, 64);
@@ -119,14 +142,15 @@ namespace GUI_TicketSalesSystem
             this.btnThongKe.Size = new System.Drawing.Size(149, 36);
             this.btnThongKe.TabIndex = 4;
             this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.Click += new System.EventHandler(this.BtnThongKe_Click);
             // 
             // lblDoanhThu
             // 
             this.lblDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblDoanhThu.ForeColor = System.Drawing.Color.Green;
-            this.lblDoanhThu.Location = new System.Drawing.Point(810, 77);
+            this.lblDoanhThu.Location = new System.Drawing.Point(910, 73);
             this.lblDoanhThu.Name = "lblDoanhThu";
-            this.lblDoanhThu.Size = new System.Drawing.Size(300, 30);
+            this.lblDoanhThu.Size = new System.Drawing.Size(214, 30);
             this.lblDoanhThu.TabIndex = 5;
             this.lblDoanhThu.Text = "Tổng doanh thu: 0 VND";
             // 
@@ -134,7 +158,7 @@ namespace GUI_TicketSalesSystem
             // 
             this.lblSoVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblSoVe.ForeColor = System.Drawing.Color.Blue;
-            this.lblSoVe.Location = new System.Drawing.Point(810, 27);
+            this.lblSoVe.Location = new System.Drawing.Point(910, 27);
             this.lblSoVe.Name = "lblSoVe";
             this.lblSoVe.Size = new System.Drawing.Size(200, 30);
             this.lblSoVe.TabIndex = 6;
@@ -144,7 +168,8 @@ namespace GUI_TicketSalesSystem
             // 
             this.dgvDoanhThu.AllowUserToAddRows = false;
             this.dgvDoanhThu.AllowUserToDeleteRows = false;
-            this.dgvDoanhThu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDoanhThu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvDoanhThu.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvDoanhThu.ColumnHeadersHeight = 35;
             this.dgvDoanhThu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvNgay,
@@ -156,19 +181,39 @@ namespace GUI_TicketSalesSystem
             this.dgvDoanhThu.Size = new System.Drawing.Size(1090, 400);
             this.dgvDoanhThu.TabIndex = 7;
             // 
+            // tabVe
+            // 
+            this.tabVe.Location = new System.Drawing.Point(4, 33);
+            this.tabVe.Name = "tabVe";
+            this.tabVe.Size = new System.Drawing.Size(1133, 583);
+            this.tabVe.TabIndex = 1;
+            this.tabVe.Text = "Thống kê vé";
+            this.tabVe.UseVisualStyleBackColor = true;
+            // 
+            // tabTuyen
+            // 
+            this.tabTuyen.Location = new System.Drawing.Point(4, 33);
+            this.tabTuyen.Name = "tabTuyen";
+            this.tabTuyen.Size = new System.Drawing.Size(1133, 583);
+            this.tabTuyen.TabIndex = 2;
+            this.tabTuyen.Text = "Thống kê tuyến";
+            this.tabTuyen.UseVisualStyleBackColor = true;
+            // 
             // dgvNgay
             // 
-            this.dgvNgay.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvNgay.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.dgvNgay.HeaderText = "Ngày";
             this.dgvNgay.Name = "dgvNgay";
             this.dgvNgay.ReadOnly = true;
+            this.dgvNgay.Width = 79;
             // 
             // dgvSoVe
             // 
-            this.dgvSoVe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvSoVe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.dgvSoVe.HeaderText = "Số vé";
             this.dgvSoVe.Name = "dgvSoVe";
             this.dgvSoVe.ReadOnly = true;
+            this.dgvSoVe.Width = 83;
             // 
             // dgvThu
             // 
@@ -177,31 +222,15 @@ namespace GUI_TicketSalesSystem
             this.dgvThu.Name = "dgvThu";
             this.dgvThu.ReadOnly = true;
             // 
-            // tabVe
-            // 
-            this.tabVe.Location = new System.Drawing.Point(4, 22);
-            this.tabVe.Name = "tabVe";
-            this.tabVe.Size = new System.Drawing.Size(1133, 594);
-            this.tabVe.TabIndex = 1;
-            this.tabVe.Text = "Thống kê vé";
-            this.tabVe.UseVisualStyleBackColor = true;
-            // 
-            // tabTuyen
-            // 
-            this.tabTuyen.Location = new System.Drawing.Point(4, 22);
-            this.tabTuyen.Name = "tabTuyen";
-            this.tabTuyen.Size = new System.Drawing.Size(1133, 594);
-            this.tabTuyen.TabIndex = 2;
-            this.tabTuyen.Text = "Thống kê tuyến";
-            this.tabTuyen.UseVisualStyleBackColor = true;
-            // 
             // FormThongKe
             // 
             this.ClientSize = new System.Drawing.Size(1143, 635);
             this.Controls.Add(this.tabThongKe);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FormThongKe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ thống bán vé ga Sài Gòn - Thống kê báo cáo";
+            this.Load += new System.EventHandler(this.FormThongKe_Load);
             this.tabThongKe.ResumeLayout(false);
             this.tabDoanhThu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).EndInit();
@@ -223,6 +252,8 @@ namespace GUI_TicketSalesSystem
         private DataGridView dgvDoanhThu;
         private Label lblTuNgay;
         private Label lblDenNgay;
+        private Button btnXuatBaoCao;
+        private Button btnLamMoi;
         private DataGridViewTextBoxColumn dgvNgay;
         private DataGridViewTextBoxColumn dgvSoVe;
         private DataGridViewTextBoxColumn dgvThu;

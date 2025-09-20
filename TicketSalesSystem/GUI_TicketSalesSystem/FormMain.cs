@@ -1,4 +1,5 @@
-﻿using DTO_TicketSalesSystem.utils;
+﻿using DTO_TicketSalesSystem;
+using DTO_TicketSalesSystem.utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -141,12 +142,102 @@ namespace GUI_TicketSalesSystem
             if (!CheckAdminPermission("xem thống kê")) return;
             try
             {
-                // Mở form thống kê dành cho admin
-                MessageBox.Show("Chức năng thống kê dành cho Quản trị viên!", "Thống kê", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                foreach (Form childForm in this.MdiChildren)
+                {
+                    if (childForm is FormThongKe)
+                    {
+                        childForm.Activate();
+                        return;
+                    }
+                }
+
+                FormThongKe frm = new FormThongKe();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi mở form thống kê: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void mnuQuanLyNguoiDung_Click(object sender, EventArgs e)
+        {
+            if (!CheckAdminPermission("quản lý người dùng")) return;
+            try
+            {
+                using (Form formNguoiDung = new FormQuanLyNguoiDung())
+                {
+                    formNguoiDung.ShowDialog();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void mnuCaiDatHeThong_Click(object sender, EventArgs e)
+        {
+            if (!CheckAdminPermission("cài đặt hệ thống")) return;
+            try
+            {
+                using (var formCaiDat = new FormCaiDatHeThong())
+                {
+                    formCaiDat.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi mở cài đặt hệ thống: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void mnuDashboard_Click(object sender, EventArgs e)
+        {
+            if (!CheckAdminPermission("xem dashboard")) return;
+            try
+            {
+                foreach (Form childForm in this.MdiChildren)
+                {
+                    if (childForm is FormDashboard)
+                    {
+                        childForm.Activate();
+                        return;
+                    }
+                }
+
+                FormDashboard frm = new FormDashboard();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi mở dashboard: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void mnuQuanTriVien_Click(object sender, EventArgs e)
+        {
+            if (!CheckAdminPermission("quản trị hệ thống")) return;
+            try
+            {
+                foreach (Form childForm in this.MdiChildren)
+                {
+                    if (childForm is FormQuanTriVien)
+                    {
+                        childForm.Activate();
+                        return;
+                    }
+                }
+
+                FormQuanTriVien frm = new FormQuanTriVien();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi mở form quản trị: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -164,21 +255,12 @@ namespace GUI_TicketSalesSystem
         {
             if (UserSession.IsAdmin)
             {
-                // Admin có tất cả quyền
-                mnuThongKe.Visible = true;
-
-                // Có thể thêm menu admin khác
-                // mnuQuanLyUser.Visible = true;
-                // mnuQuanLyTau.Visible = true;
+                mnuQuanTri.Visible = true;
+                mnuQuanTriVien_Click(null, null);
             }
             else
             {
-                // User thường chỉ có quyền cơ bản
-                mnuThongKe.Visible = false;
-
-                // Ẩn các menu admin khác
-                // mnuQuanLyUser.Visible = false;
-                // mnuQuanLyTau.Visible = false;
+                mnuQuanTri.Visible = false;
             }
         }
 

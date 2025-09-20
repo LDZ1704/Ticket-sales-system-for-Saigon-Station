@@ -40,8 +40,13 @@ namespace GUI_TicketSalesSystem
             this.mnuVe = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDatVe = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuQuanLyVe = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuQuanTri = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuThongKe = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCaiDatHeThong = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuQuanLyNguoiDung = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDashboard = new System.Windows.Forms.ToolStripMenuItem();
             this.lblChaoMung = new System.Windows.Forms.Label();
+            this.mnuQuanTriVien = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +57,7 @@ namespace GUI_TicketSalesSystem
             this.mnuTaiKhoan,
             this.mnuChuyenTau,
             this.mnuVe,
-            this.mnuThongKe});
+            this.mnuQuanTri});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(752, 38);
@@ -119,12 +124,45 @@ namespace GUI_TicketSalesSystem
             this.mnuQuanLyVe.Text = "Vé của tôi";
             this.mnuQuanLyVe.Click += new System.EventHandler(this.mnuQuanLyVe_Click);
             // 
+            // mnuQuanTri
+            // 
+            this.mnuQuanTri.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuDashboard,
+            this.mnuQuanTriVien,
+            this.mnuThongKe,
+            this.mnuQuanLyNguoiDung,
+            this.mnuCaiDatHeThong});
+            this.mnuQuanTri.Name = "mnuQuanTri";
+            this.mnuQuanTri.Size = new System.Drawing.Size(344, 34);
+            this.mnuQuanTri.Text = "Chức năng dành cho Quản trị viên";
+            // 
             // mnuThongKe
             // 
             this.mnuThongKe.Name = "mnuThongKe";
-            this.mnuThongKe.Size = new System.Drawing.Size(218, 34);
-            this.mnuThongKe.Text = "Thống kê và Báo cáo";
+            this.mnuThongKe.Size = new System.Drawing.Size(272, 34);
+            this.mnuThongKe.Text = "Thống kê";
             this.mnuThongKe.Click += new System.EventHandler(this.mnuThongKe_Click);
+            // 
+            // mnuCaiDatHeThong
+            // 
+            this.mnuCaiDatHeThong.Name = "mnuCaiDatHeThong";
+            this.mnuCaiDatHeThong.Size = new System.Drawing.Size(272, 34);
+            this.mnuCaiDatHeThong.Text = "Cài đặt hệ thống";
+            this.mnuCaiDatHeThong.Click += new System.EventHandler(this.mnuCaiDatHeThong_Click);
+            // 
+            // mnuQuanLyNguoiDung
+            // 
+            this.mnuQuanLyNguoiDung.Name = "mnuQuanLyNguoiDung";
+            this.mnuQuanLyNguoiDung.Size = new System.Drawing.Size(272, 34);
+            this.mnuQuanLyNguoiDung.Text = "Quản lý người dùng";
+            this.mnuQuanLyNguoiDung.Click += new System.EventHandler(this.mnuQuanLyNguoiDung_Click);
+            // 
+            // mnuDashboard
+            // 
+            this.mnuDashboard.Name = "mnuDashboard";
+            this.mnuDashboard.Size = new System.Drawing.Size(272, 34);
+            this.mnuDashboard.Text = "Trang tổng quan";
+            this.mnuDashboard.Click += new System.EventHandler(this.mnuDashboard_Click);
             // 
             // lblChaoMung
             // 
@@ -135,6 +173,13 @@ namespace GUI_TicketSalesSystem
             this.lblChaoMung.Size = new System.Drawing.Size(301, 31);
             this.lblChaoMung.TabIndex = 2;
             this.lblChaoMung.Text = "Xin chào, Người dùng!";
+            // 
+            // mnuQuanTriVien
+            // 
+            this.mnuQuanTriVien.Name = "mnuQuanTriVien";
+            this.mnuQuanTriVien.Size = new System.Drawing.Size(272, 34);
+            this.mnuQuanTriVien.Text = "Trang quản trị";
+            this.mnuQuanTriVien.Click += new System.EventHandler(this.mnuQuanTriVien_Click);
             // 
             // FormMain
             // 
@@ -167,7 +212,12 @@ namespace GUI_TicketSalesSystem
         private ToolStripMenuItem mnuVe;
         private ToolStripMenuItem mnuDatVe;
         private ToolStripMenuItem mnuQuanLyVe;
-        private ToolStripMenuItem mnuThongKe;
+        private ToolStripMenuItem mnuQuanTri;
         private Label lblChaoMung;
+        private ToolStripMenuItem mnuThongKe;
+        private ToolStripMenuItem mnuCaiDatHeThong;
+        private ToolStripMenuItem mnuQuanLyNguoiDung;
+        private ToolStripMenuItem mnuDashboard;
+        private ToolStripMenuItem mnuQuanTriVien;
     }
 }

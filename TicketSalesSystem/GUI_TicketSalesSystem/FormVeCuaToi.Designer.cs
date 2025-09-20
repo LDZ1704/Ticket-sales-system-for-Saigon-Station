@@ -32,6 +32,12 @@ namespace GUI_TicketSalesSystem
         private void InitializeComponent()
         {
             this.dgvVe = new System.Windows.Forms.DataGridView();
+            this.btnLamMoi = new System.Windows.Forms.Button();
+            this.btnHuyVe = new System.Windows.Forms.Button();
+            this.btnDoiVe = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.btnThongKe = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.dgvMaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvHanhKhach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,12 +46,6 @@ namespace GUI_TicketSalesSystem
             this.dgvGiaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvNgayDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnLamMoi = new System.Windows.Forms.Button();
-            this.btnHuyVe = new System.Windows.Forms.Button();
-            this.btnDoiVe = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.btnThongKe = new System.Windows.Forms.Button();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +53,8 @@ namespace GUI_TicketSalesSystem
             // 
             this.dgvVe.AllowUserToAddRows = false;
             this.dgvVe.AllowUserToDeleteRows = false;
-            this.dgvVe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvVe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvVe.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvVe.ColumnHeadersHeight = 35;
             this.dgvVe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvMaVe,
@@ -71,62 +72,6 @@ namespace GUI_TicketSalesSystem
             this.dgvVe.Size = new System.Drawing.Size(1237, 485);
             this.dgvVe.TabIndex = 4;
             this.dgvVe.SelectionChanged += new System.EventHandler(this.dgvVe_SelectionChanged);
-            // 
-            // dgvMaVe
-            // 
-            this.dgvMaVe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvMaVe.HeaderText = "Mã vé";
-            this.dgvMaVe.Name = "dgvMaVe";
-            this.dgvMaVe.ReadOnly = true;
-            // 
-            // dgvHanhKhach
-            // 
-            this.dgvHanhKhach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvHanhKhach.HeaderText = "Hành khách";
-            this.dgvHanhKhach.Name = "dgvHanhKhach";
-            this.dgvHanhKhach.ReadOnly = true;
-            // 
-            // dgvTuyen
-            // 
-            this.dgvTuyen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvTuyen.HeaderText = "Tuyến";
-            this.dgvTuyen.Name = "dgvTuyen";
-            this.dgvTuyen.ReadOnly = true;
-            // 
-            // dgvGhe
-            // 
-            this.dgvGhe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvGhe.HeaderText = "Toa - Ghế";
-            this.dgvGhe.Name = "dgvGhe";
-            this.dgvGhe.ReadOnly = true;
-            // 
-            // dgvKhoiHanh
-            // 
-            this.dgvKhoiHanh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvKhoiHanh.HeaderText = "Ngày khởi hành";
-            this.dgvKhoiHanh.Name = "dgvKhoiHanh";
-            this.dgvKhoiHanh.ReadOnly = true;
-            // 
-            // dgvGiaVe
-            // 
-            this.dgvGiaVe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvGiaVe.HeaderText = "Giá vé";
-            this.dgvGiaVe.Name = "dgvGiaVe";
-            this.dgvGiaVe.ReadOnly = true;
-            // 
-            // dgvTrangThai
-            // 
-            this.dgvTrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvTrangThai.HeaderText = "Trạng thái";
-            this.dgvTrangThai.Name = "dgvTrangThai";
-            this.dgvTrangThai.ReadOnly = true;
-            // 
-            // dgvNgayDat
-            // 
-            this.dgvNgayDat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvNgayDat.HeaderText = "Ngày đặt";
-            this.dgvNgayDat.Name = "dgvNgayDat";
-            this.dgvNgayDat.ReadOnly = true;
             // 
             // btnLamMoi
             // 
@@ -182,6 +127,70 @@ namespace GUI_TicketSalesSystem
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
+            // dgvMaVe
+            // 
+            this.dgvMaVe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvMaVe.HeaderText = "Mã vé";
+            this.dgvMaVe.Name = "dgvMaVe";
+            this.dgvMaVe.ReadOnly = true;
+            this.dgvMaVe.Width = 86;
+            // 
+            // dgvHanhKhach
+            // 
+            this.dgvHanhKhach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvHanhKhach.HeaderText = "Hành khách";
+            this.dgvHanhKhach.Name = "dgvHanhKhach";
+            this.dgvHanhKhach.ReadOnly = true;
+            this.dgvHanhKhach.Width = 137;
+            // 
+            // dgvTuyen
+            // 
+            this.dgvTuyen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvTuyen.HeaderText = "Tuyến";
+            this.dgvTuyen.Name = "dgvTuyen";
+            this.dgvTuyen.ReadOnly = true;
+            this.dgvTuyen.Width = 89;
+            // 
+            // dgvGhe
+            // 
+            this.dgvGhe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvGhe.HeaderText = "Toa - Ghế";
+            this.dgvGhe.Name = "dgvGhe";
+            this.dgvGhe.ReadOnly = true;
+            this.dgvGhe.Width = 120;
+            // 
+            // dgvKhoiHanh
+            // 
+            this.dgvKhoiHanh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvKhoiHanh.HeaderText = "Ngày khởi hành";
+            this.dgvKhoiHanh.Name = "dgvKhoiHanh";
+            this.dgvKhoiHanh.ReadOnly = true;
+            this.dgvKhoiHanh.Width = 167;
+            // 
+            // dgvGiaVe
+            // 
+            this.dgvGiaVe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvGiaVe.HeaderText = "Giá vé";
+            this.dgvGiaVe.Name = "dgvGiaVe";
+            this.dgvGiaVe.ReadOnly = true;
+            this.dgvGiaVe.Width = 88;
+            // 
+            // dgvTrangThai
+            // 
+            this.dgvTrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvTrangThai.HeaderText = "Trạng thái";
+            this.dgvTrangThai.Name = "dgvTrangThai";
+            this.dgvTrangThai.ReadOnly = true;
+            this.dgvTrangThai.Width = 119;
+            // 
+            // dgvNgayDat
+            // 
+            this.dgvNgayDat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvNgayDat.HeaderText = "Ngày đặt";
+            this.dgvNgayDat.Name = "dgvNgayDat";
+            this.dgvNgayDat.ReadOnly = true;
+            this.dgvNgayDat.Width = 110;
+            // 
             // FormVeCuaToi
             // 
             this.ClientSize = new System.Drawing.Size(1244, 553);
@@ -211,6 +220,8 @@ namespace GUI_TicketSalesSystem
         private Button btnHuyVe;
         private Button btnDoiVe;
         private Label lblTitle;
+        private Button btnThongKe;
+        private Button btnTimKiem;
         private DataGridViewTextBoxColumn dgvMaVe;
         private DataGridViewTextBoxColumn dgvHanhKhach;
         private DataGridViewTextBoxColumn dgvTuyen;
@@ -219,7 +230,5 @@ namespace GUI_TicketSalesSystem
         private DataGridViewTextBoxColumn dgvGiaVe;
         private DataGridViewTextBoxColumn dgvTrangThai;
         private DataGridViewTextBoxColumn dgvNgayDat;
-        private Button btnThongKe;
-        private Button btnTimKiem;
     }
 }

@@ -3,56 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|c:\\users\\administrator\\desktop\\ticket-sales-system-for-saigon-station\\ticketsalessystem\\gui_ticketsalessystem\\formvecuatoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formvecuatoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formbaocaotonghop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formbaocaotonghop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formcapquyen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formcapquyen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formquanlynguoidung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formquanlynguoidung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formthongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formthongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|c:\\users\\administrator\\desktop\\ticket-sales-system-for-saigon-station\\ticketsalessystem\\gui_ticketsalessystem\\formthongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formthongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|c:\\users\\administrator\\desktop\\ticket-sales-system-for-saigon-station\\ticketsalessystem\\gui_ticketsalessystem\\formquanlynguoidung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formquanlynguoidung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|c:\\users\\administrator\\desktop\\ticket-sales-system-for-saigon-station\\ticketsalessystem\\gui_ticketsalessystem\\formvecuatoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formvecuatoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|c:\\users\\administrator\\desktop\\ticket-sales-system-for-saigon-station\\ticketsalessystem\\gui_ticketsalessystem\\formhuyve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formhuyve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formquantrivien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formquantrivien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20F8C4EB-8E75-4F8E-A6FC-E540ED819F15}|BUS_TicketSalesSystem\\BUS_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\bus_ticketsalessystem\\bus_ve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20F8C4EB-8E75-4F8E-A6FC-E540ED819F15}|BUS_TicketSalesSystem\\BUS_TicketSalesSystem.csproj|solutionrelative:bus_ticketsalessystem\\bus_ve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formcaidathethong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formcaidathethong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|c:\\users\\administrator\\desktop\\ticket-sales-system-for-saigon-station\\ticketsalessystem\\gui_ticketsalessystem\\formdatve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formdatve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formdatve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formdatve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formtracuu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formtracuu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formlichsuhoatdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formlichsuhoatdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formdoive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formdoive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20F8C4EB-8E75-4F8E-A6FC-E540ED819F15}|BUS_TicketSalesSystem\\BUS_TicketSalesSystem.csproj|c:\\users\\administrator\\desktop\\ticket-sales-system-for-saigon-station\\ticketsalessystem\\bus_ticketsalessystem\\bus_quanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20F8C4EB-8E75-4F8E-A6FC-E540ED819F15}|BUS_TicketSalesSystem\\BUS_TicketSalesSystem.csproj|solutionrelative:bus_ticketsalessystem\\bus_quanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DADB5A1-9D10-47D2-AD8E-F63A39BCFB53}|DAL_TicketSalesSystem\\DAL_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\dal_ticketsalessystem\\dal_toatau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DADB5A1-9D10-47D2-AD8E-F63A39BCFB53}|DAL_TicketSalesSystem\\DAL_TicketSalesSystem.csproj|solutionrelative:dal_ticketsalessystem\\dal_toatau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DADB5A1-9D10-47D2-AD8E-F63A39BCFB53}|DAL_TicketSalesSystem\\DAL_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\dal_ticketsalessystem\\dal_quanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DADB5A1-9D10-47D2-AD8E-F63A39BCFB53}|DAL_TicketSalesSystem\\DAL_TicketSalesSystem.csproj|solutionrelative:dal_ticketsalessystem\\dal_quanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DADB5A1-9D10-47D2-AD8E-F63A39BCFB53}|DAL_TicketSalesSystem\\DAL_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\dal_ticketsalessystem\\dal_ve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DADB5A1-9D10-47D2-AD8E-F63A39BCFB53}|DAL_TicketSalesSystem\\DAL_TicketSalesSystem.csproj|solutionrelative:dal_ticketsalessystem\\dal_ve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0F609B1-CA5A-4A37-BE40-E86F9ED89316}|DTO_TicketSalesSystem\\DTO_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\dto_ticketsalessystem\\dto_quanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F609B1-CA5A-4A37-BE40-E86F9ED89316}|DTO_TicketSalesSystem\\DTO_TicketSalesSystem.csproj|solutionrelative:dto_ticketsalessystem\\dto_quanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DADB5A1-9D10-47D2-AD8E-F63A39BCFB53}|DAL_TicketSalesSystem\\DAL_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\dal_ticketsalessystem\\dal_chuyentau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DADB5A1-9D10-47D2-AD8E-F63A39BCFB53}|DAL_TicketSalesSystem\\DAL_TicketSalesSystem.csproj|solutionrelative:dal_ticketsalessystem\\dal_chuyentau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20F8C4EB-8E75-4F8E-A6FC-E540ED819F15}|BUS_TicketSalesSystem\\BUS_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\bus_ticketsalessystem\\bus_toa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20F8C4EB-8E75-4F8E-A6FC-E540ED819F15}|BUS_TicketSalesSystem\\BUS_TicketSalesSystem.csproj|solutionrelative:bus_ticketsalessystem\\bus_toa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20F8C4EB-8E75-4F8E-A6FC-E540ED819F15}|BUS_TicketSalesSystem\\BUS_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\bus_ticketsalessystem\\bus_datve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20F8C4EB-8E75-4F8E-A6FC-E540ED819F15}|BUS_TicketSalesSystem\\BUS_TicketSalesSystem.csproj|solutionrelative:bus_ticketsalessystem\\bus_datve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\gui_ticketsalessystem\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB24AD86-1F69-4107-A27E-6D643BB4C310}|GUI_TicketSalesSystem\\GUI_TicketSalesSystem.csproj|solutionrelative:gui_ticketsalessystem\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,167 +74,211 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormVeCuaToi.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormVeCuaToi.cs",
-              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormVeCuaToi.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormVeCuaToi.cs",
-              "RelativeToolTip": "GUI_TicketSalesSystem\\FormVeCuaToi.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T16:17:33.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "FormVeCuaToi.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormVeCuaToi.cs",
               "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormVeCuaToi.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormVeCuaToi.cs [Design]",
               "RelativeToolTip": "GUI_TicketSalesSystem\\FormVeCuaToi.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T16:17:29.507Z",
+              "WhenOpened": "2025-09-20T08:11:12.453Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormHuyVe.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormHuyVe.cs",
-              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormHuyVe.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormHuyVe.cs",
-              "RelativeToolTip": "GUI_TicketSalesSystem\\FormHuyVe.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAIwG4AAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T16:17:15.988Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "FormDatVe.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormDatVe.cs",
-              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormDatVe.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormDatVe.cs [Design]",
-              "RelativeToolTip": "GUI_TicketSalesSystem\\FormDatVe.cs [Design]",
+              "Title": "FormQuanLyNguoiDung.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormQuanLyNguoiDung.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormQuanLyNguoiDung.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormQuanLyNguoiDung.cs [Design]",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormQuanLyNguoiDung.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T07:42:41.491Z",
+              "WhenOpened": "2025-09-20T08:05:33.668Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormTraCuu.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormTraCuu.cs",
-              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormTraCuu.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormTraCuu.cs",
-              "RelativeToolTip": "GUI_TicketSalesSystem\\FormTraCuu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYBAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T04:49:58.299Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FormDoiVe.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormDoiVe.cs",
-              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormDoiVe.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormDoiVe.cs",
-              "RelativeToolTip": "GUI_TicketSalesSystem\\FormDoiVe.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAwwP4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T17:09:35.157Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "FormDatVe.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormDatVe.cs",
-              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormDatVe.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormDatVe.cs",
-              "RelativeToolTip": "GUI_TicketSalesSystem\\FormDatVe.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKoBAAAoAAAAAAAAAA==",
+              "Title": "FormThongKe.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormThongKe.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormThongKe.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormThongKe.cs [Design]",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormThongKe.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T16:39:00.357Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "BUS_DatVe.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\BUS_TicketSalesSystem\\BUS_DatVe.cs",
-              "RelativeDocumentMoniker": "BUS_TicketSalesSystem\\BUS_DatVe.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\BUS_TicketSalesSystem\\BUS_DatVe.cs",
-              "RelativeToolTip": "BUS_TicketSalesSystem\\BUS_DatVe.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAqwOcAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T04:23:17.166Z"
+              "WhenOpened": "2025-09-20T07:45:57.914Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "BUS_Ve.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\BUS_TicketSalesSystem\\BUS_Ve.cs",
-              "RelativeDocumentMoniker": "BUS_TicketSalesSystem\\BUS_Ve.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\BUS_TicketSalesSystem\\BUS_Ve.cs",
-              "RelativeToolTip": "BUS_TicketSalesSystem\\BUS_Ve.cs",
-              "ViewState": "AgIAALAAAAAAAAAAAAAAAGkAAAAuAAAAAAAAAA==",
+              "Title": "FormThongKe.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormThongKe.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormThongKe.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormThongKe.cs",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormThongKe.cs",
+              "ViewState": "AgIAAHkBAAAAAAAAAAAYwOUAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T04:16:28.247Z",
+              "WhenOpened": "2025-09-19T16:03:38.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormQuanLyNguoiDung.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormQuanLyNguoiDung.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormQuanLyNguoiDung.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormQuanLyNguoiDung.cs",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormQuanLyNguoiDung.cs",
+              "ViewState": "AgIAAFkBAAAAAAAAAAAiwGcBAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T16:03:21.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormCapQuyen.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormCapQuyen.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormCapQuyen.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormCapQuyen.cs",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormCapQuyen.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T16:03:02.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormBaoCaoTongHop.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormBaoCaoTongHop.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormBaoCaoTongHop.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormBaoCaoTongHop.cs",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormBaoCaoTongHop.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T16:02:53.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormQuanTriVien.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormQuanTriVien.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormQuanTriVien.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormQuanTriVien.cs",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormQuanTriVien.cs",
+              "ViewState": "AgIAABwBAAAAAAAAAAAqwCoBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T04:08:22.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormDashboard.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormDashboard.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormDashboard.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormDashboard.cs",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormDashboard.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T03:53:14.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormCaiDatHeThong.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormCaiDatHeThong.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormCaiDatHeThong.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormCaiDatHeThong.cs",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormCaiDatHeThong.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T03:39:00.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormMain.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormMain.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormMain.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormMain.cs [Design]",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T15:42:01.626Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormMain.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormMain.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormMain.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormMain.cs",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormMain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T15:37:14.898Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "BUS_Toa.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\BUS_TicketSalesSystem\\BUS_Toa.cs",
-              "RelativeDocumentMoniker": "BUS_TicketSalesSystem\\BUS_Toa.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\BUS_TicketSalesSystem\\BUS_Toa.cs",
-              "RelativeToolTip": "BUS_TicketSalesSystem\\BUS_Toa.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAuwJIAAAANAAAAAAAAAA==",
+              "Title": "FormLichSuHoatDong.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormLichSuHoatDong.cs",
+              "RelativeDocumentMoniker": "GUI_TicketSalesSystem\\FormLichSuHoatDong.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\GUI_TicketSalesSystem\\FormLichSuHoatDong.cs",
+              "RelativeToolTip": "GUI_TicketSalesSystem\\FormLichSuHoatDong.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAmwBAAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T04:12:16.288Z"
+              "WhenOpened": "2025-09-18T15:16:47.833Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DAL_ChuyenTau.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\DAL_TicketSalesSystem\\DAL_ChuyenTau.cs",
-              "RelativeDocumentMoniker": "DAL_TicketSalesSystem\\DAL_ChuyenTau.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\DAL_TicketSalesSystem\\DAL_ChuyenTau.cs",
-              "RelativeToolTip": "DAL_TicketSalesSystem\\DAL_ChuyenTau.cs",
-              "ViewState": "AgIAAKoAAAAAAAAAAAAswLwAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "BUS_QuanLy.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\BUS_TicketSalesSystem\\BUS_QuanLy.cs",
+              "RelativeDocumentMoniker": "BUS_TicketSalesSystem\\BUS_QuanLy.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\BUS_TicketSalesSystem\\BUS_QuanLy.cs",
+              "RelativeToolTip": "BUS_TicketSalesSystem\\BUS_QuanLy.cs",
+              "ViewState": "AgIAAPUAAAAAAAAAAAAAAP4AAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T03:43:21.923Z"
+              "WhenOpened": "2025-09-18T08:46:36.41Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DAL_Ve.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\DAL_TicketSalesSystem\\DAL_Ve.cs",
-              "RelativeDocumentMoniker": "DAL_TicketSalesSystem\\DAL_Ve.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\DAL_TicketSalesSystem\\DAL_Ve.cs",
-              "RelativeToolTip": "DAL_TicketSalesSystem\\DAL_Ve.cs",
-              "ViewState": "AgIAAO0AAAAAAAAAAAAAAAMBAAAQAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "DAL_QuanLy.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\DAL_TicketSalesSystem\\DAL_QuanLy.cs",
+              "RelativeDocumentMoniker": "DAL_TicketSalesSystem\\DAL_QuanLy.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\DAL_TicketSalesSystem\\DAL_QuanLy.cs",
+              "RelativeToolTip": "DAL_TicketSalesSystem\\DAL_QuanLy.cs",
+              "ViewState": "AgIAABgCAAAAAAAAAAAQwCkCAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T03:34:33.376Z"
+              "WhenOpened": "2025-09-18T08:23:27.653Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DAL_ToaTau.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\DAL_TicketSalesSystem\\DAL_ToaTau.cs",
-              "RelativeDocumentMoniker": "DAL_TicketSalesSystem\\DAL_ToaTau.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\DAL_TicketSalesSystem\\DAL_ToaTau.cs",
-              "RelativeToolTip": "DAL_TicketSalesSystem\\DAL_ToaTau.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAAAG8AAABMAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "DTO_QuanLy.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\DTO_TicketSalesSystem\\DTO_QuanLy.cs",
+              "RelativeDocumentMoniker": "DTO_TicketSalesSystem\\DTO_QuanLy.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Ticket-sales-system-for-Saigon-Station\\TicketSalesSystem\\DTO_TicketSalesSystem\\DTO_QuanLy.cs",
+              "RelativeToolTip": "DTO_TicketSalesSystem\\DTO_QuanLy.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAYwKAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T03:02:03.583Z"
+              "WhenOpened": "2025-09-18T08:16:51.241Z",
+              "EditorCaption": ""
             }
           ]
         }
