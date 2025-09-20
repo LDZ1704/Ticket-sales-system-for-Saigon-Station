@@ -570,19 +570,55 @@ namespace DAL_TicketSalesSystem
                     {
                         try
                         {
-                            // Khóa tài khoản thay vì xóa
+                            // 1. Trả ghế về trạng thái TRONG
+                            var ves = (from v in ctx.Ves
+                                       join tt in ctx.ThanhToans on v.MaThanhToan equals tt.MaThanhToan
+                                       where tt.MaNguoiDung == maNguoiDung
+                                       select v).ToList();
+
+                            foreach (var ve in ves)
+                            {
+                                if (ve.MaGhe.HasValue)
+                                {
+                                    var ghe = ctx.Ghes.Find(ve.MaGhe.Value);
+                                    if (ghe != null)
+                                    {
+                                        ghe.TrangThai = "TRONG";
+                                    }
+                                }
+                            }
+
+                            // 2. Lấy danh sách hành khách từ vé
+                            var hanhKhachIds = ves.Where(v => v.MaHanhKhach.HasValue).Select(v => v.MaHanhKhach.Value).Distinct().ToList();
+
+                            // 3. Xóa vé
+                            ctx.Ves.RemoveRange(ves);
+                            ctx.SaveChanges();
+
+                            // 4. Xóa hành khách
+                            var hanhKhachs = ctx.HanhKhaches.Where(hk => hanhKhachIds.Contains(hk.MaHanhKhach)).ToList();
+                            ctx.HanhKhaches.RemoveRange(hanhKhachs);
+                            ctx.SaveChanges();
+
+                            // 5. Xóa thanh toán
+                            var thanhToans = ctx.ThanhToans.Where(tt => tt.MaNguoiDung == maNguoiDung).ToList();
+                            ctx.ThanhToans.RemoveRange(thanhToans);
+                            ctx.SaveChanges();
+
+                            // 6. Xóa tài khoản
                             var taiKhoan = ctx.TaiKhoans.FirstOrDefault(tk => tk.MaNguoiDung == maNguoiDung);
                             if (taiKhoan != null)
                             {
-                                taiKhoan.TrangThai = "KHOA";
+                                ctx.TaiKhoans.Remove(taiKhoan);
+                                ctx.SaveChanges();
                             }
 
-                            // Đánh dấu người dùng là đã xóa
+                            // 7. Xóa người dùng
                             var nguoiDung = ctx.NguoiDungs.Find(maNguoiDung);
                             if (nguoiDung != null)
                             {
-                                nguoiDung.Email = $"DELETED_{maNguoiDung}_{nguoiDung.Email}";
-                                nguoiDung.SoDienThoai = $"DELETED_{maNguoiDung}_{nguoiDung.SoDienThoai}";
+                                ctx.NguoiDungs.Remove(nguoiDung);
+                                ctx.SaveChanges();
                             }
 
                             ctx.SaveChanges();
@@ -669,7 +705,7 @@ namespace DAL_TicketSalesSystem
                     GiaTri = "Ga Sài Gòn - 01 Nguyễn Thông, Quận 3, TP.HCM",
                     MoTa = "Thông tin nhà ga chính",
                     LoaiCauHinh = "TEXT",
-                    NhomCauHinh = "HEYTHONG",
+                    NhomCauHinh = "HETHONG",
                     KichHoat = true
                 },
                 ["EMAIL_LIEN_HE"] = new DTO_CauHinhHeThong
@@ -678,7 +714,7 @@ namespace DAL_TicketSalesSystem
                     GiaTri = "support@gasaigon.vn",
                     MoTa = "Email liên hệ hỗ trợ khách hàng",
                     LoaiCauHinh = "TEXT",
-                    NhomCauHinh = "HEYTHONG",
+                    NhomCauHinh = "HETHONG",
                     KichHoat = true
                 },
                 ["HOTLINE"] = new DTO_CauHinhHeThong
@@ -687,7 +723,7 @@ namespace DAL_TicketSalesSystem
                     GiaTri = "1900 1000",
                     MoTa = "Số điện thoại hotline",
                     LoaiCauHinh = "TEXT",
-                    NhomCauHinh = "HEYTHONG",
+                    NhomCauHinh = "HETHONG",
                     KichHoat = true
                 },
                 ["SO_VE_TOI_DA_MOT_LAN"] = new DTO_CauHinhHeThong
@@ -775,62 +811,6 @@ namespace DAL_TicketSalesSystem
                 {
                     return giaTriMacDinh;
                 }
-            }
-
-            //Lấy giá trị cấu hình dạng decimal
-            public decimal LayGiaTriDecimal(string tenCauHinh, decimal giaTriMacDinh = 0)
-            {
-                try
-                {
-                    var config = LayCauHinhBangTen(tenCauHinh);
-                    if (config != null && decimal.TryParse(config.GiaTri, out decimal result))
-                        return result;
-                    return giaTriMacDinh;
-                }
-                catch
-                {
-                    return giaTriMacDinh;
-                }
-            }
-
-            //Lấy giá trị cấu hình dạng chuỗi
-            public string LayGiaTriChuoi(string tenCauHinh, string giaTriMacDinh = "")
-            {
-                try
-                {
-                    var config = LayCauHinhBangTen(tenCauHinh);
-                    return config?.GiaTri ?? giaTriMacDinh;
-                }
-                catch
-                {
-                    return giaTriMacDinh;
-                }
-            }
-
-            //Lấy giá trị cấu hình dạng bool
-            public bool LayGiaTriBool(string tenCauHinh, bool giaTriMacDinh = false)
-            {
-                try
-                {
-                    var config = LayCauHinhBangTen(tenCauHinh);
-                    if (config != null)
-                    {
-                        var giaTri = config.GiaTri.ToLower();
-                        return giaTri == "true" || giaTri == "1" || giaTri == "yes";
-                    }
-                    return giaTriMacDinh;
-                }
-                catch
-                {
-                    return giaTriMacDinh;
-                }
-            }
-
-            //Reset cấu hình về mặc định
-            public bool ResetCauHinhMacDinh(string tenCauHinh)
-            {
-                // Trong thực tế sẽ xóa record trong database để sử dụng giá trị mặc định
-                return true;
             }
 
             //Validate giá trị cấu hình

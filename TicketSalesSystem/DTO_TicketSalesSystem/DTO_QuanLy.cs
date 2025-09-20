@@ -144,20 +144,6 @@ namespace DTO_TicketSalesSystem
             public List<DTO_ThongKeDoanhThu> DoanhThu7NgayGanNhat { get; set; }
         }
 
-        // Filter cho báo cáo
-        public class DTO_BaoCaoFilter
-        {
-            public DateTime? TuNgay { get; set; }
-            public DateTime? DenNgay { get; set; }
-            public int? MaTuyen { get; set; }
-            public string LoaiGhe { get; set; }
-            public string TrangThaiVe { get; set; }
-            public string LoaiBaoCao { get; set; } // DOANHTHU, VE, TUYEN, THOIGIAN
-            public string GroupBy { get; set; } // NGAY, THANG, NAM, TUYEN
-            public int? Top { get; set; } // Lấy top N
-            public bool IncludeChart { get; set; } // Có tạo chart không
-        }
-
         public class DTO_LichSuHoatDong
         {
             public DateTime? NgayGiaoDich { get; set; }

@@ -37,12 +37,6 @@ namespace GUI_TicketSalesSystem
             this.cboLoaiNguoiDung = new System.Windows.Forms.ComboBox();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.dgvNguoiDung = new System.Windows.Forms.DataGridView();
-            this.btnKhoaTaiKhoan = new System.Windows.Forms.Button();
-            this.btnCapQuyen = new System.Windows.Forms.Button();
-            this.btnDatLaiMatKhau = new System.Windows.Forms.Button();
-            this.btnXemLichSu = new System.Windows.Forms.Button();
-            this.lblTongNguoiDung = new System.Windows.Forms.Label();
-            this.lblThongKe = new System.Windows.Forms.Label();
             this.MaNguoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +46,13 @@ namespace GUI_TicketSalesSystem
             this.NgayTao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongChiTieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnKhoaTaiKhoan = new System.Windows.Forms.Button();
+            this.btnCapQuyen = new System.Windows.Forms.Button();
+            this.btnDatLaiMatKhau = new System.Windows.Forms.Button();
+            this.btnXemLichSu = new System.Windows.Forms.Button();
+            this.lblTongNguoiDung = new System.Windows.Forms.Label();
+            this.lblThongKe = new System.Windows.Forms.Label();
+            this.btnXoaTaiKhoan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +72,6 @@ namespace GUI_TicketSalesSystem
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(462, 38);
             this.txtTimKiem.TabIndex = 1;
-            this.txtTimKiem.Text = "Tìm theo tên, email, SĐT...";
             // 
             // btnTimKiem
             // 
@@ -125,64 +125,6 @@ namespace GUI_TicketSalesSystem
             this.dgvNguoiDung.Size = new System.Drawing.Size(1487, 450);
             this.dgvNguoiDung.TabIndex = 5;
             this.dgvNguoiDung.SelectionChanged += new System.EventHandler(this.DgvNguoiDung_SelectionChanged);
-            // 
-            // btnKhoaTaiKhoan
-            // 
-            this.btnKhoaTaiKhoan.Enabled = false;
-            this.btnKhoaTaiKhoan.Location = new System.Drawing.Point(825, 580);
-            this.btnKhoaTaiKhoan.Name = "btnKhoaTaiKhoan";
-            this.btnKhoaTaiKhoan.Size = new System.Drawing.Size(141, 44);
-            this.btnKhoaTaiKhoan.TabIndex = 6;
-            this.btnKhoaTaiKhoan.Text = "Khóa TK";
-            this.btnKhoaTaiKhoan.Click += new System.EventHandler(this.BtnKhoaTaiKhoan_Click);
-            // 
-            // btnCapQuyen
-            // 
-            this.btnCapQuyen.Enabled = false;
-            this.btnCapQuyen.Location = new System.Drawing.Point(972, 580);
-            this.btnCapQuyen.Name = "btnCapQuyen";
-            this.btnCapQuyen.Size = new System.Drawing.Size(175, 44);
-            this.btnCapQuyen.TabIndex = 7;
-            this.btnCapQuyen.Text = "Cấp quyền";
-            this.btnCapQuyen.Click += new System.EventHandler(this.BtnCapQuyen_Click);
-            // 
-            // btnDatLaiMatKhau
-            // 
-            this.btnDatLaiMatKhau.Enabled = false;
-            this.btnDatLaiMatKhau.Location = new System.Drawing.Point(1153, 580);
-            this.btnDatLaiMatKhau.Name = "btnDatLaiMatKhau";
-            this.btnDatLaiMatKhau.Size = new System.Drawing.Size(171, 44);
-            this.btnDatLaiMatKhau.TabIndex = 8;
-            this.btnDatLaiMatKhau.Text = "Đặt lại MK";
-            this.btnDatLaiMatKhau.Click += new System.EventHandler(this.BtnDatLaiMatKhau_Click);
-            // 
-            // btnXemLichSu
-            // 
-            this.btnXemLichSu.Enabled = false;
-            this.btnXemLichSu.Location = new System.Drawing.Point(1330, 580);
-            this.btnXemLichSu.Name = "btnXemLichSu";
-            this.btnXemLichSu.Size = new System.Drawing.Size(177, 44);
-            this.btnXemLichSu.TabIndex = 9;
-            this.btnXemLichSu.Text = "Xem lịch sử";
-            this.btnXemLichSu.Click += new System.EventHandler(this.BtnXemLichSu_Click);
-            // 
-            // lblTongNguoiDung
-            // 
-            this.lblTongNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTongNguoiDung.ForeColor = System.Drawing.Color.Blue;
-            this.lblTongNguoiDung.Location = new System.Drawing.Point(21, 580);
-            this.lblTongNguoiDung.Name = "lblTongNguoiDung";
-            this.lblTongNguoiDung.Size = new System.Drawing.Size(230, 44);
-            this.lblTongNguoiDung.TabIndex = 10;
-            // 
-            // lblThongKe
-            // 
-            this.lblThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblThongKe.ForeColor = System.Drawing.Color.Green;
-            this.lblThongKe.Location = new System.Drawing.Point(269, 580);
-            this.lblThongKe.Name = "lblThongKe";
-            this.lblThongKe.Size = new System.Drawing.Size(550, 44);
-            this.lblThongKe.TabIndex = 11;
             // 
             // MaNguoiDung
             // 
@@ -256,9 +198,78 @@ namespace GUI_TicketSalesSystem
             this.TongChiTieu.ReadOnly = true;
             this.TongChiTieu.Width = 131;
             // 
+            // btnKhoaTaiKhoan
+            // 
+            this.btnKhoaTaiKhoan.Enabled = false;
+            this.btnKhoaTaiKhoan.Location = new System.Drawing.Point(1294, 616);
+            this.btnKhoaTaiKhoan.Name = "btnKhoaTaiKhoan";
+            this.btnKhoaTaiKhoan.Size = new System.Drawing.Size(213, 41);
+            this.btnKhoaTaiKhoan.TabIndex = 6;
+            this.btnKhoaTaiKhoan.Text = "Khóa tài khoản";
+            this.btnKhoaTaiKhoan.Click += new System.EventHandler(this.BtnKhoaTaiKhoan_Click);
+            // 
+            // btnCapQuyen
+            // 
+            this.btnCapQuyen.Enabled = false;
+            this.btnCapQuyen.Location = new System.Drawing.Point(1149, 569);
+            this.btnCapQuyen.Name = "btnCapQuyen";
+            this.btnCapQuyen.Size = new System.Drawing.Size(175, 42);
+            this.btnCapQuyen.TabIndex = 7;
+            this.btnCapQuyen.Text = "Cấp quyền";
+            this.btnCapQuyen.Click += new System.EventHandler(this.BtnCapQuyen_Click);
+            // 
+            // btnDatLaiMatKhau
+            // 
+            this.btnDatLaiMatKhau.Enabled = false;
+            this.btnDatLaiMatKhau.Location = new System.Drawing.Point(914, 569);
+            this.btnDatLaiMatKhau.Name = "btnDatLaiMatKhau";
+            this.btnDatLaiMatKhau.Size = new System.Drawing.Size(229, 41);
+            this.btnDatLaiMatKhau.TabIndex = 8;
+            this.btnDatLaiMatKhau.Text = "Đặt lại mật khẩu";
+            this.btnDatLaiMatKhau.Click += new System.EventHandler(this.BtnDatLaiMatKhau_Click);
+            // 
+            // btnXemLichSu
+            // 
+            this.btnXemLichSu.Enabled = false;
+            this.btnXemLichSu.Location = new System.Drawing.Point(1330, 569);
+            this.btnXemLichSu.Name = "btnXemLichSu";
+            this.btnXemLichSu.Size = new System.Drawing.Size(177, 41);
+            this.btnXemLichSu.TabIndex = 9;
+            this.btnXemLichSu.Text = "Xem lịch sử";
+            this.btnXemLichSu.Click += new System.EventHandler(this.BtnXemLichSu_Click);
+            // 
+            // lblTongNguoiDung
+            // 
+            this.lblTongNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTongNguoiDung.ForeColor = System.Drawing.Color.Blue;
+            this.lblTongNguoiDung.Location = new System.Drawing.Point(21, 580);
+            this.lblTongNguoiDung.Name = "lblTongNguoiDung";
+            this.lblTongNguoiDung.Size = new System.Drawing.Size(230, 44);
+            this.lblTongNguoiDung.TabIndex = 10;
+            // 
+            // lblThongKe
+            // 
+            this.lblThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblThongKe.ForeColor = System.Drawing.Color.Green;
+            this.lblThongKe.Location = new System.Drawing.Point(269, 580);
+            this.lblThongKe.Name = "lblThongKe";
+            this.lblThongKe.Size = new System.Drawing.Size(550, 44);
+            this.lblThongKe.TabIndex = 11;
+            // 
+            // btnXoaTaiKhoan
+            // 
+            this.btnXoaTaiKhoan.Location = new System.Drawing.Point(1059, 617);
+            this.btnXoaTaiKhoan.Name = "btnXoaTaiKhoan";
+            this.btnXoaTaiKhoan.Size = new System.Drawing.Size(229, 41);
+            this.btnXoaTaiKhoan.TabIndex = 12;
+            this.btnXoaTaiKhoan.Text = "Xóa tài khoản";
+            this.btnXoaTaiKhoan.UseVisualStyleBackColor = true;
+            this.btnXoaTaiKhoan.Click += new System.EventHandler(this.btnXoaTaiKhoan_Click);
+            // 
             // FormQuanLyNguoiDung
             // 
-            this.ClientSize = new System.Drawing.Size(1519, 661);
+            this.ClientSize = new System.Drawing.Size(1519, 668);
+            this.Controls.Add(this.btnXoaTaiKhoan);
             this.Controls.Add(this.lblTieuDe);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnTimKiem);
@@ -306,5 +317,6 @@ namespace GUI_TicketSalesSystem
         private DataGridViewTextBoxColumn NgayTao;
         private DataGridViewTextBoxColumn SoVe;
         private DataGridViewTextBoxColumn TongChiTieu;
+        private Button btnXoaTaiKhoan;
     }
 }

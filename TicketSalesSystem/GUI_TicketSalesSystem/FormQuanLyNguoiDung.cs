@@ -335,6 +335,62 @@ namespace GUI_TicketSalesSystem
             }
         }
 
+        private void btnXoaTaiKhoan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvNguoiDung.SelectedRows.Count == 0) return;
+
+                var row = dgvNguoiDung.SelectedRows[0];
+                int maNguoiDung = (int)row.Cells["MaNguoiDung"].Value;
+                string hoTen = row.Cells["HoTen"].Value.ToString();
+                string loaiNguoiDung = row.Cells["LoaiNguoiDung"].Value.ToString();
+
+                // Không cho xóa admin cuối cùng
+                if (loaiNguoiDung == "Quản trị viên")
+                {
+                    var adminCount = busQuanLy.LocNguoiDung("QUANTRI").Count(u => u.DangHoatDong);
+                    if (adminCount <= 1)
+                    {
+                        MessageBox.Show("Không thể xóa admin cuối cùng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+
+                var result = MessageBox.Show(
+                    $"Bạn có chắc muốn XÓA HOÀN TOÀN người dùng '{hoTen}'?\n\n" +
+                    "- Tất cả vé đã mua sẽ bị xóa\n" +
+                    "- Ghế đã đặt sẽ được trả về trạng thái trống\n" +
+                    "- Thông tin hành khách sẽ bị xóa\n" +
+                    "- Tất cả giao dịch thanh toán sẽ bị xóa\n" +
+                    "- Tài khoản sẽ bị xóa vĩnh viễn\n\n" +
+                    "Hành động này KHÔNG THỂ hoàn tác!",
+                    "XÁC NHẬN XÓA VĨNH VIỄN",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    bool success = busQuanLy.XoaNguoiDung(maNguoiDung);
+                    if (success)
+                    {
+                        MessageBox.Show("Đã xóa người dùng thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadDanhSachNguoiDung();
+                        HienThiThongKe();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thể xóa người dùng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi xóa người dùng: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private string ChuyenDoiLoaiNguoiDung(string loai)
         {
             switch (loai)
