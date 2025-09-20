@@ -1,5 +1,6 @@
 ﻿using BUS_TicketSalesSystem;
 using DTO_TicketSalesSystem;
+using DTO_TicketSalesSystem.utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -146,8 +147,9 @@ namespace GUI_TicketSalesSystem
                     return;
                 }
 
-                var formDatVe = new FormDatVe(maChuyen);
-                formDatVe.ShowDialog();
+                // Mở form đặt vé mới với giỏ hàng và thanh toán VNPay
+                var formDatVeGioHang = new FormDatVeGioHang(UserSession.UserId);
+                formDatVeGioHang.ShowDialog();
 
                 // Refresh lại danh sách sau khi đặt vé
                 if (cboGaDi.SelectedIndex != -1 && cboGaDen.SelectedIndex != -1)

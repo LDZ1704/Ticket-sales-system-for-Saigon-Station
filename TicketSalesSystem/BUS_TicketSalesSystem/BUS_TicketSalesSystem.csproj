@@ -61,9 +61,12 @@
     <Compile Include="BUS_NguoiDung.cs" />
     <Compile Include="BUS_QuanLy.cs" />
     <Compile Include="BUS_TaiKhoan.cs" />
+    <Compile Include="BUS_ThanhToan.cs" />
     <Compile Include="BUS_Toa.cs" />
     <Compile Include="BUS_TraCuu.cs" />
     <Compile Include="BUS_Ve.cs" />
+    <Compile Include="VNPayTest.cs" />
+    <Compile Include="VnpayLibrary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

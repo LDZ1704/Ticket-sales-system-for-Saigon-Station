@@ -116,9 +116,9 @@ namespace GUI_TicketSalesSystem
         {
             try
             {
-                // Mở form tra cứu để chọn chuyến tàu trước khi đặt vé
-                mnuTraCuu_Click(sender, e);
-                MessageBox.Show("Vui lòng chọn chuyến tàu và nhấn 'Đặt vé' để tiếp tục!", "Hướng dẫn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Mở form đặt vé với giỏ hàng và thanh toán VNPay
+                var formDatVeGioHang = new FormDatVeGioHang(UserSession.UserId);
+                formDatVeGioHang.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -152,15 +152,16 @@ namespace GUI_TicketSalesSystem
 
         private void mnuThongKe_Click(object sender, EventArgs e)
         {
-            if (!CheckAdminPermission("xem thống kê")) return;
             try
             {
-                // Mở form thống kê dành cho admin
-                MessageBox.Show("Chức năng thống kê dành cho Quản trị viên!", "Thống kê", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Mở form test VNPay để debug
+                var formVNPayTest = new FormVNPayTest();
+                formVNPayTest.ShowDialog();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Lỗi mở test VNPay: {ex.Message}", "Lỗi", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

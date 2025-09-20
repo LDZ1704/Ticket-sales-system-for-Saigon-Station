@@ -27,7 +27,11 @@ namespace DAL_TicketSalesSystem
                                 GioKhoiHanh = ct.GioKhoiHanh ?? DateTime.MinValue,
                                 GioDen = ct.GioDen ?? DateTime.MinValue,
                                 TrangThai = ct.TrangThai,
-                                GhiChu = ct.GhiChu
+                                GhiChu = ct.GhiChu,
+                                TenTau = t.TenTau,
+                                TenGaDi = gdi.TenGa,
+                                TenGaDen = gden.TenGa,
+                                GiaVe = 100000 // Default price, should be calculated based on route and seat type
                             };
                 return query.ToList();
             }

@@ -9,6 +9,8 @@ namespace DAL_TicketSalesSystem
 {
     public class DAL_Ve
     {
+        private DAL_Ghe dalGhe = new DAL_Ghe();
+
         public bool ThemVe(int maHanhKhach, int maChuyen, int maGhe, int maThanhToan, decimal giaVe, string maQR)
         {
             using (var ctx = new TicketSalesContext())
@@ -26,6 +28,71 @@ namespace DAL_TicketSalesSystem
 
                 ctx.Ves.Add(ve);
                 return ctx.SaveChanges() > 0;
+            }
+        }
+
+        public int ThemVe(DTO_Ve dto)
+        {
+            using (var ctx = new TicketSalesContext())
+            {
+                var ve = new Ve
+                {
+                    MaHanhKhach = dto.MaHanhKhach,
+                    MaChuyen = dto.MaChuyen,
+                    MaGhe = dto.MaGhe,
+                    MaThanhToan = dto.MaThanhToan,
+                    GiaVe = dto.GiaVe,
+                    TrangThai = dto.TrangThai,
+                    MaQR = dto.MaQR
+                };
+
+                ctx.Ves.Add(ve);
+                ctx.SaveChanges();
+                return ve.MaVe;
+            }
+        }
+
+        public bool ThemDanhSachVe(List<DTO_Ve> danhSachVe)
+        {
+            try
+            {
+                using (var db = new TicketSalesContext())
+                {
+                    foreach (var ve in danhSachVe)
+                    {
+                        db.Ves.Add(new Ve
+                        {
+                            MaHanhKhach = ve.MaHanhKhach,
+                            MaChuyen = ve.MaChuyen,
+                            MaGhe = ve.MaGhe,
+                            MaThanhToan = ve.MaThanhToan,
+                            GiaVe = ve.GiaVe,
+                            TrangThai = ve.TrangThai,
+                            MaQR = ve.MaQR
+                        });
+
+                        // cập nhật trạng thái ghế bằng chính context này
+                        var ghe = db.Ghes.Find(ve.MaGhe);
+                        if (ghe != null)
+                        {
+                            Console.WriteLine($"[INFO] Update Ghế {ve.MaGhe} -> DADAT");
+                            ghe.TrangThai = "DADAT";
+                        }
+                    }
+
+                    int rows = db.SaveChanges();
+                    Console.WriteLine($"[INFO] SaveChanges thành công, {rows} bản ghi bị ảnh hưởng.");
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("[ERROR] ThemDanhSachVe thất bại: " + ex.Message);
+                if (ex.InnerException != null)
+                    Console.WriteLine("[INNER] " + ex.InnerException.Message);
+                if (ex.InnerException?.InnerException != null)
+                    Console.WriteLine("[INNER2] " + ex.InnerException.InnerException.Message);
+                return false;
             }
         }
 
@@ -102,10 +169,10 @@ namespace DAL_TicketSalesSystem
                             join gdi in ctx.GaTaus on td.MaGaDi equals gdi.MaGaTau
                             join gden in ctx.GaTaus on td.MaGaDen equals gden.MaGaTau
                             where v.MaVe == maVe
-                            select new { gdi.TenGa, GaDen = gden.TenGa };
+                            select new { GaDi = gdi.TenGa, GaDen = gden.TenGa };
 
                 var result = query.FirstOrDefault();
-                return result != null ? $"{result.TenGa} - {result.GaDen}" : string.Empty;
+                return result != null ? $"{result.GaDi} - {result.GaDen}" : string.Empty;
             }
         }
 
@@ -117,7 +184,7 @@ namespace DAL_TicketSalesSystem
                             join g in ctx.Ghes on v.MaGhe equals g.MaGhe
                             join tt in ctx.ToaTaus on g.MaToa equals tt.MaToa
                             where v.MaVe == maVe
-                            select new { tt.TenToa, g.SoHieu };
+                            select new { TenToa = tt.TenToa, SoHieu = g.SoHieu };
 
                 var result = query.FirstOrDefault();
                 return result != null ? $"{result.TenToa} - {result.SoHieu}" : string.Empty;

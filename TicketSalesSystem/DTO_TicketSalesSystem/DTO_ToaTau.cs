@@ -11,6 +11,7 @@ namespace DTO_TicketSalesSystem
         public int? MaToa { get; set; }
         public string TenToa { get; set; }
         public string LoaiGhe { get; set; }
+        public decimal? GiaVe { get; set; }
         public int? ViTri { get; set; }
         public int MaTau { get; set; }
 
