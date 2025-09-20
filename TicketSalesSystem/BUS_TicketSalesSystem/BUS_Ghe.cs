@@ -54,5 +54,19 @@ namespace BUS_TicketSalesSystem
                 throw new Exception($"Lỗi lấy thông tin ghế: {ex.Message}");
             }
         }
+
+        public List<DTO_Ghe> LayGheTheoChuyen(int maChuyen)
+        {
+            try
+            {
+                if (maChuyen <= 0)
+                    throw new ArgumentException("Mã chuyến không hợp lệ");
+                return dalGhe.LayGheBangChuyen(maChuyen);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi lấy danh sách ghế theo chuyến: {ex.Message}");
+            }
+        }
     }
 }

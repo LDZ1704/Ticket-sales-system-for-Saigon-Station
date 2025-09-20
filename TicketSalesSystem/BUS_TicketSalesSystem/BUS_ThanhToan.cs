@@ -10,6 +10,7 @@ namespace BUS_TicketSalesSystem
 {
     public class BUS_ThanhToan
     {
+<<<<<<< HEAD
         private readonly DAL_ThanhToan dalThanhToan = new DAL_ThanhToan();
 
         /// <summary>
@@ -191,6 +192,13 @@ namespace BUS_TicketSalesSystem
             // Chuyến mới phải trong cùng ngày hoặc sau ngày của chuyến cũ
             // (theo yêu cầu "cùng tuyến, cùng ngày hoặc theo điều kiện")
             return ngayKhoiHanhMoi.Date >= ngayKhoiHanhCu.Date;
+=======
+        private DAL_ThanhToan dalThanhToan = new DAL_ThanhToan();
+
+        public DTO_ThanhToan LayThanhToanTheoId(int maThanhToan)
+        {
+            return dalThanhToan.LayThanhToanTheoId(maThanhToan);
+>>>>>>> c6748c47e9d8cb80444f49ab33d2a8edf2fe47b7
         }
     }
 }

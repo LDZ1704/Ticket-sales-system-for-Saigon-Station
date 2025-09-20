@@ -13,5 +13,8 @@ namespace DTO_TicketSalesSystem
         public string ViTri { get; set; }
         public string TrangThai { get; set; }
         public int MaToa { get; set; }
+        public string TenToa { get; set; }
+        public string LoaiGhe { get; set; }
+        public decimal GiaVe { get; set; }
     }
 }

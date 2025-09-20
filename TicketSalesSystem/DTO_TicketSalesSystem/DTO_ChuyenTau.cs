@@ -20,6 +20,9 @@ namespace DTO_TicketSalesSystem
         public string TenTau { get; set; }
         public string Tuyen { get; set; }
         public int SoChoTrong { get; set; }
+        public string TenGaDi { get; set; }
+        public string TenGaDen { get; set; }
+        public decimal GiaVe { get; set; }
 
     }
 }

@@ -23,6 +23,7 @@ namespace DAL_TicketSalesSystem
         public int MaToa { get; set; }
         public string TenToa { get; set; }
         public string LoaiGhe { get; set; }
+        public Nullable<decimal> GiaVe { get; set; }
         public Nullable<int> ViTri { get; set; }
         public Nullable<int> MaTau { get; set; }
         public Nullable<decimal> GiaVe { get; set; }
