@@ -1,10 +1,17 @@
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormBaoCaoTongHop.resources
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormCaiDatHeThong.resources
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormCapQuyen.resources
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormChangePassword.resources
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormDashboard.resources
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormDatVe.resources
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormDoiVe.resources
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormHuyVe.resources
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormLichSuHoatDong.resources
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormLogin.resources
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormMain.resources
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormQuanLyNguoiDung.resources
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormQuanTriVien.resources
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormRegister.resources
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormThongKe.resources
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.FormTraCuu.resources
@@ -12,3 +19,9 @@ C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSale
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.Properties.Resources.resources
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.csproj.GenerateResource.cache
 C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.csproj.CoreCompileInputs.cache
+<<<<<<< HEAD
+=======
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_Tick.DB9B779C.Up2Date
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.exe
+C:\Users\Administrator\Desktop\Ticket-sales-system-for-Saigon-Station\TicketSalesSystem\GUI_TicketSalesSystem\obj\Debug\GUI_TicketSalesSystem.pdb
+>>>>>>> cabcde3143097b7b4ec026ac87c0a0ef0b02e0d9
