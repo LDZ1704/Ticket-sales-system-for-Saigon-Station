@@ -44,14 +44,34 @@ namespace GUI_TicketSalesSystem
             this.lblDoanhThu = new System.Windows.Forms.Label();
             this.lblSoVe = new System.Windows.Forms.Label();
             this.dgvDoanhThu = new System.Windows.Forms.DataGridView();
-            this.tabVe = new System.Windows.Forms.TabPage();
-            this.tabTuyen = new System.Windows.Forms.TabPage();
             this.dgvNgay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSoVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabVe = new System.Windows.Forms.TabPage();
+            this.dgvVe = new System.Windows.Forms.DataGridView();
+            this.dgvTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTiLe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbDaDoi = new System.Windows.Forms.Label();
+            this.lbDaHuy = new System.Windows.Forms.Label();
+            this.lbDaThanhToan = new System.Windows.Forms.Label();
+            this.lbTongVe = new System.Windows.Forms.Label();
+            this.tabTuyen = new System.Windows.Forms.TabPage();
+            this.lbTuyenBanChayNhat = new System.Windows.Forms.Label();
+            this.lbTuyen = new System.Windows.Forms.Label();
+            this.dgvTuyen = new System.Windows.Forms.DataGridView();
+            this.dgvXepHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTenTuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSoVeBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDoanhThu2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDoanhThuTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabThongKe.SuspendLayout();
             this.tabDoanhThu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).BeginInit();
+            this.tabVe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVe)).BeginInit();
+            this.tabTuyen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuyen)).BeginInit();
             this.SuspendLayout();
             // 
             // tabThongKe
@@ -123,7 +143,7 @@ namespace GUI_TicketSalesSystem
             this.btnXuatBaoCao.Name = "btnXuatBaoCao";
             this.btnXuatBaoCao.Size = new System.Drawing.Size(149, 36);
             this.btnXuatBaoCao.TabIndex = 4;
-            this.btnXuatBaoCao.Text = "Làm mới";
+            this.btnXuatBaoCao.Text = "Xuất báo cáo";
             this.btnXuatBaoCao.Click += new System.EventHandler(this.btnXuatBaoCao_Click);
             // 
             // btnLamMoi
@@ -181,24 +201,6 @@ namespace GUI_TicketSalesSystem
             this.dgvDoanhThu.Size = new System.Drawing.Size(1090, 400);
             this.dgvDoanhThu.TabIndex = 7;
             // 
-            // tabVe
-            // 
-            this.tabVe.Location = new System.Drawing.Point(4, 33);
-            this.tabVe.Name = "tabVe";
-            this.tabVe.Size = new System.Drawing.Size(1133, 583);
-            this.tabVe.TabIndex = 1;
-            this.tabVe.Text = "Thống kê vé";
-            this.tabVe.UseVisualStyleBackColor = true;
-            // 
-            // tabTuyen
-            // 
-            this.tabTuyen.Location = new System.Drawing.Point(4, 33);
-            this.tabTuyen.Name = "tabTuyen";
-            this.tabTuyen.Size = new System.Drawing.Size(1133, 583);
-            this.tabTuyen.TabIndex = 2;
-            this.tabTuyen.Text = "Thống kê tuyến";
-            this.tabTuyen.UseVisualStyleBackColor = true;
-            // 
             // dgvNgay
             // 
             this.dgvNgay.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -222,6 +224,182 @@ namespace GUI_TicketSalesSystem
             this.dgvThu.Name = "dgvThu";
             this.dgvThu.ReadOnly = true;
             // 
+            // tabVe
+            // 
+            this.tabVe.Controls.Add(this.dgvVe);
+            this.tabVe.Controls.Add(this.lbDaDoi);
+            this.tabVe.Controls.Add(this.lbDaHuy);
+            this.tabVe.Controls.Add(this.lbDaThanhToan);
+            this.tabVe.Controls.Add(this.lbTongVe);
+            this.tabVe.Location = new System.Drawing.Point(4, 33);
+            this.tabVe.Name = "tabVe";
+            this.tabVe.Size = new System.Drawing.Size(1133, 583);
+            this.tabVe.TabIndex = 1;
+            this.tabVe.Text = "Thống kê vé";
+            this.tabVe.UseVisualStyleBackColor = true;
+            // 
+            // dgvVe
+            // 
+            this.dgvVe.AllowUserToAddRows = false;
+            this.dgvVe.AllowUserToDeleteRows = false;
+            this.dgvVe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvVe.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvVe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvTrangThai,
+            this.dgvSoLuong,
+            this.dgvTiLe});
+            this.dgvVe.Location = new System.Drawing.Point(15, 137);
+            this.dgvVe.Name = "dgvVe";
+            this.dgvVe.Size = new System.Drawing.Size(1099, 428);
+            this.dgvVe.TabIndex = 1;
+            // 
+            // dgvTrangThai
+            // 
+            this.dgvTrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvTrangThai.HeaderText = "Trạng thái";
+            this.dgvTrangThai.Name = "dgvTrangThai";
+            this.dgvTrangThai.Width = 119;
+            // 
+            // dgvSoLuong
+            // 
+            this.dgvSoLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvSoLuong.HeaderText = "Số lượng";
+            this.dgvSoLuong.Name = "dgvSoLuong";
+            this.dgvSoLuong.Width = 111;
+            // 
+            // dgvTiLe
+            // 
+            this.dgvTiLe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvTiLe.HeaderText = "Tỉ lệ (%)";
+            this.dgvTiLe.Name = "dgvTiLe";
+            this.dgvTiLe.Width = 103;
+            // 
+            // lbDaDoi
+            // 
+            this.lbDaDoi.AutoSize = true;
+            this.lbDaDoi.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lbDaDoi.Location = new System.Drawing.Point(365, 89);
+            this.lbDaDoi.Name = "lbDaDoi";
+            this.lbDaDoi.Size = new System.Drawing.Size(85, 24);
+            this.lbDaDoi.TabIndex = 0;
+            this.lbDaDoi.Text = "Đã đổi: 0";
+            // 
+            // lbDaHuy
+            // 
+            this.lbDaHuy.AutoSize = true;
+            this.lbDaHuy.ForeColor = System.Drawing.Color.Red;
+            this.lbDaHuy.Location = new System.Drawing.Point(81, 89);
+            this.lbDaHuy.Name = "lbDaHuy";
+            this.lbDaHuy.Size = new System.Drawing.Size(89, 24);
+            this.lbDaHuy.TabIndex = 0;
+            this.lbDaHuy.Text = "Đã hủy: 0";
+            // 
+            // lbDaThanhToan
+            // 
+            this.lbDaThanhToan.AutoSize = true;
+            this.lbDaThanhToan.ForeColor = System.Drawing.Color.Green;
+            this.lbDaThanhToan.Location = new System.Drawing.Point(304, 40);
+            this.lbDaThanhToan.Name = "lbDaThanhToan";
+            this.lbDaThanhToan.Size = new System.Drawing.Size(146, 24);
+            this.lbDaThanhToan.TabIndex = 0;
+            this.lbDaThanhToan.Text = "Đã thanh toán: 0";
+            // 
+            // lbTongVe
+            // 
+            this.lbTongVe.AutoSize = true;
+            this.lbTongVe.ForeColor = System.Drawing.Color.Blue;
+            this.lbTongVe.Location = new System.Drawing.Point(45, 40);
+            this.lbTongVe.Name = "lbTongVe";
+            this.lbTongVe.Size = new System.Drawing.Size(125, 24);
+            this.lbTongVe.TabIndex = 0;
+            this.lbTongVe.Text = "Tổng số vé: 0";
+            // 
+            // tabTuyen
+            // 
+            this.tabTuyen.Controls.Add(this.dgvTuyen);
+            this.tabTuyen.Controls.Add(this.lbTuyen);
+            this.tabTuyen.Controls.Add(this.lbTuyenBanChayNhat);
+            this.tabTuyen.Location = new System.Drawing.Point(4, 33);
+            this.tabTuyen.Name = "tabTuyen";
+            this.tabTuyen.Size = new System.Drawing.Size(1133, 583);
+            this.tabTuyen.TabIndex = 2;
+            this.tabTuyen.Text = "Thống kê tuyến";
+            this.tabTuyen.UseVisualStyleBackColor = true;
+            // 
+            // lbTuyenBanChayNhat
+            // 
+            this.lbTuyenBanChayNhat.AutoSize = true;
+            this.lbTuyenBanChayNhat.ForeColor = System.Drawing.Color.Blue;
+            this.lbTuyenBanChayNhat.Location = new System.Drawing.Point(53, 31);
+            this.lbTuyenBanChayNhat.Name = "lbTuyenBanChayNhat";
+            this.lbTuyenBanChayNhat.Size = new System.Drawing.Size(197, 24);
+            this.lbTuyenBanChayNhat.TabIndex = 0;
+            this.lbTuyenBanChayNhat.Text = "Tuyến bán chạy nhất: ";
+            // 
+            // lbTuyen
+            // 
+            this.lbTuyen.AutoSize = true;
+            this.lbTuyen.ForeColor = System.Drawing.Color.Green;
+            this.lbTuyen.Location = new System.Drawing.Point(53, 79);
+            this.lbTuyen.Name = "lbTuyen";
+            this.lbTuyen.Size = new System.Drawing.Size(136, 24);
+            this.lbTuyen.TabIndex = 0;
+            this.lbTuyen.Text = "Tổng số tuyến:";
+            // 
+            // dgvTuyen
+            // 
+            this.dgvTuyen.AllowUserToAddRows = false;
+            this.dgvTuyen.AllowUserToDeleteRows = false;
+            this.dgvTuyen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvTuyen.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvTuyen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTuyen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvXepHang,
+            this.dgvTenTuyen,
+            this.dgvSoVeBan,
+            this.dgvDoanhThu2,
+            this.dgvDoanhThuTB});
+            this.dgvTuyen.Location = new System.Drawing.Point(20, 117);
+            this.dgvTuyen.Name = "dgvTuyen";
+            this.dgvTuyen.Size = new System.Drawing.Size(1092, 448);
+            this.dgvTuyen.TabIndex = 1;
+            // 
+            // dgvXepHang
+            // 
+            this.dgvXepHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvXepHang.HeaderText = "Xếp hạng";
+            this.dgvXepHang.Name = "dgvXepHang";
+            this.dgvXepHang.Width = 109;
+            // 
+            // dgvTenTuyen
+            // 
+            this.dgvTenTuyen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvTenTuyen.HeaderText = "Tên tuyến";
+            this.dgvTenTuyen.Name = "dgvTenTuyen";
+            this.dgvTenTuyen.Width = 110;
+            // 
+            // dgvSoVeBan
+            // 
+            this.dgvSoVeBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvSoVeBan.HeaderText = "Số vé bán";
+            this.dgvSoVeBan.Name = "dgvSoVeBan";
+            this.dgvSoVeBan.Width = 110;
+            // 
+            // dgvDoanhThu2
+            // 
+            this.dgvDoanhThu2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvDoanhThu2.HeaderText = "Doanh thu";
+            this.dgvDoanhThu2.Name = "dgvDoanhThu2";
+            this.dgvDoanhThu2.Width = 112;
+            // 
+            // dgvDoanhThuTB
+            // 
+            this.dgvDoanhThuTB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvDoanhThuTB.HeaderText = "Doanh thu trung bình";
+            this.dgvDoanhThuTB.Name = "dgvDoanhThuTB";
+            this.dgvDoanhThuTB.Width = 160;
+            // 
             // FormThongKe
             // 
             this.ClientSize = new System.Drawing.Size(1143, 635);
@@ -234,6 +412,12 @@ namespace GUI_TicketSalesSystem
             this.tabThongKe.ResumeLayout(false);
             this.tabDoanhThu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).EndInit();
+            this.tabVe.ResumeLayout(false);
+            this.tabVe.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVe)).EndInit();
+            this.tabTuyen.ResumeLayout(false);
+            this.tabTuyen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTuyen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,5 +441,21 @@ namespace GUI_TicketSalesSystem
         private DataGridViewTextBoxColumn dgvNgay;
         private DataGridViewTextBoxColumn dgvSoVe;
         private DataGridViewTextBoxColumn dgvThu;
+        private Label lbDaHuy;
+        private Label lbTongVe;
+        private Label lbDaDoi;
+        private Label lbDaThanhToan;
+        private DataGridView dgvVe;
+        private DataGridViewTextBoxColumn dgvTrangThai;
+        private DataGridViewTextBoxColumn dgvSoLuong;
+        private DataGridViewTextBoxColumn dgvTiLe;
+        private Label lbTuyenBanChayNhat;
+        private Label lbTuyen;
+        private DataGridView dgvTuyen;
+        private DataGridViewTextBoxColumn dgvXepHang;
+        private DataGridViewTextBoxColumn dgvTenTuyen;
+        private DataGridViewTextBoxColumn dgvSoVeBan;
+        private DataGridViewTextBoxColumn dgvDoanhThu2;
+        private DataGridViewTextBoxColumn dgvDoanhThuTB;
     }
 }

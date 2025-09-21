@@ -64,8 +64,6 @@
     <Compile Include="BUS_ThanhToan.cs" />
     <Compile Include="BUS_Toa.cs" />
     <Compile Include="BUS_Ve.cs" />
-    <Compile Include="VNPayTest.cs" />
-    <Compile Include="VnpayLibrary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

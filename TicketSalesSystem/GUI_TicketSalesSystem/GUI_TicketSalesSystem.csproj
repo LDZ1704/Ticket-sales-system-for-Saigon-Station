@@ -107,17 +107,7 @@
     <Compile Include="DatVe\FormDatVe.Designer.cs">
       <DependentUpon>FormDatVe.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="DatVe\FormDoiVe.cs">
-=======
-    <Compile Include="FormDatVeGioHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDatVeGioHang.Designer.cs">
-      <DependentUpon>FormDatVeGioHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormLogin.cs">
->>>>>>> c6748c47e9d8cb80444f49ab33d2a8edf2fe47b7
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DatVe\FormDoiVe.Designer.cs">
@@ -183,33 +173,6 @@
     <Compile Include="DatVe\FormVeCuaToi.Designer.cs">
       <DependentUpon>FormVeCuaToi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormGioHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormGioHang.Designer.cs">
-      <DependentUpon>FormGioHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormTestButtons.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormThanhToanVNPay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormThanhToanVNPay.Designer.cs">
-      <DependentUpon>FormThanhToanVNPay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormVNPayTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormVNPayConfig.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormVNPayCallback.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormVNPayCallback.Designer.cs">
-      <DependentUpon>FormVNPayCallback.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\Debounce.cs" />
@@ -231,7 +194,6 @@
     <EmbeddedResource Include="DatVe\FormDatVe.resx">
       <DependentUpon>FormDatVe.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="DatVe\FormDoiVe.resx">
       <DependentUpon>FormDoiVe.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,12 +204,6 @@
       <DependentUpon>FormLichSuHoatDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NguoiDung\FormLogin.resx">
-=======
-    <EmbeddedResource Include="FormDatVeGioHang.resx">
-      <DependentUpon>FormDatVeGioHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
->>>>>>> c6748c47e9d8cb80444f49ab33d2a8edf2fe47b7
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
@@ -270,15 +226,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DatVe\FormVeCuaToi.resx">
       <DependentUpon>FormVeCuaToi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGioHang.resx">
-      <DependentUpon>FormGioHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormThanhToanVNPay.resx">
-      <DependentUpon>FormThanhToanVNPay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormVNPayCallback.resx">
-      <DependentUpon>FormVNPayCallback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

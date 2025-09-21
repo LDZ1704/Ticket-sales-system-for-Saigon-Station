@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="QrCodeGenerator, Version=1.6.0.0, Culture=neutral, PublicKeyToken=6aa6bd7a159d47c2, processorArchitecture=MSIL">
-      <HintPath>..\packages\Net.Codecrete.QrCodeGenerator.2.0.7\lib\netstandard2.0\QrCodeGenerator.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,17 +54,12 @@
     <Compile Include="DTO_ToaTau.cs" />
     <Compile Include="DTO_TuyenDuong.cs" />
     <Compile Include="DTO_Ve.cs" />
-    <Compile Include="DTO_GioHang.cs" />
-    <Compile Include="DTO_ThanhToanVNPay.cs" />
     <Compile Include="enums\LoaiNguoiDung.cs" />
     <Compile Include="enums\TrangThai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\PasswordHasher.cs" />
-    <Compile Include="utils\QRCodeGenerator.cs" />
     <Compile Include="utils\UserSession.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

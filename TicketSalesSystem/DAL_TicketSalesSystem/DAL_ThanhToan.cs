@@ -27,39 +27,5 @@ namespace DAL_TicketSalesSystem
                 return thanhToan.MaThanhToan;
             }
         }
-
-        public bool CapNhatTrangThaiThanhToan(int maThanhToan, string trangThai)
-        {
-            using (var ctx = new TicketSalesContext())
-            {
-                var thanhToan = ctx.ThanhToans.Find(maThanhToan);
-                if (thanhToan != null)
-                {
-                    thanhToan.TrangThai = trangThai;
-                    ctx.SaveChanges();
-                    return true;
-                }
-                return false;
-            }
-        }
-
-        public DTO_ThanhToan LayThanhToanTheoId(int maThanhToan)
-        {
-            using (var ctx = new TicketSalesContext())
-            {
-                var entity = ctx.ThanhToans.Find(maThanhToan);
-                if (entity == null) return null;
-
-                return new DTO_ThanhToan
-                {
-                    MaThanhToan = entity.MaThanhToan,
-                    MaNguoiDung = (int)entity.MaNguoiDung,
-                    HinhThuc = entity.HinhThuc,
-                    ThoiDiem = (DateTime)entity.ThoiDiem,
-                    TrangThai = entity.TrangThai,
-                    NgayThanhToan = (DateTime)entity.NgayThanhToan
-                };
-            }
-        }
     }
 }

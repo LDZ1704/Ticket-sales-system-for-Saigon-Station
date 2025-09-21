@@ -40,7 +40,14 @@
             this.lblTiLeGheTrong = new System.Windows.Forms.Label();
             this.lblCapNhatLan = new System.Windows.Forms.Label();
             this.dgvTop5Tuyen = new System.Windows.Forms.DataGridView();
+            this.dgvHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSoVe1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDoanhThu1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDoanhThu7Ngay = new System.Windows.Forms.DataGridView();
+            this.dgvNgay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSoVe2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDoanhThu2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnXemThongKe = new System.Windows.Forms.Button();
             this.btnQuanLyNguoiDung = new System.Windows.Forms.Button();
@@ -56,13 +63,6 @@
             this.lblNguoiDungTitle = new System.Windows.Forms.Label();
             this.pnlHeThong = new System.Windows.Forms.Panel();
             this.lblHeThongTitle = new System.Windows.Forms.Label();
-            this.dgvHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSoVe1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDoanhThu1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvNgay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSoVe2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDoanhThu2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTop5Tuyen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu7Ngay)).BeginInit();
             this.grpTop5.SuspendLayout();
@@ -126,7 +126,7 @@
             this.lblSoVeThangNay.BackColor = System.Drawing.Color.Transparent;
             this.lblSoVeThangNay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoVeThangNay.ForeColor = System.Drawing.Color.White;
-            this.lblSoVeThangNay.Location = new System.Drawing.Point(8, 65);
+            this.lblSoVeThangNay.Location = new System.Drawing.Point(7, 61);
             this.lblSoVeThangNay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSoVeThangNay.Name = "lblSoVeThangNay";
             this.lblSoVeThangNay.Size = new System.Drawing.Size(246, 27);
@@ -197,7 +197,7 @@
             // 
             this.lblCapNhatLan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCapNhatLan.ForeColor = System.Drawing.Color.Gray;
-            this.lblCapNhatLan.Location = new System.Drawing.Point(963, 550);
+            this.lblCapNhatLan.Location = new System.Drawing.Point(967, 9);
             this.lblCapNhatLan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCapNhatLan.Name = "lblCapNhatLan";
             this.lblCapNhatLan.Size = new System.Drawing.Size(226, 25);
@@ -223,6 +223,38 @@
             this.dgvTop5Tuyen.Size = new System.Drawing.Size(601, 232);
             this.dgvTop5Tuyen.TabIndex = 0;
             // 
+            // dgvHang
+            // 
+            this.dgvHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvHang.HeaderText = "Hạng";
+            this.dgvHang.Name = "dgvHang";
+            this.dgvHang.ReadOnly = true;
+            this.dgvHang.Width = 92;
+            // 
+            // dgvTuyen
+            // 
+            this.dgvTuyen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvTuyen.HeaderText = "Tuyến";
+            this.dgvTuyen.Name = "dgvTuyen";
+            this.dgvTuyen.ReadOnly = true;
+            this.dgvTuyen.Width = 102;
+            // 
+            // dgvSoVe1
+            // 
+            this.dgvSoVe1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvSoVe1.HeaderText = "Số vé";
+            this.dgvSoVe1.Name = "dgvSoVe1";
+            this.dgvSoVe1.ReadOnly = true;
+            this.dgvSoVe1.Width = 97;
+            // 
+            // dgvDoanhThu1
+            // 
+            this.dgvDoanhThu1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvDoanhThu1.HeaderText = "Doanh thu";
+            this.dgvDoanhThu1.Name = "dgvDoanhThu1";
+            this.dgvDoanhThu1.ReadOnly = true;
+            this.dgvDoanhThu1.Width = 145;
+            // 
             // dgvDoanhThu7Ngay
             // 
             this.dgvDoanhThu7Ngay.AllowUserToAddRows = false;
@@ -240,6 +272,30 @@
             this.dgvDoanhThu7Ngay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDoanhThu7Ngay.Size = new System.Drawing.Size(542, 232);
             this.dgvDoanhThu7Ngay.TabIndex = 0;
+            // 
+            // dgvNgay
+            // 
+            this.dgvNgay.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvNgay.HeaderText = "Ngày";
+            this.dgvNgay.Name = "dgvNgay";
+            this.dgvNgay.ReadOnly = true;
+            this.dgvNgay.Width = 91;
+            // 
+            // dgvSoVe2
+            // 
+            this.dgvSoVe2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvSoVe2.HeaderText = "Số vé";
+            this.dgvSoVe2.Name = "dgvSoVe2";
+            this.dgvSoVe2.ReadOnly = true;
+            this.dgvSoVe2.Width = 97;
+            // 
+            // dgvDoanhThu2
+            // 
+            this.dgvDoanhThu2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvDoanhThu2.HeaderText = "Doanh thu";
+            this.dgvDoanhThu2.Name = "dgvDoanhThu2";
+            this.dgvDoanhThu2.ReadOnly = true;
+            this.dgvDoanhThu2.Width = 145;
             // 
             // btnLamMoi
             // 
@@ -277,7 +333,7 @@
             this.btnQuanLyNguoiDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuanLyNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLyNguoiDung.ForeColor = System.Drawing.Color.White;
-            this.btnQuanLyNguoiDung.Location = new System.Drawing.Point(438, 534);
+            this.btnQuanLyNguoiDung.Location = new System.Drawing.Point(1000, 534);
             this.btnQuanLyNguoiDung.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuanLyNguoiDung.Name = "btnQuanLyNguoiDung";
             this.btnQuanLyNguoiDung.Size = new System.Drawing.Size(193, 41);
@@ -292,7 +348,7 @@
             this.btnCaiDat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCaiDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCaiDat.ForeColor = System.Drawing.Color.White;
-            this.btnCaiDat.Location = new System.Drawing.Point(438, 484);
+            this.btnCaiDat.Location = new System.Drawing.Point(1000, 484);
             this.btnCaiDat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCaiDat.Name = "btnCaiDat";
             this.btnCaiDat.Size = new System.Drawing.Size(193, 46);
@@ -334,9 +390,9 @@
             this.lblTitle.Location = new System.Drawing.Point(22, 16);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(300, 28);
+            this.lblTitle.Size = new System.Drawing.Size(415, 28);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "DASHBOARD QUẢN TRỊ VIÊN";
+            this.lblTitle.Text = "TRANG TỔNG QUAN QUẢN TRỊ VIÊN";
             // 
             // pnlDoanhThu
             // 
@@ -441,62 +497,6 @@
             this.lblHeThongTitle.Size = new System.Drawing.Size(188, 29);
             this.lblHeThongTitle.TabIndex = 0;
             this.lblHeThongTitle.Text = "HỆ THỐNG";
-            // 
-            // dgvHang
-            // 
-            this.dgvHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dgvHang.HeaderText = "Hạng";
-            this.dgvHang.Name = "dgvHang";
-            this.dgvHang.ReadOnly = true;
-            this.dgvHang.Width = 92;
-            // 
-            // dgvTuyen
-            // 
-            this.dgvTuyen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dgvTuyen.HeaderText = "Tuyến";
-            this.dgvTuyen.Name = "dgvTuyen";
-            this.dgvTuyen.ReadOnly = true;
-            this.dgvTuyen.Width = 102;
-            // 
-            // dgvSoVe1
-            // 
-            this.dgvSoVe1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dgvSoVe1.HeaderText = "Số vé";
-            this.dgvSoVe1.Name = "dgvSoVe1";
-            this.dgvSoVe1.ReadOnly = true;
-            this.dgvSoVe1.Width = 97;
-            // 
-            // dgvDoanhThu1
-            // 
-            this.dgvDoanhThu1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dgvDoanhThu1.HeaderText = "Doanh thu";
-            this.dgvDoanhThu1.Name = "dgvDoanhThu1";
-            this.dgvDoanhThu1.ReadOnly = true;
-            this.dgvDoanhThu1.Width = 145;
-            // 
-            // dgvNgay
-            // 
-            this.dgvNgay.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dgvNgay.HeaderText = "Ngày";
-            this.dgvNgay.Name = "dgvNgay";
-            this.dgvNgay.ReadOnly = true;
-            this.dgvNgay.Width = 91;
-            // 
-            // dgvSoVe2
-            // 
-            this.dgvSoVe2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dgvSoVe2.HeaderText = "Số vé";
-            this.dgvSoVe2.Name = "dgvSoVe2";
-            this.dgvSoVe2.ReadOnly = true;
-            this.dgvSoVe2.Width = 97;
-            // 
-            // dgvDoanhThu2
-            // 
-            this.dgvDoanhThu2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dgvDoanhThu2.HeaderText = "Doanh thu";
-            this.dgvDoanhThu2.Name = "dgvDoanhThu2";
-            this.dgvDoanhThu2.ReadOnly = true;
-            this.dgvDoanhThu2.Width = 145;
             // 
             // FormDashboard
             // 

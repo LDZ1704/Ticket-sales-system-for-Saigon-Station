@@ -24,7 +24,7 @@ namespace DAL_TicketSalesSystem
         {
             throw new UnintentionalCodeFirstException();
         }
-
+    
         public virtual DbSet<ChuyenTau> ChuyenTaus { get; set; }
         public virtual DbSet<GaTau> GaTaus { get; set; }
         public virtual DbSet<Ghe> Ghes { get; set; }

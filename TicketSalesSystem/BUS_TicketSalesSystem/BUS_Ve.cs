@@ -347,11 +347,6 @@ namespace BUS_TicketSalesSystem
             }
         }
 
-        public bool ThemDanhSachVe(List<DTO_Ve> danhSachVe)
-        {
-            return dalVe.ThemDanhSachVe(danhSachVe);
-        }
-
         public bool KiemTraVeCoTheHuy(string trangThai)
         {
             return trangThai == "Đã thanh toán";

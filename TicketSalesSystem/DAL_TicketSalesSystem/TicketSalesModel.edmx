@@ -451,7 +451,6 @@
           <Property Name="MaToa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenToa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="LoaiGhe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="GiaVe" Type="Decimal" Precision="12" Scale="2" />
           <Property Name="ViTri" Type="Int32" />
           <Property Name="MaTau" Type="Int32" />
           <NavigationProperty Name="Ghes" Relationship="Self.FK__Ghe__MaToa__4E88ABD4" FromRole="ToaTau" ToRole="Ghe" />
@@ -805,7 +804,6 @@
                 <ScalarProperty Name="MaToa" ColumnName="MaToa" />
                 <ScalarProperty Name="TenToa" ColumnName="TenToa" />
                 <ScalarProperty Name="LoaiGhe" ColumnName="LoaiGhe" />
-                <ScalarProperty Name="GiaVe" ColumnName="GiaVe" />
                 <ScalarProperty Name="ViTri" ColumnName="ViTri" />
                 <ScalarProperty Name="MaTau" ColumnName="MaTau" />
               </MappingFragment>
