@@ -334,9 +334,50 @@ namespace BUS_TicketSalesSystem
             }
         }
 
+        //Lấy giá trị cấu hình số
+        public int LayGiaTriCauHinhSo(string tenCauHinh, int giaTriMacDinh = 0)
+        {
+            try
+            {
+                return dalCauHinh.LayGiaTriSo(tenCauHinh, giaTriMacDinh);
+            }
+            catch
+            {
+                return giaTriMacDinh;
+            }
+        }
+
+        //Lấy giá trị cấu hình chuỗi
+        public string LayGiaTriCauHinhChuoi(string tenCauHinh, string giaTriMacDinh = "")
+        {
+            try
+            {
+                return dalCauHinh.LayGiaTriChuoi(tenCauHinh, giaTriMacDinh);
+            }
+            catch
+            {
+                return giaTriMacDinh;
+            }
+        }
+
         #endregion
 
         #region Helper Methods
+
+        /// Kiểm tra quyền admin
+        public bool KiemTraQuyenAdmin(int maNguoiDung)
+        {
+            try
+            {
+                var nguoiDung = dalQuanLyNguoiDung.LayTatCaNguoiDung().FirstOrDefault(n => n.MaNguoiDung == maNguoiDung);
+                return nguoiDung?.LoaiNguoiDung == "QUANTRI";
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         //Validate khoảng thời gian hợp lệ
         public bool ValidateKhoangThoiGian(DateTime tuNgay, DateTime denNgay)
         {
@@ -344,6 +385,44 @@ namespace BUS_TicketSalesSystem
             if ((denNgay - tuNgay).TotalDays > 365) return false;
             if (denNgay > DateTime.Now.AddDays(1)) return false;
             return true;
+        }
+
+        //Format số tiền hiển thị
+        public string FormatTien(decimal soTien)
+        {
+            return $"{soTien:N0} VND";
+        }
+
+        //Export data to CSV format string
+        public string ExportCSV<T>(List<T> data, string tieuDe)
+        {
+            try
+            {
+                if (data == null || data.Count == 0)
+                    return $"{tieuDe}\nKhông có dữ liệu\n";
+
+                var csv = new StringBuilder();
+                csv.AppendLine(tieuDe);
+                csv.AppendLine($"Ngày xuất: {DateTime.Now:dd/MM/yyyy HH:mm}");
+                csv.AppendLine();
+
+                // Header
+                var properties = typeof(T).GetProperties();
+                csv.AppendLine(string.Join(",", properties.Select(p => p.Name)));
+
+                // Data
+                foreach (var item in data)
+                {
+                    var values = properties.Select(p => p.GetValue(item)?.ToString() ?? "");
+                    csv.AppendLine(string.Join(",", values));
+                }
+
+                return csv.ToString();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi export CSV: {ex.Message}");
+            }
         }
 
         #endregion

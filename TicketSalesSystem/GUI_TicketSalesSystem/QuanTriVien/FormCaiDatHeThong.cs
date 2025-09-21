@@ -238,7 +238,7 @@ namespace GUI_TicketSalesSystem
             {
                 case "VE": return "Vé";
                 case "THANHTOAN": return "Thanh toán";
-                case "HETHONG": return "Hệ thống";
+                case "HEYTHONG": return "Hệ thống";
                 default: return nhomCode;
             }
         }

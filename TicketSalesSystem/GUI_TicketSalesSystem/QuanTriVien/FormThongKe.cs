@@ -27,6 +27,8 @@ namespace GUI_TicketSalesSystem
                 dtpTuNgay.Value = DateTime.Today.AddDays(-30);
                 dtpDenNgay.Value = DateTime.Today;
 
+                SetupTabVe();
+                SetupTabTuyen();
                 LoadThongKeDoanhThu();
             }
             catch (Exception ex)
@@ -36,6 +38,7 @@ namespace GUI_TicketSalesSystem
         }
 
         #region Tab Doanh Thu
+
         private void BtnThongKe_Click(object sender, EventArgs e)
         {
             try
@@ -100,6 +103,70 @@ namespace GUI_TicketSalesSystem
         #endregion
 
         #region Tab thống kê vé
+
+        private DataGridView dgvVe;
+        private Label lblTongVe;
+        private Label lblVeDaThanhToan;
+        private Label lblVeHuy;
+        private Label lblVeDoi;
+
+        private void SetupTabVe()
+        {
+            // Tạo controls cho tab vé
+            dgvVe = new DataGridView
+            {
+                Location = new Point(20, 120),
+                Size = new Size(1090, 400),
+                AllowUserToAddRows = false,
+                AllowUserToDeleteRows = false,
+                ReadOnly = true,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells,
+                ColumnHeadersHeight = 40
+            };
+
+            dgvVe.Columns.Add("TrangThai", "Trạng thái");
+            dgvVe.Columns.Add("SoLuong", "Số lượng");
+            dgvVe.Columns.Add("TiLe", "Tỷ lệ (%)");
+
+            lblTongVe = new Label
+            {
+                Location = new Point(30, 30),
+                Size = new Size(300, 30),
+                Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold),
+                ForeColor = Color.Blue,
+                Text = "Tổng số vé: 0"
+            };
+
+            lblVeDaThanhToan = new Label
+            {
+                Location = new Point(350, 30),
+                Size = new Size(300, 30),
+                Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold),
+                ForeColor = Color.Green,
+                Text = "Đã thanh toán: 0"
+            };
+
+            lblVeHuy = new Label
+            {
+                Location = new Point(30, 70),
+                Size = new Size(300, 30),
+                Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold),
+                ForeColor = Color.Red,
+                Text = "Đã hủy: 0"
+            };
+
+            lblVeDoi = new Label
+            {
+                Location = new Point(350, 70),
+                Size = new Size(300, 30),
+                Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold),
+                ForeColor = Color.Orange,
+                Text = "Đã đổi: 0"
+            };
+
+            tabVe.Controls.AddRange(new Control[] { dgvVe, lblTongVe, lblVeDaThanhToan, lblVeHuy, lblVeDoi });
+        }
+
         private void LoadThongKeVe()
         {
             try
@@ -132,10 +199,10 @@ namespace GUI_TicketSalesSystem
                     }
                 }
 
-                lbTongVe.Text = $"Tổng số vé: {tongVe:N0}";
-                lbDaThanhToan.Text = $"Đã thanh toán: {veDaThanhToan:N0}";
-                lbDaHuy.Text = $"Đã hủy: {veHuy:N0}";
-                lbDaDoi.Text = $"Đã đổi: {veDoi:N0}";
+                lblTongVe.Text = $"Tổng số vé: {tongVe:N0}";
+                lblVeDaThanhToan.Text = $"Đã thanh toán: {veDaThanhToan:N0}";
+                lblVeHuy.Text = $"Đã hủy: {veHuy:N0}";
+                lblVeDoi.Text = $"Đã đổi: {veDoi:N0}";
             }
             catch (Exception ex)
             {
@@ -146,6 +213,51 @@ namespace GUI_TicketSalesSystem
         #endregion
 
         #region Tab thống kê tuyến
+
+        private DataGridView dgvTuyen;
+        private Label lblTuyenBanChay;
+        private Label lblTongTuyen;
+
+        private void SetupTabTuyen()
+        {
+            dgvTuyen = new DataGridView
+            {
+                Location = new Point(20, 120),
+                Size = new Size(1090, 400),
+                AllowUserToAddRows = false,
+                AllowUserToDeleteRows = false,
+                ReadOnly = true,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells,
+                ColumnHeadersHeight = 40
+            };
+
+            dgvTuyen.Columns.Add("XepHang", "Xếp hạng");
+            dgvTuyen.Columns.Add("TenTuyen", "Tên tuyến");
+            dgvTuyen.Columns.Add("SoVeBan", "Số vé bán");
+            dgvTuyen.Columns.Add("DoanhThu", "Doanh thu");
+            dgvTuyen.Columns.Add("DoanhThuTB", "Doanh thu TB");
+
+            lblTuyenBanChay = new Label
+            {
+                Location = new Point(30, 30),
+                Size = new Size(500, 30),
+                Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold),
+                ForeColor = Color.Blue,
+                Text = "Tuyến bán chạy nhất: N/A"
+            };
+
+            lblTongTuyen = new Label
+            {
+                Location = new Point(30, 70),
+                Size = new Size(300, 30),
+                Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold),
+                ForeColor = Color.Green,
+                Text = "Tổng số tuyến: 0"
+            };
+
+            tabTuyen.Controls.AddRange(new Control[] { dgvTuyen, lblTuyenBanChay, lblTongTuyen });
+        }
+
         private void LoadThongKeTuyen()
         {
             try
@@ -167,8 +279,8 @@ namespace GUI_TicketSalesSystem
                     );
                 }
 
-                lbTuyen.Text = $"Tổng số tuyến: {data.Count}";
-                lbTuyenBanChayNhat.Text = data.Count > 0 ? $"Tuyến bán chạy nhất: {data[0].TenTuyen}" : "Tuyến bán chạy nhất: N/A";
+                lblTongTuyen.Text = $"Tổng số tuyến: {data.Count}";
+                lblTuyenBanChay.Text = data.Count > 0 ? $"Tuyến bán chạy nhất: {data[0].TenTuyen}" : "Tuyến bán chạy nhất: N/A";
             }
             catch (Exception ex)
             {

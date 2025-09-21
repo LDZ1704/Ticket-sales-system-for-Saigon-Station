@@ -31,12 +31,7 @@ namespace GUI_TicketSalesSystem
             {
                 lblChaoAdmin.Text = $"Xin chào Quản trị viên: {UserSession.Username}";
                 LoadDashboard();
-
-                //Mock data
-                dgvCanhBao.Rows.Clear();
-                dgvCanhBao.Rows.Add("INFO", "Hệ thống đang hoạt động bình thường", DateTime.Now.ToString("HH:mm"), "Đã xử lý");
-                dgvCanhBao.Rows.Add("WARNING", "Dung lượng database đạt 80%", DateTime.Now.AddMinutes(-15).ToString("HH:mm"), "Chưa xử lý");
-                dgvCanhBao.Rows.Add("INFO", "Backup dữ liệu thành công", DateTime.Now.AddHours(-1).ToString("HH:mm"), "Đã xử lý");
+                LoadCanhBao();
             }
             catch (Exception ex)
             {
@@ -62,13 +57,55 @@ namespace GUI_TicketSalesSystem
         private void BtnLamMoiDashboard_Click(object sender, EventArgs e)
         {
             LoadDashboard();
+            LoadCanhBao();
             MessageBox.Show("Đã làm mới dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
-            //Mock data
-            dgvCanhBao.Rows.Clear();
-            dgvCanhBao.Rows.Add("INFO", "Hệ thống đang hoạt động bình thường", DateTime.Now.ToString("HH:mm"), "Đã xử lý");
-            dgvCanhBao.Rows.Add("WARNING", "Dung lượng database đạt 80%", DateTime.Now.AddMinutes(-15).ToString("HH:mm"), "Chưa xử lý");
-            dgvCanhBao.Rows.Add("INFO", "Backup dữ liệu thành công", DateTime.Now.AddHours(-1).ToString("HH:mm"), "Đã xử lý");
+        private void BtnTimKiemNguoiDung_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string tuKhoa = txtTimKiem.Text.Trim();
+                if (string.IsNullOrEmpty(tuKhoa))
+                {
+                    MessageBox.Show("Vui lòng nhập từ khóa tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var ketQua = busQuanLy.TimKiemNguoiDung(tuKhoa);
+                if (ketQua.Count > 0)
+                {
+                    var thongTin = $"Tìm thấy {ketQua.Count} người dùng:\n";
+                    foreach (var user in ketQua.Take(5))
+                    {
+                        thongTin += $"- {user.GetHoTen()} ({user.Email})\n";
+                    }
+                    MessageBox.Show(thongTin, "Kết quả tìm kiếm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy người dùng nào!", "Kết quả tìm kiếm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi tìm kiếm: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnKhoaTaiKhoan_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng này cần chọn người dùng cụ thể!\nVui lòng sử dụng 'Quản lý người dùng' để thực hiện.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void BtnDatLaiMatKhau_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng này cần chọn người dùng cụ thể!\nVui lòng sử dụng 'Quản lý người dùng' để thực hiện.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void BtnXemLichSu_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng này cần chọn người dùng cụ thể!\nVui lòng sử dụng 'Quản lý người dùng' để thực hiện.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void BtnXuatBaoCaoNgay_Click(object sender, EventArgs e)
@@ -96,11 +133,7 @@ namespace GUI_TicketSalesSystem
                 {
                     // Simulate backup process
                     MessageBox.Show("Đã thực hiện sao lưu dữ liệu thành công!", "Sao lưu hoàn tất", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                    dgvCanhBao.Rows.Clear();
-                    dgvCanhBao.Rows.Add("INFO", "Hệ thống đang hoạt động bình thường", DateTime.Now.ToString("HH:mm"), "Đã xử lý");
-                    dgvCanhBao.Rows.Add("WARNING", "Dung lượng database đạt 80%", DateTime.Now.AddMinutes(-15).ToString("HH:mm"), "Chưa xử lý");
-                    dgvCanhBao.Rows.Add("INFO", "Backup dữ liệu thành công", DateTime.Now.AddHours(-1).ToString("HH:mm"), "Đã xử lý");
+                    LoadCanhBao(); // Refresh warnings
                 }
             }
             catch (Exception ex)
@@ -238,6 +271,23 @@ namespace GUI_TicketSalesSystem
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi load top tuyến: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadCanhBao()
+        {
+            try
+            {
+                dgvCanhBao.Rows.Clear();
+
+                // Mock data cho cảnh báo
+                dgvCanhBao.Rows.Add("INFO", "Hệ thống đang hoạt động bình thường", DateTime.Now.ToString("HH:mm"), "Đã xử lý");
+                dgvCanhBao.Rows.Add("WARNING", "Dung lượng database đạt 80%", DateTime.Now.AddMinutes(-15).ToString("HH:mm"), "Chưa xử lý");
+                dgvCanhBao.Rows.Add("INFO", "Backup dữ liệu thành công", DateTime.Now.AddHours(-1).ToString("HH:mm"), "Đã xử lý");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi load cảnh báo: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
