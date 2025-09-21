@@ -17,12 +17,12 @@ namespace BUS_TicketSalesSystem
         private readonly DAL_ToaTau dalToa = new DAL_ToaTau();
         private readonly DAL_ChuyenTau dalChuyenTau = new DAL_ChuyenTau();
 
-        public bool DatVe(DTO_DatVe datVeInput)
+        public string DatVe(DTO_DatVe datVeInput)
         {
             try
             {
                 if (!ValidateInput(datVeInput))
-                    return false;
+                    throw new ArgumentException($"Vé không hợp lệ: {datVeInput.HoTen}");
 
                 // Lấy giá vé từ toa
                 decimal giaVeThucTe = LayGiaVeTuGhe(datVeInput.MaGhe);
@@ -62,7 +62,26 @@ namespace BUS_TicketSalesSystem
                     throw new Exception("Không thể tạo vé");
                 }
 
-                return true;
+                // Tạo VNPay request
+                var vnp = new VnpayLibrary();
+                vnp.AddRequestData("vnp_Version", VnpayLibrary.VERSION);
+                vnp.AddRequestData("vnp_Command", "pay");
+                vnp.AddRequestData("vnp_TmnCode", "LJOV7890");
+                vnp.AddRequestData("vnp_Amount", ((int)(giaVeThucTe * 100)).ToString());
+                vnp.AddRequestData("vnp_CreateDate", DateTime.Now.ToString("yyyyMMddHHmmss"));
+                vnp.AddRequestData("vnp_CurrCode", "VND");
+                vnp.AddRequestData("vnp_IpAddr", "127.0.0.1");
+                vnp.AddRequestData("vnp_Locale", "vn");
+                vnp.AddRequestData("vnp_OrderInfo", $"Dat ve tau - Ma TT {maThanhToan}");
+                vnp.AddRequestData("vnp_OrderType", "other");
+                vnp.AddRequestData("vnp_ReturnUrl", "http://localhost:8080/api/vnpay/callback");
+                vnp.AddRequestData("vnp_TxnRef", maThanhToan.ToString());
+
+                string url = vnp.CreateRequestUrl(
+                    "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html",
+                    "00ABBP3B3DHPXAW8GR1UUY95P2HUPLWE");
+
+                return url;
             }
             catch (Exception ex)
             {
