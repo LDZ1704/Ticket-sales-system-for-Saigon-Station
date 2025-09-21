@@ -57,14 +57,14 @@ namespace GUI_TicketSalesSystem
             this.lbDaThanhToan = new System.Windows.Forms.Label();
             this.lbTongVe = new System.Windows.Forms.Label();
             this.tabTuyen = new System.Windows.Forms.TabPage();
-            this.lbTuyenBanChayNhat = new System.Windows.Forms.Label();
-            this.lbTuyen = new System.Windows.Forms.Label();
             this.dgvTuyen = new System.Windows.Forms.DataGridView();
             this.dgvXepHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTenTuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSoVeBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDoanhThu2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDoanhThuTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbTuyen = new System.Windows.Forms.Label();
+            this.lbTuyenBanChayNhat = new System.Windows.Forms.Label();
             this.tabThongKe.SuspendLayout();
             this.tabDoanhThu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).BeginInit();
@@ -168,9 +168,9 @@ namespace GUI_TicketSalesSystem
             // 
             this.lblDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblDoanhThu.ForeColor = System.Drawing.Color.Green;
-            this.lblDoanhThu.Location = new System.Drawing.Point(910, 73);
+            this.lblDoanhThu.Location = new System.Drawing.Point(736, 20);
             this.lblDoanhThu.Name = "lblDoanhThu";
-            this.lblDoanhThu.Size = new System.Drawing.Size(214, 30);
+            this.lblDoanhThu.Size = new System.Drawing.Size(313, 30);
             this.lblDoanhThu.TabIndex = 5;
             this.lblDoanhThu.Text = "Tổng doanh thu: 0 VND";
             // 
@@ -178,7 +178,7 @@ namespace GUI_TicketSalesSystem
             // 
             this.lblSoVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblSoVe.ForeColor = System.Drawing.Color.Blue;
-            this.lblSoVe.Location = new System.Drawing.Point(910, 27);
+            this.lblSoVe.Location = new System.Drawing.Point(426, 20);
             this.lblSoVe.Name = "lblSoVe";
             this.lblSoVe.Size = new System.Drawing.Size(200, 30);
             this.lblSoVe.TabIndex = 6;
@@ -231,9 +231,9 @@ namespace GUI_TicketSalesSystem
             this.tabVe.Controls.Add(this.lbDaHuy);
             this.tabVe.Controls.Add(this.lbDaThanhToan);
             this.tabVe.Controls.Add(this.lbTongVe);
-            this.tabVe.Location = new System.Drawing.Point(4, 33);
+            this.tabVe.Location = new System.Drawing.Point(4, 22);
             this.tabVe.Name = "tabVe";
-            this.tabVe.Size = new System.Drawing.Size(1133, 583);
+            this.tabVe.Size = new System.Drawing.Size(1133, 594);
             this.tabVe.TabIndex = 1;
             this.tabVe.Text = "Thống kê vé";
             this.tabVe.UseVisualStyleBackColor = true;
@@ -320,32 +320,12 @@ namespace GUI_TicketSalesSystem
             this.tabTuyen.Controls.Add(this.dgvTuyen);
             this.tabTuyen.Controls.Add(this.lbTuyen);
             this.tabTuyen.Controls.Add(this.lbTuyenBanChayNhat);
-            this.tabTuyen.Location = new System.Drawing.Point(4, 33);
+            this.tabTuyen.Location = new System.Drawing.Point(4, 22);
             this.tabTuyen.Name = "tabTuyen";
-            this.tabTuyen.Size = new System.Drawing.Size(1133, 583);
+            this.tabTuyen.Size = new System.Drawing.Size(1133, 594);
             this.tabTuyen.TabIndex = 2;
             this.tabTuyen.Text = "Thống kê tuyến";
             this.tabTuyen.UseVisualStyleBackColor = true;
-            // 
-            // lbTuyenBanChayNhat
-            // 
-            this.lbTuyenBanChayNhat.AutoSize = true;
-            this.lbTuyenBanChayNhat.ForeColor = System.Drawing.Color.Blue;
-            this.lbTuyenBanChayNhat.Location = new System.Drawing.Point(53, 31);
-            this.lbTuyenBanChayNhat.Name = "lbTuyenBanChayNhat";
-            this.lbTuyenBanChayNhat.Size = new System.Drawing.Size(197, 24);
-            this.lbTuyenBanChayNhat.TabIndex = 0;
-            this.lbTuyenBanChayNhat.Text = "Tuyến bán chạy nhất: ";
-            // 
-            // lbTuyen
-            // 
-            this.lbTuyen.AutoSize = true;
-            this.lbTuyen.ForeColor = System.Drawing.Color.Green;
-            this.lbTuyen.Location = new System.Drawing.Point(53, 79);
-            this.lbTuyen.Name = "lbTuyen";
-            this.lbTuyen.Size = new System.Drawing.Size(136, 24);
-            this.lbTuyen.TabIndex = 0;
-            this.lbTuyen.Text = "Tổng số tuyến:";
             // 
             // dgvTuyen
             // 
@@ -399,6 +379,26 @@ namespace GUI_TicketSalesSystem
             this.dgvDoanhThuTB.HeaderText = "Doanh thu trung bình";
             this.dgvDoanhThuTB.Name = "dgvDoanhThuTB";
             this.dgvDoanhThuTB.Width = 160;
+            // 
+            // lbTuyen
+            // 
+            this.lbTuyen.AutoSize = true;
+            this.lbTuyen.ForeColor = System.Drawing.Color.Green;
+            this.lbTuyen.Location = new System.Drawing.Point(53, 79);
+            this.lbTuyen.Name = "lbTuyen";
+            this.lbTuyen.Size = new System.Drawing.Size(136, 24);
+            this.lbTuyen.TabIndex = 0;
+            this.lbTuyen.Text = "Tổng số tuyến:";
+            // 
+            // lbTuyenBanChayNhat
+            // 
+            this.lbTuyenBanChayNhat.AutoSize = true;
+            this.lbTuyenBanChayNhat.ForeColor = System.Drawing.Color.Blue;
+            this.lbTuyenBanChayNhat.Location = new System.Drawing.Point(53, 31);
+            this.lbTuyenBanChayNhat.Name = "lbTuyenBanChayNhat";
+            this.lbTuyenBanChayNhat.Size = new System.Drawing.Size(197, 24);
+            this.lbTuyenBanChayNhat.TabIndex = 0;
+            this.lbTuyenBanChayNhat.Text = "Tuyến bán chạy nhất: ";
             // 
             // FormThongKe
             // 
