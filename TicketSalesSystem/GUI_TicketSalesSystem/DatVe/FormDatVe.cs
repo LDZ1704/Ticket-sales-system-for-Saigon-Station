@@ -335,22 +335,9 @@ namespace GUI_TicketSalesSystem
 
                 if (confirmResult == DialogResult.Yes)
                 {
-                    bool success = busDatVe.DatVe(datVeInput);
-                    if (success)
-                    {
-                        // Reload ghế để cập nhật trạng thái
-                        if (cboToa.SelectedItem is ComboBoxItem item)
-                        {
-                            LoadGhes((int)item.Value);
-                        }
-
-                        MessageBox.Show(
-                            $"Đặt vé thành công!\n\nGiá vé: {giaVeThucTe:N0} VND",
-                            "Thành công",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Information
-                        );
-                    }
+                    string url = busDatVe.DatVe(datVeInput);
+                    // Mở trình duyệt để thanh toán
+                    System.Diagnostics.Process.Start(url);
                 }
             }
             catch (Exception ex)

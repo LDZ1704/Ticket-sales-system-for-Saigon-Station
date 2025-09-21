@@ -27,5 +27,38 @@ namespace DAL_TicketSalesSystem
                 return thanhToan.MaThanhToan;
             }
         }
+
+        public bool CapNhatTrangThaiThanhToan(int maThanhToan, string trangThaiMoi)
+        {
+            try
+            {
+                using (var db = new TicketSalesContext())
+                {
+                    var thanhToan = db.ThanhToans.Find(maThanhToan);
+                    if (thanhToan == null)
+                        return false;
+
+                    thanhToan.TrangThai = trangThaiMoi;
+                    thanhToan.NgayThanhToan = DateTime.Now;
+
+                    db.SaveChanges();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("[ERROR] CapNhatTrangThaiThanhToan: " + ex.Message);
+                return false;
+            }
+        }
+
+        // Gợi ý: có thể viết thêm hàm lấy ra nếu chưa có
+        public ThanhToan LayThanhToanTheoId(int maThanhToan)
+        {
+            using (var db = new TicketSalesContext())
+            {
+                return db.ThanhToans.Find(maThanhToan);
+            }
+        }
     }
 }
